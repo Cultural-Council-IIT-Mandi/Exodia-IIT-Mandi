@@ -106,36 +106,36 @@ const cardData = [
 function AllCards() {
   return (
     <div className="space-y-8 px-5 ml-28 custom-lg:ml-60">
-      {cardData.map((dayData, index) => (
-        <div key={index} className="space-y-4" >
-          {/* Day Title */}
-          <h2 className="text-2xl font-semibold" style={{color:"gold"}}>{dayData.day}</h2>
-          
-          {/* Card Container */}
-          <div className="flex flex-wrap gap-4">
-            {dayData.cards.map((card, idx) => (
-              <div
-                key={idx}
-                className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
-              >
-                <Card
-                  imageUrl={card.imageUrl}
-                  title={card.title}
-                  description={card.description}
-                  location={card.location}
-                  price={card.price}
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Horizontal line to separate days */}
-          {index !== cardData.length - 1 && (
-            <hr className="border-gray-300 my-4" />
-          )}
+    {cardData.map((dayData, index) => (
+      <div key={index} className="space-y-4">
+        {/* Day Title */}
+        <h2 className="text-2xl font-semibold" style={{color:"gold"}}>{dayData.day}</h2>
+  
+        {/* Card Container */}
+        <div className="flex flex-wrap gap-4">
+          {dayData.cards.map((card, idx) => (
+            <div
+              key={idx}
+              className="w-2/3  sm:w-1/3 md:w-1/4 lg:w-1/4  xl:w-1/5 xs:scale-[0.4] sm:scale-[0.7] lg:scale-100 transition-transform"
+            >
+              <Card
+                imageUrl={card.imageUrl}
+                title={card.title}
+                description={card.description}
+                location={card.location}
+                price={card.price}
+              />
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+  
+        {/* Horizontal line to separate days */}
+        {index !== cardData.length - 1 && (
+          <hr className="border-gray-300 my-4" />
+        )}
+      </div>
+    ))}<br/><br/><br/>
+  </div>
   );
 }
 

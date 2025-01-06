@@ -117,3 +117,63 @@ export const Events = [
 
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+export const SponList = [
+  {
+      name: 'Sponsor 1',
+      image: '/assets/sponsors/1.png'
+  },
+  {
+      name: 'Sponsor 2',
+      image: '/assets/sponsors/2.jpeg'
+  },
+  {
+      name: 'Sponsor 3',
+      image: '/assets/sponsors/3.jpeg'
+  },
+  {
+      name: 'Sponsor 4',
+      image: '/assets/sponsors/4.png'
+  },
+  {
+      name: 'Sponsor 5',
+      image: '/assets/sponsors/5.jpeg'
+  },
+  {
+      name: 'Sponsor 6',
+      image: '/assets/sponsors/6.png'
+  },
+  {
+      name: 'Sponsor 7',
+      image: '/assets/sponsors/7.jpeg'
+  },
+  {
+      name: 'Sponsor 8',
+      image: '/assets/sponsors/8.png'
+  },
+  {
+      name: 'Sponsor 9',
+      image: '/assets/sponsors/9.png'
+  },
+  {
+      name: 'Sponsor 10',
+      image: '/assets/sponsors/10.png'
+  },
+  {
+      name: 'Sponsor 11',
+      image: '/assets/sponsors/11.png'
+  },
+  {
+      name: 'Sponsor 12',
+      image: '/assets/sponsors/12.png'
+  },
+  {
+      name: 'Sponsor 13',
+      image: '/assets/sponsors/13.png'
+  },
+  {
+      name: 'Sponsor 14',
+      image: '/assets/sponsors/14.png'
+  },
+];

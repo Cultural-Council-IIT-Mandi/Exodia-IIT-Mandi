@@ -98,7 +98,7 @@ const SwiperComponent = () => {
   }, [count, delay]);
 
   return (
-    <div>
+    <div className="jjk">
       <Head>
         <title>Swiper Component</title>
         <link

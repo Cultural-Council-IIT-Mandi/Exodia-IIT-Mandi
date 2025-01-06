@@ -11,6 +11,10 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Home_JoinSection } from "@/components/Home_JoinSection";
 import Navbar from "@/components/Navbar";
+import ArrowButton from "@/components/Button";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+import { HomeEvents } from "@/components/HomeEvents";
+import Home_MainSection from "@/components/Home_MainSection";
 
 
 
@@ -21,51 +25,40 @@ const HomePage = () => {
 
       <Navbar />
 
-        <FloatingNav navItems={navItems} namex="P" />
+        <FloatingNav navItems={navItems} namex="P" className="max-md:hidden"/>
+ {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
 
-        <div className="flex items-center justify-center relative h-[100vh] w-full">
-          <div className="relative flex h-screen w-full flex-col items-center justify-center gap-0">
-            <p className="harry-text-small absolute top-[16rem] left-[26rem]">
-              Welcome to
-            </p>
-            <p className="harry-text">EXODIA '25</p>
-            <p className="harry-text-small absolute right-[8rem] bottom-[21rem]">
-              - Biggest Cultural Fest in the Himalayas
-            </p>
-            <p className="harry-text-small">By IIT MANDI</p>
-          </div>
-        </div>
+        <Home_MainSection />
+
+ {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
 
         <div
           id="about"
-          className="h-[100vh] pt-44 flex justify-center items-center"
+          className="h-[100vh]  flex justify-center items-center"
         >
           <Home_AboutSection />
         </div>
+        {/* <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> */}
 
+        <HomeEvents/>
 
-        <div id="events" className="relative h-[150vh] flex flex-col justify-center items-center pt-[100px]">
-          <p className="harry-text-Medium">Explore Events</p>
-          <Home_EventsSection />
-          <Link href="/events">
-            <p className="harry-text-vsmall absolute bottom-[200px] right-[100px] cursor-pointer">
-              explore all events ....
-            </p>
-          </Link>
-        </div>
+ {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
 
-
-        <div id="gallery" className=" h-[150vh] flex justify-center items-center flex-col">
-          <p className="harry-text-Medium">Gallery</p>
-          <div className="flex  justify-center items-center gap-[20px] p-10 w-full">
+        <div id="gallery" className=" h-[100vh] flex justify-center items-center flex-col">
+          <p className="harry-text text-[5rem]">Gallery</p>
+          <div className="flex  justify-center items-center w-full h-[80%]">
             <Home_GallerySection />
           </div>
         </div>
+
+ {/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
 
         <div id="contact" className="h-[100vh] flex justify-center items-center">
           <Home_JoinSection />
         </div>
       </div>
+
+{/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */}
 
       <Footer />
 

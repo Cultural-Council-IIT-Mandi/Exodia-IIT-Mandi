@@ -1,0 +1,55 @@
+"use client";
+
+import { ParallaxScroll } from "@/components/ui/layout-grid";
+
+export default function ParallaxScrollDemo() {
+  return <ParallaxScroll images={images} />;
+}
+
+const images = [
+  "/assets/exodia images/DSC_0373.jpg",
+    "/assets/exodia images/DSC06940.jpg",
+    "/assets/exodia images/DSC07046.jpg",
+    "/assets/exodia images/DSC07047.jpg",
+    "/assets/exodia images/DSC07048.jpg",
+    "/assets/exodia images/DSC07049.jpg",
+    "/assets/exodia images/DSC07218.jpg",
+    "/assets/exodia images/DSC07220.jpg",
+    "/assets/exodia images/DSC07222.jpg", 
+    "/assets/exodia images/DSC07223.jpg",
+    "/assets/exodia images/DSC07240.jpg",
+    "/assets/exodia images/DSC07242.jpg",
+    "/assets/exodia images/DSC07243.jpg",
+    "/assets/exodia images/DSC07245.jpg",
+    "/assets/exodia images/DSC07249.jpg", 
+    "/assets/exodia images/DSC07250.jpg",
+    "/assets/exodia images/DSC07251.jpg",
+    "/assets/exodia images/DSC07252.jpg",
+    "/assets/exodia images/DSC07253.jpg",
+    "/assets/exodia images/DSC07254.jpg",
+    "/assets/exodia images/DSC07255.jpg",
+    "/assets/exodia images/DSC07256.jpg",
+    "/assets/exodia images/DSC07257.jpg",
+    "/assets/exodia images/DSC07258.jpg",
+    "/assets/exodia images/DSC07260.jpg", 
+    "/assets/exodia images/DSC07268.jpg",
+    "/assets/exodia images/DSC07269.jpg",
+    "/assets/exodia images/DSC07270.jpg",
+    "/assets/exodia images/DSC07273.jpg",
+    "/assets/exodia images/DSC07274.jpg",
+    "/assets/exodia images/DSC07275.jpg",
+    "/assets/exodia images/DSC07390.jpg",
+    "/assets/exodia images/DSC08403.jpg",
+    "/assets/exodia images/DSC08467.jpg",
+    "/assets/exodia images/DSC08472.jpg",
+    "/assets/exodia images/DSC08475.jpg",
+    "/assets/exodia images/DSC08481.jpg",
+    "/assets/exodia images/DSC08482.jpg",
+    "/assets/exodia images/DSC08483.jpg",
+    "/assets/exodia images/DSC08487.jpg",
+    "/assets/exodia images/DSC08495.jpg",
+    "/assets/exodia images/DSC08499.jpg",
+    "/assets/exodia images/DSC08503.jpg",
+    "/assets/exodia images/LEH07282.jpg",
+    "/assets/exodia images/LEH07287.jpg",
+];

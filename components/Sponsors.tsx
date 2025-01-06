@@ -1,5 +1,6 @@
 import React from 'react';
 import SponsorCard from './SponsorCard';
+import './ui/Sponsors.css';
 
 // Define the type for the sponsor objects
 interface Sponsor {
@@ -23,14 +24,21 @@ const Sponsors: React.FC = () => {
           fontFamily: 'HarryP',
           fontSize: '6rem',
           color: '#B22222',
-          textShadow:'4px 4px 8px rgba(0, 0, 0, 0.9), -1px -1px 10px rgba(139, 0, 0, 0.8)'
+          textShadow: '4px 4px 8px rgba(0, 0, 0, 0.9), -1px -1px 10px rgba(139, 0, 0, 0.8)',
+          animation: 'titleAnimation 1s ease-in-out',
         }}
       >
         Our Sponsors
       </h1>
-      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-16">
         {sponsors.map((sponsor, index) => (
-          <SponsorCard key={index} name={sponsor.name} logo={sponsor.logo} link={sponsor.link} />
+          <div
+            key={index}
+            className="card-slide-in"
+            style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'forwards' }}
+          >
+            <SponsorCard name={sponsor.name} logo={sponsor.logo} link={sponsor.link} />
+          </div>
         ))}
       </div>
     </div>
