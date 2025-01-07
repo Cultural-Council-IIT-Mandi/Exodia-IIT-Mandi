@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Sheet, SheetClose, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
+import { navItems } from "@/lib/utils";
+import Link from "next/link";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,81 +50,55 @@ const Navbar: React.FC = () => {
 
         {/* Navbar Links */}
         <nav
-          className={`${isMenuOpen ? "block" : "hidden"
-            } absolute md:static top-full left-0 w-full md:w-auto md:flex md:items-center bg-white/10 md:bg-transparent p-4 md:p-0`}
+          className={`max-sm:hidden static top-full left-0 w-auto flex items-center  bg-transparent p-4 md:p-0`}
         >
           <div className="flex flex-col md:flex-row items-start md:items-center space-y-3 md:space-y-0 md:space-x-6">
-            <a
-              href="/"
-              className="text-white text-base hover:text-yellow-300 transition"
-            >
-              Home
-            </a>
-            <a
-              href="/events"
-              className="text-white text-base hover:text-yellow-300 transition"
-            >
-              Events
-            </a>
-            <a
-              href="/gallery"
-              className="text-white text-base hover:text-yellow-300 transition"
-            >
-              Gallery
-            </a>
-            <a
-              href="/schedule"
-              className="text-white text-base hover:text-yellow-300 transition"
-            >
-              Schedule
-            </a>
-            <a
-              href="/sponsors"
-              className="text-white text-base hover:text-yellow-300 transition"
-            >
-              Spnsors
-            </a>
-            <a
-              href="/about"
-              className="text-white text-base hover:text-yellow-300 transition"
-            >
-              About
-            </a>
-            <a
-              href="/contact"
-              className="text-white text-base hover:text-yellow-300 transition"
-            >
-              Contact
-            </a>
-          </div>
 
-          <div className={`${isMenuOpen ? "block" : "hidden"}`}>
-            P
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.link}
+                className="text-white text-base hover:text-yellow-300 transition"
+              >
+                {item.name}
+              </a>
+            ))}
           </div>
 
         </nav>
-        <div>
+        <div className="max-sm:hidden">
+          P
         </div>
         {/* Menu Icon (Mobile Only) */}
-        <button
-          className="text-white text-2xl md:hidden"
-          onClick={toggleMenu}
-          aria-label="Toggle Menu"
-        >
-          ☰
-        </button>
+        <Sheet>
+          <SheetTrigger asChild>
+            {/* <Button variant="outline">Open</Button> */}
+            <button
+              className="text-white text-2xl md:hidden"
+              onClick={toggleMenu}
+              aria-label="Toggle Menu"
+            >
+              ☰
+            </button>
+          </SheetTrigger>
+          <SheetContent>
+            <SheetClose asChild>
+              <div>
+                {navItems.map((item, i) => (
+                  <div key={i} className="text-white text-2xl pt-2 transition">
+                    <Link href={item.link}>
+                      {item.name}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </SheetClose>
+          </SheetContent>
+        </Sheet>
       </div>
-
-
-      {/* Background Overlay for Mobile Menu */}
-      {isMenuOpen && (
-        <div
-          className="absolute top-[55px] left-0 w-full h-screen bg-black/20 backdrop-blur-md z-40"
-          onClick={toggleMenu}
-        ></div>
-      )}
     </header>
   );
 };
 
 export default Navbar;
+

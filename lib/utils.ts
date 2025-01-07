@@ -39,43 +39,48 @@ export const navItems = [
     link: "/about",
   },
   {
+    name: "Team",
+    link: "/team",
+  },
+  {
     name: "Contact",
     link: "/contact",
   },
 ];
 
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 export  const links = [
   {
     title: "Whatsapp",
-    icon: "📱",
+    icon: "/icons/socialmedia/whatsapp.png",
     href: "#",
   },
 
   {
     title: "Instagram",
-    icon: "📦",
+    icon: "/icons/socialmedia/insta.png",
     href: "#",
   },
   {
     title: "Twitter",
-    icon:"🧩",
+    icon:"/icons/socialmedia/twitter.png",
     href: "#",
   },
   {
     title: "Youtube",
-    icon: "🔄",
+    icon: "/icons/socialmedia/youtube.png",
     href: "#",
   },
 
   {
     title: "LinkedIn",
-    icon: "🐦",
+    icon: "/icons/socialmedia/linkedin.png",
     href: "#",
   },
   {
     title: "Facebook",
-    icon: "🐙",
+    icon: "/icons/socialmedia/facebook.png",
     href: "#",
   },
 ];
@@ -175,5 +180,235 @@ export const SponList = [
   {
       name: 'Sponsor 14',
       image: '/assets/sponsors/14.png'
+  },
+];
+
+
+
+export const videoLinks: Record<number,string> = {
+  2017:"xQDj8OrE0bo?si=KW575XIEyKTzBuMS",
+  2018:"WU_8wcNML3M?si=JwusbaJ7TvDwrYFS",
+  2019:"GlRHHi22mQg?si=XHcqcWHIqIM2z7wo",
+  2023:"GtArDHgOt5A?si=WfkmoRAPhQ5t5qYY",
+  2024:"WvwU3scKoAI?si=gB2kQWbVTzNk4kc7"
+}; 
+
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+export const cardData = [
+  {
+    day: "Day 1",
+    cards: [
+      {
+        imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/college-fest-design-template-5443b82b18d8f816645e035945ef4f59_screen.jpg?ts=1637021026",
+        title: "StandUps",
+        description: "A Fun night with Friends.",
+        location: "IIT Mandi, Auditorium",
+        price: "600₹",
+      },
+      {
+        imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/dj-night-invitation-flyer-design-template-58803bfdef2b0547de0c3ef496c3a267_screen.jpg?ts=1665764068",
+        title: "Pro-Night",
+        description: "Experience DJ with you friends",
+        location: "Hockey Ground North Campus",
+        price: "500₹",
+      },
+      {
+        imageUrl: "https://i.pinimg.com/originals/7c/12/79/7c12796de2905baf4e498d588082e170.jpg",
+        title: "Dancer Hits",
+        description: "Prize pool 3K||1.5K||0.7K",
+        location: "North Campus,Auiditorium",
+        price: "100₹",
+      },
+      {
+        imageUrl: "https://classicgamefest.com/wp-content/uploads/2020/03/87473755_1510224229127396_8307146197110358016_o.jpg",
+        title: "Gaming Mania",
+        description: "Relax and play with us.",
+        location: "SCEE A13-1B North Campus",
+        price: "400₹",
+      },
+      {
+        imageUrl: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/89d5f123483327.56323c3f98e66.jpg",
+        title: "MusicWins !",
+        description: "Enjoy peaceful music living.",
+        location: "IIT Mandi,North Campus",
+        price: "200₹",
+      },
+      {
+        imageUrl: "https://www.nowlucknow.com/wp-content/uploads/2022/02/PHOTO-2022-02-15-14-26-43-723x1024.jpg",
+        title: "De Oasis",
+        description: "Enjoy peaceful music living.",
+        location: "IIT Mandi,North Campus",
+        price: "200₹",
+      },
+    ],
+  },
+  {
+    day: "Day 2",
+    cards: [
+      {
+        imageUrl: "https://as1.ftcdn.net/v2/jpg/01/58/48/58/1000_F_158485851_DaiK7ZXKw1j9wf9NFdg3eKrZJD5Sfbdi.jpg",
+        title: "PartyAllNight",
+        description: "A Lorem ipsum dolor ore?",
+        location: "IIT Mandi,South Campus",
+        price: "$250",
+      },
+      {
+        imageUrl: "https://i.pinimg.com/originals/71/23/f8/7123f8b689af3c6765abb4f2fef53768.png",
+        title: "Pubg Pro",
+        description: "Experience tranquility with mountain views.",
+        location: "IIT Mandi, A10",
+        price: "300₹",
+      },
+      {
+        imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/dj-night-invitation-flyer-design-template-58803bfdef2b0547de0c3ef496c3a267_screen.jpg?ts=1665764068",
+        title: "Pro-Night",
+        description: "Experience DJ with you friends",
+        location: "Hockey Ground North Campus",
+        price: "500₹",
+      },
+      {
+        imageUrl: "https://i.pinimg.com/originals/7c/12/79/7c12796de2905baf4e498d588082e170.jpg",
+        title: "Dancer Hits",
+        description: "Prize pool 3K||1.5K||0.7K",
+        location: "North Campus,Auiditorium",
+        price: "100₹",
+      },
+    ],
+  },
+  {
+    day: "Day 3",
+    cards: [
+      {
+        imageUrl: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/89d5f123483327.56323c3f98e66.jpg",
+        title: "MusicWins !",
+        description: "Enjoy peaceful music living.",
+        location: "IIT Mandi,North Campus",
+        price: "200₹",
+      },
+      {
+        imageUrl: "https://classicgamefest.com/wp-content/uploads/2020/03/87473755_1510224229127396_8307146197110358016_o.jpg",
+        title: "Gaming Mania",
+        description: "Relax and play with us.",
+        location: "SCEE A13-1B North Campus",
+        price: "400₹",
+      },
+    ],
+  },
+];
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+export const eventcards = [
+  {
+    imageUrl:
+      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/college-fest-design-template-5443b82b18d8f816645e035945ef4f59_screen.jpg?ts=1637021026",
+    title: "StandUps",
+    description: "A Fun night with Friends.",
+    location: "IIT Mandi, Auditorium",
+    price: "600₹",
+  },
+  {
+    imageUrl:
+      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/dj-night-invitation-flyer-design-template-58803bfdef2b0547de0c3ef496c3a267_screen.jpg?ts=1665764068",
+    title: "Pro-Night",
+    description: "Experience DJ with you friends",
+    location: "Hockey Ground North Campus",
+    price: "500₹",
+  },
+  {
+    imageUrl:
+      "https://i.pinimg.com/originals/7c/12/79/7c12796de2905baf4e498d588082e170.jpg",
+    title: "Dancer Hits",
+    description: "Prize pool 3K||1.5K||0.7K",
+    location: "North Campus,Auiditorium",
+    price: "100₹",
+  },
+  {
+    imageUrl:
+      "https://classicgamefest.com/wp-content/uploads/2020/03/87473755_1510224229127396_8307146197110358016_o.jpg",
+    title: "Gaming Mania",
+    description: "Relax and play with us.",
+    location: "SCEE A13-1B North Campus",
+    price: "400₹",
+  },
+  {
+    imageUrl:
+      "https://mir-s3-cdn-cf.behance.net/project_modules/1400/89d5f123483327.56323c3f98e66.jpg",
+    title: "MusicWins !",
+    description: "Enjoy peaceful music living.",
+    location: "IIT Mandi,North Campus",
+    price: "200₹",
+  },
+  {
+    imageUrl:
+      "https://www.nowlucknow.com/wp-content/uploads/2022/02/PHOTO-2022-02-15-14-26-43-723x1024.jpg",
+    title: "De Oasis",
+    description: "Enjoy peaceful music living.",
+    location: "IIT Mandi,North Campus",
+    price: "200₹",
+  },
+  {
+    imageUrl:
+      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/dj-night-invitation-flyer-design-template-58803bfdef2b0547de0c3ef496c3a267_screen.jpg?ts=1665764068",
+    title: "Pro-Night",
+    description: "Experience DJ with you friends",
+    location: "Hockey Ground North Campus",
+    price: "500₹",
+  },
+  {
+    imageUrl:
+      "https://i.pinimg.com/originals/7c/12/79/7c12796de2905baf4e498d588082e170.jpg",
+    title: "Dancer Hits",
+    description: "Prize pool 3K||1.5K||0.7K",
+    location: "North Campus,Auiditorium",
+    price: "100₹",
+  },
+  {
+    imageUrl:
+      "https://classicgamefest.com/wp-content/uploads/2020/03/87473755_1510224229127396_8307146197110358016_o.jpg",
+    title: "Gaming Mania",
+    description: "Relax and play with us.",
+    location: "SCEE A13-1B North Campus",
+    price: "400₹",
+  },
+  {
+    imageUrl:
+      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/college-fest-design-template-5443b82b18d8f816645e035945ef4f59_screen.jpg?ts=1637021026",
+    title: "StandUps",
+    description: "A Fun night with Friends.",
+    location: "IIT Mandi, Auditorium",
+    price: "600₹",
+  },
+];
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+export const Sliderslides = [
+  {
+    id: 1,
+    title: "First Slide",
+    subtitle: "Subtitle",
+    description: "Description for the first slide.",
+    image: "/assets/galery-raw-images/gallery-raw-1.jpg",
+  },
+  {
+    id: 2,
+    title: "Second Slide",
+    subtitle: "Subtitle",
+    description: "Description for the second slide.",
+    image: "/assets/galery-raw-images/gallery-raw-2.jpg",
+  },
+  {
+    id: 3,
+    title: "Third Slide",
+    subtitle: "Subtitle",
+    description: "Description for the third slide.",
+    image: "/assets/galery-raw-images/gallery-raw-3.jpg",
   },
 ];

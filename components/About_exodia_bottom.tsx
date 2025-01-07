@@ -1,14 +1,8 @@
 "use client";
 
+import { videoLinks } from '@/lib/utils';
 import React, { useState } from 'react';
 
-const videoLinks: Record<number,string> = {
-  2017:"xQDj8OrE0bo?si=KW575XIEyKTzBuMS",
-  2018:"WU_8wcNML3M?si=JwusbaJ7TvDwrYFS",
-  2019:"GlRHHi22mQg?si=XHcqcWHIqIM2z7wo",
-  2023:"GtArDHgOt5A?si=WfkmoRAPhQ5t5qYY",
-  2024:"WvwU3scKoAI?si=gB2kQWbVTzNk4kc7"
-}; 
 
 const AboutExodiaBottom: React.FC = () => {
   const [activeYear, setActiveYear]= useState<number>(2024);
