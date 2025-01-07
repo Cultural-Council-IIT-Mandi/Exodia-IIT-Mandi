@@ -20,7 +20,7 @@ body {
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-/* HOME PAGE CSS */
+/* HOME PAGE About CSS */
 
 .background {
   background-image: url('/assets/background/background6.webp');
@@ -52,11 +52,6 @@ body {
     height: 100%;
 }
 
-.harry-text {
-  z-index: 1;
-  position: relative;
-}
-
 .glassmorphic {
   backdrop-filter: blur(5px);
   /* Reduce blur effect */
@@ -83,6 +78,7 @@ h1 {
   margin: 80px 0;
 }
 
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 
 /* Media Queries for Responsiveness */
@@ -162,7 +158,7 @@ h2, h3, h4, h5, h6, hr, figure, p, pre {
 }
 @font-face {
   font-family: 'H2';
-  src: url('/fonts/HarryPot.TTF') format('truetype');
+  src: url('/fonts/HarryPot.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -174,7 +170,7 @@ h2, h3, h4, h5, h6, hr, figure, p, pre {
 }
 @font-face {
   font-family: 'H3';
-  src: url('/fonts/HarryPotter.TTF') format('truetype');
+  src: url('/fonts/HarryPotter.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -190,12 +186,18 @@ h2, h3, h4, h5, h6, hr, figure, p, pre {
   font-weight: normal;
   font-style: normal;
 }
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 .harry-text {
   font-family: 'HarryP', sans-serif;
-  font-size: 15rem;
+  /* font-size: 15rem; */
   color: gold;
   text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000;
+}
 
+.harry-text {
+  z-index: 1;
 }
 
 .harry-text-small {
@@ -249,9 +251,8 @@ h2, h3, h4, h5, h6, hr, figure, p, pre {
 .gallery{
     flex-basis: 100%;
     display: grid;
-    gap: 10px;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 150px;
+    grid-auto-rows: 80px;
     margin: auto;
 }
 
@@ -481,3 +482,110 @@ h2, h3, h4, h5, h6, hr, figure, p, pre {
     @apply bg-background text-foreground;
   }
 } 
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*ABOUT TEAM CSS*/
+
+body{
+  text-align: center;
+}
+
+.box{
+  background-color: cadetblue;
+  width:58vw; 
+  height:400px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+  overflow-y: auto;
+} 
+
+.box h3{
+  font-size: 22px;
+  padding-top: 5px;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.box.show{
+  transform: translateX(0);
+}
+
+.pic-container{
+  /* background-color:gray; */
+  display: flex;
+  flex-direction: column;
+  height:270px;
+  /* align-items: center; */
+  margin: 25px;
+  position: relative;
+}
+
+.pic-holder{
+  display: flex;
+  /* background-color:blue; */
+  margin: 10px;
+  height:200px;
+  margin-bottom: 0;
+  /* width: 250px;  */
+}
+
+.pic{
+  background-color: black;
+  width:250px;
+  margin: 10px;
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content-holder{
+  /* background-color: red; */
+  display: flex; 
+  height: 50px;
+  
+}
+
+.content{
+  opacity:0;
+  transition: opacity 0.3s ease; 
+}
+
+.pic-container:hover .content{
+  opacity: 1;
+}
+
+.content{
+  /* background-color: black; */
+  font-size: 20px;
+  width:250px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.team-name{
+  font-size: 25px;
+  font-weight: bold;
+  padding:3px;
+  margin-left: 10px;
+}
+
+.team-name:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  filter:brightness(120%)
+}
+
+.app-icons{
+  cursor: pointer;
+  display: flex;
+  justify-content:space-evenly;
+  
+}
+

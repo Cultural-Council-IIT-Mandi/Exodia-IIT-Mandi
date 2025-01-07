@@ -11,7 +11,7 @@ export function Home_JoinSection() {
     "/assets/home-join-images/j1dddd.JPG",
   ];
   return (
-    <ImagesSlider className="h-[40rem]" images={images}>
+    <ImagesSlider className="h-[40rem] mx-[100px] max-2xl:mx-[80px] max-xl:mx-[70px] max-lg:mx-[60px] max-md:mx-[40px] max-sm:mx-[20px] border-2 border-gray-500" images={images}>
       <motion.div
         initial={{
           opacity: 0,
