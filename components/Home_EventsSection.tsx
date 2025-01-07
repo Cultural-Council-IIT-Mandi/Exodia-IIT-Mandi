@@ -1,17 +1,51 @@
 "use client";
- 
-import Image from "next/image";
-import React from "react";
-import Home_EventsSectionCard from "./Home_EventsSectionCard";
-import { Home_EventsSectionGrid } from "./Home_EventsSectionGrid";
 
+import React from "react";
+import "./ui/Home_Events.css";
+import Home_EventsSlide from "./Home_EventsSlide";
+import { eventcards } from "@/lib/utils";
 
 const Home_EventsSection = () => {
-  return (
-   <div>
-    <Home_EventsSectionGrid />
-   </div>
-  )
-}
 
-export default Home_EventsSection
+  return (
+    <>
+    <div className="Mkd">
+      <div className="gallery-container">
+        <div className="box34">
+          <div className="center-text" style={{
+            backgroundImage: "linear-gradient(to right, rgb(255, 136, 0), rgb(255, 0, 255))",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            fontFamily: "H3",
+          }}>
+            Events
+          </div>
+          <div className="animate">
+            {eventcards.map((card, index) => (
+              <span
+                key={index}
+                style={{
+                  "--i": index + 6,
+                } as React.CSSProperties}
+              >
+                <img src={card.imageUrl} alt={card.title} />
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+      <Home_EventsSlide />
+      <hr
+        style={{
+          height: "2px",
+          backgroundColor: "gold",
+          border: "2px white",
+        }}/>
+    </div>
+    </>
+  );
+};
+
+export default Home_EventsSection;
+
+

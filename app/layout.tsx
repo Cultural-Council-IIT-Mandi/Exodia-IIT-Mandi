@@ -14,8 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="dark">
+        <div>
         {children}
+        </div>
       </body>
     </html>
   );

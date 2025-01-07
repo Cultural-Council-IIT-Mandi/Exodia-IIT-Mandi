@@ -32,3 +32,8 @@
     - created Home page Events section Card 
     - Add animations to it 
     - Make use of expandable card 
+
+23 dec (piyush)-
+    - create gallery for home page 
+    - created a navbar 
+    - added animation for navbar and custom navdock

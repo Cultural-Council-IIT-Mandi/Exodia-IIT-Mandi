@@ -1,0 +1,53 @@
+.scroll-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: -170px;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-content {
+  display: flex;
+  gap: 0; /* No gap between images */
+}
+
+.scroll-content img {
+  flex-shrink: 0;
+  width: 300px; /* Match image width */
+  height: 300px; /* Match image height */
+}
+
+/* Media Queries for Tablet and Mobile */
+@media (max-width: 1024px) {
+  .scroll-container {
+    margin-top: -120px; /* Adjust margin-top for tablet */
+  }
+
+  .scroll-content img {
+    width: 250px; /* Adjust image width for tablet */
+    height: 250px; /* Adjust image height for tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-container {
+    margin-top: -100px; /* Adjust margin-top for mobile */
+  }
+
+  .scroll-content img {
+    width: 200px; /* Adjust image width for mobile */
+    height: 200px; /* Adjust image height for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-container {
+    margin-top: -80px; /* Further adjust margin-top for smaller screens */
+  }
+
+  .scroll-content img {
+    width: 150px; /* Further reduced image width for small screens */
+    height: 150px; /* Further reduced image height for small screens */
+  }
+}

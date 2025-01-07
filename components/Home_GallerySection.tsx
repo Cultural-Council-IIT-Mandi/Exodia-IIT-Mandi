@@ -1,73 +1,130 @@
-import React from 'react'
+"use client";
+import React from 'react';
+import Image from 'next/image';
+import { Lens } from './ui/lens';
 
 const Home_GallerySection = () => {
   return (
-    <div className="gallery max-w-[80%]">
-                <div
-                  className="box box1 row2MEphailega"
-                  style={{
-                    backgroundImage:
-                      "url(https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8fDB8fHww)",
-                  }}
-                >
-                  tree
-                </div>
-                <div
-                  className="box box2 col2MEphailega"
-                  style={{
-                    backgroundImage:
-                      "url(https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D)",
-                  }}
-                >
-                  mountain
-                </div>
-                <div
-                  className="box box3"
-                  style={{
-                    backgroundImage:
-                      "url(https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fHww)",
-                  }}
-                >
-                  forest
-                </div>
-                <div
-                  className="box box4 row2MEphailega"
-                  style={{
-                    backgroundImage:
-                      "url(https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8fDB8fHww)",
-                  }}
-                >
-                  sunset
-                </div>
-                <div
-                  className="box box5 col2MEphailega"
-                  style={{
-                    backgroundImage:
-                      "url(https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D)",
-                  }}
-                >
-                  nature
-                </div>
-                <div
-                  className="box box6"
-                  style={{
-                    backgroundImage:
-                      "url(https://plus.unsplash.com/premium_photo-1664547606956-22749d0e0d77?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bmF0dXJlfGVufDB8fDB8fHww)",
-                  }}
-                >
-                  river
-                </div>
-                <div
-                  className="box box7 col2MEphailega"
-                  style={{
-                    backgroundImage:
-                      "url(https://images.unsplash.com/photo-1510797215324-95aa89f43c33?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D)",
-                  }}
-                >
-                  scenery
-                </div>
-              </div>
-  )
-}
+    <div className=" gallery max-w-[80%] grid grid-cols-1 gap-[20px] relative max-xl:grid-cols-2 max-xl:row-span-1">
+      {/* Top-left item (spans 2 rows, 2 columns) */}
+      <div className=" row-span-2 col-span-1 relative flex items-center justify-center max-xl:col-span-2">
+        {/* <Lens lensSize={140}> */}
+          <Image
+            src="/assets/home-gallery-images/g1aaaa.jpg"
+            alt="tree"
+            // layout="fill"
+            // objectFit="cover"
+            height={300}
+            width={400}
+            objectPosition='bottom'
+            className='px-auto mx-auto rounded-3xl border-2 border-gray-500 ' 
+          />
+        {/* </Lens> */}
+      </div>
+      <div className=" row-span-2 col-span-1 relative flex items-center justify-center max-xl:hidden">
+        {/* <Lens lensSize={140}> */}
+          <Image
+            src="/assets/home-gallery-images/g1aaaa.jpg"
+            alt="tree"
+            // layout="fill"
+            // objectFit="cover"
+            height={300}
+            width={400}
+            objectPosition='bottom'
+            className='px-auto mx-auto rounded-3xl border-2 border-gray-500 ' 
+          />
+        {/* </Lens> */}
+      </div>
 
-export default Home_GallerySection
+      {/* Top-right vertical item (spans 4 rows) */}
+      <div className=" col-span-1 row-span-4 relative flex items-center justify-center max-xl:row-span-2">
+        {/* <Lens lensSize={140}> */}
+          <Image
+            src="/assets/home-gallery-images/g1bbbb.JPG"
+            alt="mountain"
+            // layout="fill"
+            // objectFit="cover"
+            height={300}
+            width={200}
+            className='border-2 border-gray-500 rounded-3xl ml-14'
+          />
+        {/* </Lens> */}
+      </div>
+
+      {/* Middle-left vertical item (spans 4 rows) */}
+      <div className=" row-span-4 col-span-1 relative flex items-center justify-center max-xl:row-span-2">
+        {/* <Lens lensSize={140}> */}
+          <Image
+            src="/assets/home-gallery-images/g1cccc.jpg"
+            alt="forest"
+            // layout="fill"
+            // objectFit="cover"
+            height={300}
+            width={200}
+            className='border-2 border-gray-500 rounded-3xl ml-4 mt-5'
+          />
+        {/* </Lens> */}
+      </div>
+
+      {/* Middle square item (spans 2 rows) */}
+      {/* <div className=" row-span-2 col-span-1 relative">
+        // <Lens lensSize={140}>
+          <Image
+            src="/assets/home-gallery-images/g1dddd.JPG"
+            alt="sunset"
+            // layout="fill"
+            // objectFit="cover"
+            height={300}
+            width={300}
+            className='border-2 border-gray-500 rounded-3xl mt-3'
+          />
+        // </Lens>
+      </div> */}
+      <div className=" row-span-2 col-span-1 relative flex items-center justify-center max-xl:hidden">
+        {/* <Lens lensSize={140}> */}
+          <Image
+            src="/assets/home-gallery-images/g1aaaa.jpg"
+            alt="tree"
+            // layout="fill"
+            // objectFit="cover"
+            height={300}
+            width={400}
+            objectPosition='bottom'
+            className='px-auto mx-auto rounded-3xl border-2 border-gray-500 ' 
+          />
+        {/* </Lens> */}
+      </div>
+      
+
+      {/* Bottom-wide item (spans 2 rows, 2 columns) */}
+      <div className=" col-span-1 row-span-2 relative flex items-center justify-center max-xl:hidden">
+        {/* <Lens lensSize={140}> */}
+          <Image
+            src="/assets/home-gallery-images/g1eeee.jpg"
+            alt="nature"
+            // layout="fill"
+            // objectFit="cover"
+            height={200}
+            width={400}
+            className='px-auto mt-14 mx-auto border-2 border-gray-500 rounded-3xl'
+          />
+        {/* </Lens> */}
+      </div>
+      <div className=" col-span-1 row-span-2 relative flex items-center justify-center max-xl:col-span-2 max-xl:row-span-1">
+        {/* <Lens lensSize={140}> */}
+          <Image
+            src="/assets/home-gallery-images/g1eeee.jpg"
+            alt="nature"
+            // layout="fill"
+            // objectFit="cover"
+            height={200}
+            width={400}
+            className='px-auto mt-14 mx-auto border-2 border-gray-500 rounded-3xl'
+          />
+        {/* </Lens> */}
+      </div>
+    </div>
+  );
+};
+
+export default Home_GallerySection;

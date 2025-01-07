@@ -14,6 +14,7 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 
@@ -22,14 +23,14 @@ export const FloatingDock = ({
   desktopClassName,
   mobileClassName,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: { title: string; icon: string; href: string }[];
   desktopClassName?: string;
   mobileClassName?: string;
 }) => {
   return (
     <>
       <FloatingDockDesktop items={items} className={desktopClassName} />
-      <FloatingDockMobile items={items} className={mobileClassName} />
+      {/* <FloatingDockMobile items={items} className={mobileClassName} /> */}
     </>
   );
 };
@@ -38,7 +39,7 @@ const FloatingDockMobile = ({
   items,
   className,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: { title: string; icon: string; href: string }[];
   className?: string;
 }) => {
   const [open, setOpen] = useState(false);
@@ -72,7 +73,10 @@ const FloatingDockMobile = ({
                   key={item.title}
                   className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
                 >
-                  <div className="h-4 w-4">{item.icon}</div>
+                  {/* <div className="h-4 w-4">{item.icon}</div> */}
+                  <div className="h-4 w-4">
+                    <Image src={item.icon} height={10} width={10} alt={item.title} />
+                  </div>
                 </Link>
               </motion.div>
             ))}
@@ -93,7 +97,7 @@ const FloatingDockDesktop = ({
   items,
   className,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: { title: string; icon: string; href: string }[];
   className?: string;
 }) => {
   let mouseX = useMotionValue(Infinity);
@@ -102,7 +106,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-gray-50 dark:bg-black px-4 pb-3",
+        "mx-auto items-center flex h-16 gap-4 md:items-end  rounded-2xl bg-gray-50 dark:bg-black px-4 pb-3",
         className
       )}
     >
@@ -121,7 +125,7 @@ function IconContainer({
 }: {
   mouseX: MotionValue;
   title: string;
-  icon: React.ReactNode;
+  icon: string;
   href: string;
 }) {
   let ref = useRef<HTMLDivElement>(null);
@@ -191,7 +195,8 @@ function IconContainer({
           style={{ width: widthIcon, height: heightIcon }}
           className="flex items-center justify-center"
         >
-          {icon}
+          {/* {icon} */}
+          <Image src={icon} height={10} width={100} alt={title} />
         </motion.div>
       </motion.div>
     </Link>

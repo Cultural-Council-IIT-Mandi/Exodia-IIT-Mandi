@@ -2,21 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
@@ -34,10 +20,10 @@ body {
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-/* HOME PAGE CSS */
+/* HOME PAGE About CSS */
 
 .background {
-  background-image: url('/assets/background6.webp');
+  background-image: url('/assets/background/background6.webp');
   background-size: cover;
   /* Ensure the background covers the container */
   background-position: 50%;
@@ -51,7 +37,7 @@ body {
 }
 
 .background-about {
-  background-image: url('/assets/background6.webp');
+  background-image: url('/assets/background/background6.webp');
   /* Add your image path */
   background-size: cover;
   background-position: center;
@@ -66,11 +52,6 @@ body {
     height: 100%;
 }
 
-.harry-text {
-  z-index: 1;
-  position: relative;
-}
-
 .glassmorphic {
   backdrop-filter: blur(5px);
   /* Reduce blur effect */
@@ -81,6 +62,83 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.box12{
+  position: relative;
+  width: 100%;
+  height: auto; /* Adjust based on content height */
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1),rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+  background-color: transparent; /* Adjust to blend with page background */
+}
+h1 {
+  color: #fff;
+  font-size: 55px;
+  margin: 80px 0;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* Media Queries for Responsiveness */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  .views{
+    scale: 0.8;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .views{
+    scale: 0.6;
+  }
+}
+
+/* Mobile (small devices) View */
+@media (max-width: 480px) {
+  .views{
+    scale: 0.2;
+  }
+  .h-full{
+    height: 80%;
+  }
+  .text-sm {
+    font-size: 0.8rem;
+    line-height: 1.25rem;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+.ml-52 {
+  margin-left: 2rem;
+  scale: 0.8;
+}
+h2, h3, h4, h5, h6, hr, figure, p, pre {
+  margin: 10px;
+}
+}
+/* styles/globals.css */
+
+.page-enter {
+  opacity: 0;
+}
+
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* FONT  */
@@ -100,7 +158,7 @@ body {
 }
 @font-face {
   font-family: 'H2';
-  src: url('/fonts/HarryPot.TTF') format('truetype');
+  src: url('/fonts/HarryPot.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -112,7 +170,7 @@ body {
 }
 @font-face {
   font-family: 'H3';
-  src: url('/fonts/HarryPotter.TTF') format('truetype');
+  src: url('/fonts/HarryPotter.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -128,12 +186,18 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 .harry-text {
   font-family: 'HarryP', sans-serif;
-  font-size: 15rem;
+  /* font-size: 15rem; */
   color: gold;
   text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000;
+}
 
+.harry-text {
+  z-index: 1;
 }
 
 .harry-text-small {
@@ -187,9 +251,8 @@ body {
 .gallery{
     flex-basis: 100%;
     display: grid;
-    gap: 10px;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 150px;
+    grid-auto-rows: 80px;
     margin: auto;
 }
 
@@ -205,6 +268,10 @@ body {
     background-blend-mode: hard-light;
 
     transition: all 1s ease-in-out;
+
+    width:100%;
+    height: 100%;
+    position: relative;
 }
 
 .box:hover{
@@ -249,6 +316,20 @@ body {
     }
 }
 
+/* HOME PAGE - EVENT SECTION  */
+
+.scroll-container {
+  display: flex;
+  overflow-x: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+.scroll-container > * {
+  flex: 0 0 auto;
+  margin-right: 1rem; /* spacing between cards */
+}
+
+
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* GALLERY PAGE CSS */
@@ -268,3 +349,243 @@ body {
   animation-timeline: view();
   animation-range: entry 0;
 }
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ABOUT SECTION CSS*/
+
+@media(max-width: 480px) {
+  .AboutExodia_top{
+      border-bottom: 2px solid var(#7d7e80);
+      padding-left:0;
+      padding-right:0;
+      text-align: center;
+      width:100%;
+  }
+  .AboutExodia_top_heading{
+      font-size: 50px;
+      text-align:center;
+  }
+  .AboutExodia_para{
+      font-size: 1.2rem;
+      text-align: center;
+  }
+  .AboutExodia_bottom{
+      align-items: center;
+      border:none;
+      padding-left: 0;
+      padding-right: 0;
+      width:100%;
+  }
+  .AboutExodia_bottom_heading{
+      font-size: 50px;
+      text-align: center;
+  }
+  .AboutExodia_years{
+      display: flex;
+      flex-wrap: wrap;
+      gap:15px;
+      justify-content: center;
+      width:100%;
+  }
+  .AboutExodia_year div{
+      border:1px solid black;
+      font-size: .8rem;
+  }
+  .ytVideo{
+      aspect-ratio:16/9;
+      width:100%;
+      height:auto;
+  }
+}
+
+.AboutExodia_years div{
+  border:1px solid black;
+  border-radius: 50%;
+  cursor:pointer;
+  font-size:18px;
+  padding: 8px 15px;
+  position: relative;
+  transition: transform .3s ease-in-out;
+}
+
+.AboutExodia_years div:hover{
+  transform: translateY(5px);
+}  
+
+.active{
+  background-color: #d0d0d0;
+  font-weight: bold;
+}  
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}  
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+} 
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*ABOUT TEAM CSS*/
+
+body{
+  text-align: center;
+}
+
+.box{
+  background-color: cadetblue;
+  width:58vw; 
+  height:400px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+  overflow-y: auto;
+} 
+
+.box h3{
+  font-size: 22px;
+  padding-top: 5px;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.box.show{
+  transform: translateX(0);
+}
+
+.pic-container{
+  /* background-color:gray; */
+  display: flex;
+  flex-direction: column;
+  height:270px;
+  /* align-items: center; */
+  margin: 25px;
+  position: relative;
+}
+
+.pic-holder{
+  display: flex;
+  /* background-color:blue; */
+  margin: 10px;
+  height:200px;
+  margin-bottom: 0;
+  /* width: 250px;  */
+}
+
+.pic{
+  background-color: black;
+  width:250px;
+  margin: 10px;
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content-holder{
+  /* background-color: red; */
+  display: flex; 
+  height: 50px;
+  
+}
+
+.content{
+  opacity:0;
+  transition: opacity 0.3s ease; 
+}
+
+.pic-container:hover .content{
+  opacity: 1;
+}
+
+.content{
+  /* background-color: black; */
+  font-size: 20px;
+  width:250px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.team-name{
+  font-size: 25px;
+  font-weight: bold;
+  padding:3px;
+  margin-left: 10px;
+}
+
+.team-name:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  filter:brightness(120%)
+}
+
+.app-icons{
+  cursor: pointer;
+  display: flex;
+  justify-content:space-evenly;
+  
+}
+

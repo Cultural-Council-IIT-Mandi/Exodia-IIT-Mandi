@@ -12,13 +12,13 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ imageUrl, title, description, location, price }) => {
     return (
         <div className='event-card'>
-        <div className="card">
+        <div className="card border-2 border-yellow-300 rounded-3xl">
             <div className="card-img" style={{ backgroundImage: `url(${imageUrl})` }}></div>
             <div className="card-body">
                 <span className="bg"></span>
                 <span className="bg"></span>
                 <span className="bg"></span>
-                <div className="content">
+                <div className="content flex flex-col justify-center items-center">
                     <h2 className="title">{title}</h2>  {/* Title */}
                     <p className="short-description">{description}</p>  {/* Short description */}
                     <p className="location">Loc : {location}</p>  {/* Location */}

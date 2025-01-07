@@ -73,7 +73,7 @@ const SwiperComponent = () => {
       const activeSlide = swiperInstance.slides[swiperInstance.activeIndex];
       const activeImage = activeSlide.querySelector('img');
       if (activeImage) {
-        activeImage.style.transform = 'scale(1.7)';
+        activeImage.style.transform = 'scale(1.7) ';  // Scale the active slide
       }
   
       // Get all text overlays and apply fade-in/fade-out based on active index
@@ -98,7 +98,7 @@ const SwiperComponent = () => {
   }, [count, delay]);
 
   return (
-    <div>
+    <div className="jjk">
       <Head>
         <title>Swiper Component</title>
         <link
@@ -131,7 +131,7 @@ const SwiperComponent = () => {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <div className="slide-content">
+            <div className="slide-content border-2 border-yellow-300">
               <img
                 src={image.src}
                 alt={image.title}
