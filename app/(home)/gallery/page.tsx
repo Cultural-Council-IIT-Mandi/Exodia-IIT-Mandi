@@ -54,8 +54,10 @@ const page = () => {
 
   const slides = Array.from({ length: images.length }, (_, index) => ({
     src: images[index],
-    description: "Press ESC to exit\nUse arrow keys to navigate",
+    description: window.innerWidth > 1140 ? "Press ESC to exit\nUse arrow keys to navigate" : "",
   }));
+
+  console.log(window.innerWidth);
 
   const onClick = (index: number) => openLightbox(index);
 
@@ -121,15 +123,15 @@ const page = () => {
         </Modal>
       </div>
       <div className="flex flex-col items-center px-20 py-12 mt-10">
-        <header className="flex flex-col items-center z-[200]">
-          <h1 className="text-4xl font-bold text-white mt-28 harry-text z-[900]" style={{ fontSize: "15rem" }}>
+        <header className="flex flex-col items-center z-[200] sm:static relative">
+          <h1 className="text-4xl font-bold text-white mt-28 harry-text z-[900] md:text-[15rem] text-[10rem]">
             <TextAnimation text="Gallery" />
           </h1>
           <div className="text-white text-center harry-text text-[3rem] mt-4 mb-4 z-[900]">
             <TextAnimation text="Welcome to the Exodia IIT Mandi Gallery!" />
           </div>
         </header>
-        <ImageRenderer onClick={onClick} images={images} />
+        {/* <ImageRenderer onClick={onClick} images={images} /> */}
         <LoadMore onClick={onClick} />
       </div>
       <Lightbox className="z-0" index={idx} captions={{descriptionTextAlign: "center"}} plugins={[Captions]} open={open} slides={slides} close={() => setOpen(false)} />

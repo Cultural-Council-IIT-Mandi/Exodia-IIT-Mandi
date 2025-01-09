@@ -46,7 +46,7 @@ const LoadMore: React.FC<LoadMoreProps> = ({ onClick }) => {
     }, [inView, data]);
     return (
         <>
-            <section>
+            <section className="flex flex-col items-center">
                 <ImageRenderer images={data} onClick={onClick} />
                 <div ref={ref}>
                     <Image className="mt-16" src='/assets/gallery-svgs/spinner.svg' alt="spinner" width={60} height={60} />
