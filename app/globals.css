@@ -18,6 +18,22 @@ body {
   
 }
 
+.swiper-slide {
+  margin: 0; /* Removes additional margins */
+  padding: 0; /* Removes additional padding */
+}
+/* Swiper Styles */
+.swiper-slide-active .slide-content {
+  transform: scale(1.2) translateY(20px);/* Scale the active slide */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Add shadow to active slide */
+  transition: transform 0.5s ease, box-shadow 0.5s ease-in-out;
+}
+
+.swiper-slide-active .slide-text {
+  opacity: 1; /* Fade in text for the active slide */
+}
+
+
 /* In globals.css */
 html, body {
   cursor: none; /* Hides the default cursor */
@@ -94,12 +110,65 @@ h1 {
   .views{
     scale: 0.8;
   }
+  .image-container{
+    max-width: 100px;
+  }
 }
 
 /* Mobile View */
 @media (max-width: 768px) {
   .views{
     scale: 0.6;
+  }
+  .image-container{
+    max-width: 100px;
+  }
+}
+.gallery-container {
+  scale: 0.9; /* Default for small screens */
+}
+
+.box34 {
+  scale: 0.9; /* Default for small screens */
+}
+
+.center-text {
+  scale: 0.8; /* Default for small screens */
+}
+.responsive-scale-container {
+  transform: scale(1); /* Default scale */
+  transition: transform 0.3s ease-in-out; /* Smooth scaling transition */
+}
+
+@media (min-width: 768px) {
+  .responsive-scale-container {
+    transform: scale(1.3); /* Scale to 1.3 for screens wider than 768px */
+  }
+}
+
+@media (max-width: 768px) and (min-width: 480px) {
+  .responsive-scale-container {
+    transform: scale(1); /* Scale to 1 for screens between 768px and 480px */
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-scale-container {
+    transform: scale(0.8); /* Scale to 0.8 for screens narrower than 480px */
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery-container {
+    scale: 0.8;
+  }
+
+  .box34 {
+    scale: 0.8;
+  }
+
+  .center-text {
+    scale: 0.7;
   }
 }
 
@@ -110,6 +179,9 @@ h1 {
   }
   .h-full{
     height: 80%;
+  }
+  .image-container{
+    max-width: 100px !important;
   }
   .text-sm {
     font-size: 0.8rem;

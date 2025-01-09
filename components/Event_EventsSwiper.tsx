@@ -1,17 +1,17 @@
-"use client"; // Uncomment if you're using Next.js 13+ with App directory
-
-import React, { useEffect, useRef, useState } from "react";
-import Head from "next/head";
-// Import Swiper's CSS
-import 'swiper/css';
-import 'swiper/css/effect-coverflow'; // Add this to include the effect's CSS
-import "./ui/EventsSwiper.css";  // Adjust the path to your actual file if needed
-// Import Swiper React components
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import necessary modules for effect and autoplay
-import { EffectCoverflow, Autoplay } from "swiper";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/autoplay";// Custom CSS for animations
+import { EffectCoverflow, Autoplay } from "swiper/modules";
 
-const images = [
+interface Image {
+  src: string;
+  title: string;
+  description: string;
+}
+
+const images: Image[] = [
   {
     src: "https://images6.alphacoders.com/304/304604.jpg",
     title: "Magical Fireworks at Exodia 2024",
@@ -54,99 +54,80 @@ const images = [
   },
 ];
 
-const SwiperComponent = () => {
-  const [count, setCount] = useState(1);
-  const [delay, setDelay] = useState(500);
-  const swiperRef = useRef(null);
 
-  // Triggering custom styles on active slide change
-  useEffect(() => {
-    const swiperInstance = swiperRef.current.swiper;
-    swiperInstance.on('slideChange', () => {
-      // Remove scale from all slides
-      const slides = document.querySelectorAll('.swiper-slide img');
-      slides.forEach(slide => {
-        slide.style.transform = 'scale(1)';
-      });
-  
-      // Scale the active slide
-      const activeSlide = swiperInstance.slides[swiperInstance.activeIndex];
-      const activeImage = activeSlide.querySelector('img');
-      if (activeImage) {
-        activeImage.style.transform = 'scale(1.7) ';  // Scale the active slide
-      }
-  
-      // Get all text overlays and apply fade-in/fade-out based on active index
-      const textOverlays = document.querySelectorAll('.text-overlay');
-      textOverlays.forEach((overlay, index) => {
-        if (index === swiperInstance.activeIndex) {
-          overlay.classList.add('fade-in');  // Add fade-in class to active slide
-          overlay.classList.remove('fade-out');  // Remove fade-out class from active slide
-        } else {
-          overlay.classList.add('fade-out');  // Add fade-out class to inactive slides
-          overlay.classList.remove('fade-in');  // Remove fade-in class from inactive slides
-        }
-      });
-    });
-
-    if (count < 4) {
-      setTimeout(() => setCount(count + 1), delay);
-    } else if (count === 4) {
-      setDelay(3000);
-      setCount(count + 1);
-    }
-  }, [count, delay]);
-
+const SwiperComponent: React.FC = () => {
   return (
-    <div className="jjk">
-      <Head>
-        <title>Swiper Component</title>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-        />
-      </Head>
-
+    <div
+  className="responsive-scale-container"
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100vh",
+    width: "1200px",
+    overflowY: "visible",
+    background: "linear-gradient(to bottom, #0F0C2900, #302B6300, #24243E00)",
+  }}
+>
       <Swiper
-        ref={swiperRef} // Reference to the Swiper component
-        modules={[EffectCoverflow, Autoplay]} // Ensure the Autoplay module is added here
+        modules={[EffectCoverflow, Autoplay]}
         effect="coverflow"
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView="auto"
+        slidesPerView={5}
+        spaceBetween={-50}
         coverflowEffect={{
-          rotate: 15,
+          rotate: 20,
           stretch: 0,
-          depth: 300,
+          depth: 150,
           modifier: 1,
           slideShadows: true,
         }}
-        loop={true}
         autoplay={{
-          delay, // 3 seconds
-          disableOnInteraction: false, // Keeps autoplay active even after interaction
-          pauseOnMouseEnter: true, // Pause autoplay when mouse enters the swiper
+          delay: 3000,
+          disableOnInteraction: false,
         }}
-        className="mySwiper"
+        loop={true}
+        style={{ width: "90%", height: "400px" }}
       >
         {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <div className="slide-content border-2 border-yellow-300">
+          <SwiperSlide key={index} className="swiper-slide">
+            <div
+              className="slide-content"
+              style={{
+                position: "relative",
+                overflow: "hidden",
+                borderRadius: "10px",
+                boxShadow: "0 5px 15px rgba(0, 0, 0, 0.3)",
+                width: "300px",
+                height: "200px",
+              }}
+            >
               <img
                 src={image.src}
                 alt={image.title}
                 style={{
-                  width: '100%',
-                  height: '160px',
-                  objectFit: 'cover',
-                  transition: 'transform 0.3s ease',
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
                 }}
               />
               <div
-                className={`text-overlay ${index === swiperRef.current?.swiper.activeIndex ? 'fade-in' : 'fade-out'}`}
+                className="slide-text"
+                style={{
+                  position: "absolute",
+                  bottom: "5%",
+                  left: "5%",
+                  right: "5%",
+                  background: "rgba(0, 0, 0, 0.6)",
+                  color: "white",
+                  padding: "10px",
+                  borderRadius: "10px",
+                  textAlign: "center",
+                }}
               >
-               <h2 style={{color:"gold"}}>{image.title}</h2>
-                <p style={{color:"gold"}}>{image.description}</p>
+                <h2 style={{ fontSize: "16px", margin: "0 0 5px 0" ,color:"gold"}}>{image.title}</h2>
+                <p style={{ fontSize: "12px", margin: 0 ,color:"gold"}}>{image.description}</p>
               </div>
             </div>
           </SwiperSlide>

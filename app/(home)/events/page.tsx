@@ -51,10 +51,10 @@ const Page = () => {
 
       <div className=" m-0 p-0 w-full flex flex-col items-center justify-center flex-grow">
         <div className="z-[900]  h-[100vh] w-full flex flex-col items-center justify-center">
-          <div className="mt-[2rem] max-sm:mt-[4rem] harry-text text-[15rem] max-2xl:text-[12rem] max-xl:text-[11rem] max-lg:text-[10rem] max-md:text-[9rem] max-sm:text-[8rem] ">
+          <div className="mt-[10rem] pt-[20rem] max-sm:mt-[10rem] harry-text text-[15rem] max-2xl:text-[12rem] max-xl:text-[11rem] max-lg:text-[10rem] max-md:text-[9rem] max-sm:text-[8rem] ">
             Events
           </div>
-          <div className="mt-[6rem] max-sm:mt-[1rem]">
+          <div className="mt-[-7rem] max-sm:mt-[1rem] transform scale-100 md:scale-80 max-sm:scale-60">
             <SwiperComponent />
           </div>
         </div>
@@ -63,6 +63,7 @@ const Page = () => {
            {/* <Image src="/assets/event_assets/evbg.png" alt="bg" width={100} height={100} className='absolute object-fill w-full mx-auto h-full' /> */}
           <div className="text-white text-4xl md:text-6xl text-center mt-[10rem] mb-[5rem] max-sm:mb-[2rem] max-sm:mt-[2rem] z-10"
             style={{ color: "gold", fontFamily: "B2" }}>
+              
             Events
           </div>
           <div>
