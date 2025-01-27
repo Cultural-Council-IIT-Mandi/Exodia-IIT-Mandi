@@ -1,10 +1,10 @@
 import { connectToDB } from "@/lib/connectDB";
+import isAdmin from "@/lib/isAdmin";
 import { announcement } from "@/models/announcement";
 import { auth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
-    console.log("asljfnlejavdn/api/announcements");
     const body = await request.json();
 
     console.log(body);
@@ -18,7 +18,7 @@ export async function POST(request: Request) {
     try {
       const { userId } = await auth();
 
-      if(!userId) {
+      if(!isAdmin(userId ? userId : "")) {
         return new NextResponse("Unauthorized", { status: 401 });
       }
       

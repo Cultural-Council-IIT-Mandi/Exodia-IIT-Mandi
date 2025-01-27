@@ -1,19 +1,17 @@
 "use client";
-import isAdmin from "@/lib/isAdmin";
 import { useAuth } from "@clerk/nextjs";
 import { motion } from "framer-motion";
-import { FileUp, PlusCircle, ShieldAlertIcon, WandIcon, Zap } from "lucide-react";
+import { ShieldAlertIcon, WandIcon } from "lucide-react";
+import isAdmin from "@/lib/isAdmin";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
 import { FileUpload } from "@/components/file-upload";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
     title: z.string().min(1, {message: "Title is required"}),
@@ -51,10 +49,14 @@ const page = () => {
 
             if (!response.ok) {
                 console.log(response);
+                alert("Failed to create announcement");
                 throw new Error("Failed to create announcement");
             }
-
+            
+            alert("Announcement created successfully");
             router.refresh();
+
+            router.push("/admin/table");
 
             const data = await response.json();
             console.log("Announcement created successfully:", data);
@@ -162,65 +164,74 @@ const page = () => {
     }
 
     return (
-        <div className="p-6">
-            <div className="flex items-center justify-between">
-                <div className="flex flex-col gap-y-2">
-                    <h1 className="text-2xl font-medium">
-                        Announcement Creation
-                    </h1>
+        <>
+            <div className="p-6">
+                <div className="flex items-center justify-between">
+                    <div className="flex flex-col gap-y-2">
+                        <h1 className="text-2xl font-medium">
+                            Announcement Creation
+                        </h1>
+                    </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
+                    <Form {...form}>
+                        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 mt-4">
+                            <div>
+                                <div className="mt-6 border rounded-md p-4">
+                                    <div className="flex items-center justify-between">
+                                        Title
+                                    </div>
+                                    <FormField control={form.control} name="title" render={({ field }) => (
+                                        <FormItem>
+                                            <FormControl>
+                                                <Input disabled={isSubmitting} placeholder="Enter title" {...field} />
+                                            </FormControl>
+                                        </FormItem>
+                                    )} />
+                                </div>
+                            </div>
+                            <div>
+                                <div className="mt-6 border rounded-md p-4">
+                                    <div className="flex items-center justify-between">
+                                        Description
+                                    </div>
+                                    <FormField control={form.control} name="description" render={({ field }) => (
+                                        <FormItem>
+                                            <FormControl>
+                                                <Textarea disabled={isSubmitting} placeholder="Enter description" {...field} />
+                                            </FormControl>
+                                        </FormItem>
+                                    )} />
+                                </div>
+                            </div>
+                            <div>
+                                <div className="mt-6 border rounded-md p-4">
+                                    <div className="flex items-center justify-between">
+                                        Image
+                                    </div>
+                                    <div>
+                                        <FileUpload endpoint="image" onChange={(url) => form.setValue("imageUrl", url)} />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-x-2">
+                                <Button disabled={!isValid || isSubmitting} type="submit">
+                                    Submit
+                                </Button>
+                            </div>
+                        </form>
+                    </Form>
+                </div>
+                <div className="mt-6">
+                    <div className="flex items-center justify-center w-full">
+                        <Button onClick={() => router.push("/admin/table")}>
+                            Manage announcements
+                        </Button>
+                    </div>
                 </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
-                <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 mt-4">
-                        <div>
-                            <div className="mt-6 border rounded-md p-4">
-                                <div className="flex items-center justify-between">
-                                    Title
-                                </div>
-                                <FormField control={form.control} name="title" render={({ field }) => (
-                                    <FormItem>
-                                        <FormControl>
-                                            <Input disabled={isSubmitting} placeholder="Enter title" {...field} />
-                                        </FormControl>
-                                    </FormItem>
-                                )} />
-                            </div>
-                        </div>
-                        <div>
-                            <div className="mt-6 border rounded-md p-4">
-                                <div className="flex items-center justify-between">
-                                    Description
-                                </div>
-                                <FormField control={form.control} name="description" render={({ field }) => (
-                                    <FormItem>
-                                        <FormControl>
-                                            <Textarea disabled={isSubmitting} placeholder="Enter description" {...field} />
-                                        </FormControl>
-                                    </FormItem>
-                                )} />
-                            </div>
-                        </div>
-                        <div>
-                            <div className="mt-6 border rounded-md p-4">
-                                <div className="flex items-center justify-between">
-                                    Image
-                                </div>
-                                <div>
-                                    <FileUpload endpoint="image" onChange={(url) => form.setValue("imageUrl", url)} />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-x-2">
-                            <Button disabled={!isValid || isSubmitting} type="submit">
-                                Submit
-                            </Button>
-                        </div>
-                    </form>
-                </Form>
-            </div>
-        </div>
-    );
+        </>
+    );  
 }
 
 export default page;
