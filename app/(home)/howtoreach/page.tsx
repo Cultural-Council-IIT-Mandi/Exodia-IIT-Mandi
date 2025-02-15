@@ -1,6 +1,5 @@
 "use client";
-import React, { Suspense, useEffect } from 'react';
-import { Canvas } from '@react-three/fiber';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plane, Train, Bus, MapPin, Navigation } from 'lucide-react';
 import { TabsDemo } from '@/components/DisplayTabs';
@@ -14,7 +13,6 @@ import { aboutNPfont11 } from '@/lib/font.utils';
 
 function App() {
   const [selectedRoute, setSelectedRoute] = React.useState<string | null>(null);
-
   const images = [
     "/assets/how-to-reach/htr-1.jpg",
     "/assets/how-to-reach/htr-2.jpg",
