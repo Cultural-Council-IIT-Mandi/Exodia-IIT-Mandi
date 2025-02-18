@@ -6,19 +6,13 @@ const CustomCursorAnshul = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pointsRef = useRef<{ x: number; y: number }[]>([]);
   const mouseRef = useRef({ x: 0, y: 0 });
+  const lastMoveTimeRef = useRef(Date.now());
   const timeRef = useRef(0);
+  const isClickingRef = useRef(false);
+  const velocityRef = useRef(0);
+  const prevMouseRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
-    // Hide cursor globally
-    document.documentElement.style.cursor = 'none';
-    document.body.style.cursor = 'none';
-    
-    // Add cursor: none to all clickable elements
-    const elements = document.querySelectorAll('a, button, [role="button"], input, select, textarea');
-    elements.forEach(el => {
-      (el as HTMLElement).style.cursor = 'none';
-    });
-
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -26,32 +20,78 @@ const CustomCursorAnshul = () => {
     let animationId: number;
 
     const config = {
-      shaderPoints: 16,
-      curvePoints: 80,
-      curveLerp: 0.5,
-      radius1: 5,
-      radius2: 30,
-      velocityTreshold: 10,
-      sleepRadiusX: 100,
-      sleepRadiusY: 100,
-      sleepTimeCoefX: 0.0025,
-      sleepTimeCoefY: 0.0025
+      maxPoints: 18,
+      minPoints: 15, // Increased min points for more consistent tail length
+      curveLerp: 0.2, // Reduced for smoother following
+      baseWidth: 3,
+      glowWidth: 8,
+      idleRadius: 8,
+      idleSpeed: 0.002,
+      maxVelocity: 40,
+      idleTimeout: 150,
+      smoothingFactor: 0.6,
+      minDistance: 3,
+      maxDistance: 12
     };
 
-    // Initialize points at mouse position
-    const initPoints = () => {
-      pointsRef.current = Array(config.curvePoints).fill(null).map(() => ({
-        x: mouseRef.current.x,
-        y: mouseRef.current.y
-      }));
+    const initPoints = (numPoints: number) => {
+      const { x, y } = mouseRef.current;
+      pointsRef.current = Array(numPoints).fill(null).map(() => ({ x, y }));
+      prevMouseRef.current = { x, y };
     };
 
     const handleMouseMove = (e: MouseEvent) => {
-      mouseRef.current = { x: e.clientX, y: e.clientY };
-      // Initialize points if not already done
-      if (pointsRef.current.length === 0) {
-        initPoints();
+      const currentTime = Date.now();
+      const prevMouse = prevMouseRef.current;
+      
+      // Smooth mouse movement
+      const smoothX = prevMouse.x + (e.clientX - prevMouse.x) * config.smoothingFactor;
+      const smoothY = prevMouse.y + (e.clientY - prevMouse.y) * config.smoothingFactor;
+      
+      const dx = smoothX - prevMouse.x;
+      const dy = smoothY - prevMouse.y;
+      velocityRef.current = Math.sqrt(dx * dx + dy * dy);
+      
+      mouseRef.current = { x: smoothX, y: smoothY };
+      prevMouseRef.current = { x: smoothX, y: smoothY };
+      lastMoveTimeRef.current = currentTime;
+
+      // Maintain more consistent point count
+      const targetPoints = Math.min(
+        Math.max(
+          config.minPoints,
+          Math.floor(config.minPoints + (velocityRef.current / config.maxVelocity) * 
+          (config.maxPoints - config.minPoints))
+        ),
+        config.maxPoints
+      );
+
+      if (pointsRef.current.length !== targetPoints) {
+        const newPoints = [];
+        for (let i = 0; i < targetPoints; i++) {
+          const index = (i / (targetPoints - 1)) * (pointsRef.current.length - 1);
+          const lowIndex = Math.floor(index);
+          const highIndex = Math.ceil(index);
+          const t = index - lowIndex;
+          
+          const point1 = pointsRef.current[lowIndex];
+          const point2 = pointsRef.current[Math.min(highIndex, pointsRef.current.length - 1)];
+          
+          newPoints.push({
+            x: point1.x + (point2.x - point1.x) * t,
+            y: point1.y + (point2.y - point1.y) * t
+          });
+        }
+        pointsRef.current = newPoints;
       }
+    };
+
+    const handleMouseDown = () => {
+      isClickingRef.current = true;
+    };
+
+    const handleMouseUp = () => {
+      isClickingRef.current = false;
     };
 
     const handleResize = () => {
@@ -61,68 +101,107 @@ const CustomCursorAnshul = () => {
 
     const updatePoints = () => {
       timeRef.current += 1;
-      
-      // Update first point with mouse position plus sleep effect
-      const sleepX = Math.sin(timeRef.current * config.sleepTimeCoefX) * config.sleepRadiusX;
-      const sleepY = Math.cos(timeRef.current * config.sleepTimeCoefY) * config.sleepRadiusY;
-      
-      pointsRef.current[0] = {
-        x: mouseRef.current.x + sleepX,
-        y: mouseRef.current.y + sleepY
-      };
+      const currentTime = Date.now();
+      const isIdle = currentTime - lastMoveTimeRef.current > config.idleTimeout;
 
-      // Update rest of points with lerp
+      let targetX = mouseRef.current.x;
+      let targetY = mouseRef.current.y;
+
+      if (isIdle) {
+        const angle = timeRef.current * config.idleSpeed;
+        targetX += Math.cos(angle) * config.idleRadius;
+        targetY += Math.sin(angle * 1.5) * config.idleRadius;
+      }
+
+      // Update first point with smooth tracking
+      if (pointsRef.current.length > 0) {
+        const firstPoint = pointsRef.current[0];
+        const lerpFactor = isIdle ? 0.1 : 0.4;
+        firstPoint.x += (targetX - firstPoint.x) * lerpFactor;
+        firstPoint.y += (targetY - firstPoint.y) * lerpFactor;
+      }
+
+      // Update remaining points with distance constraints
       for (let i = 1; i < pointsRef.current.length; i++) {
         const point = pointsRef.current[i];
         const prevPoint = pointsRef.current[i - 1];
         
-        point.x += (prevPoint.x - point.x) * config.curveLerp;
-        point.y += (prevPoint.y - point.y) * config.curveLerp;
+        // Calculate direction from previous point
+        const dx = prevPoint.x - point.x;
+        const dy = prevPoint.y - point.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        // Gradually decrease lerp factor along the tail
+        const tailProgress = i / pointsRef.current.length;
+        const lerpFactor = config.curveLerp * (1 - tailProgress * 0.5);
+        
+        // Maintain minimum distance and prevent sudden movements
+        if (distance > config.minDistance) {
+          // Apply smoother movement with direction preservation
+          const moveX = dx * lerpFactor;
+          const moveY = dy * lerpFactor;
+          
+          point.x += moveX;
+          point.y += moveY;
+        }
       }
+    };
+
+    const drawNeonPath = (width: number, color: string, blur: number, alpha: number = 1) => {
+      if (pointsRef.current.length < 2) return;
+
+      ctx.beginPath();
+      
+      // Start path
+      const startPoint = pointsRef.current[0];
+      ctx.moveTo(startPoint.x, startPoint.y);
+      
+      // Draw smooth curve through points
+      for (let i = 1; i < pointsRef.current.length - 2; i++) {
+        const current = pointsRef.current[i];
+        const next = pointsRef.current[i + 1];
+        
+        const cx = (current.x + next.x) * 0.5;
+        const cy = (current.y + next.y) * 0.5;
+        
+        ctx.quadraticCurveTo(current.x, current.y, cx, cy);
+      }
+      
+      // Connect last two points
+      const lastTwo = pointsRef.current.slice(-2);
+      if (lastTwo.length === 2) {
+        ctx.quadraticCurveTo(
+          lastTwo[0].x,
+          lastTwo[0].y,
+          lastTwo[1].x,
+          lastTwo[1].y
+        );
+      }
+
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.lineWidth = width;
+      ctx.strokeStyle = color;
+      ctx.shadowBlur = blur;
+      ctx.shadowColor = color;
+      ctx.globalAlpha = alpha;
+      ctx.stroke();
+      ctx.globalAlpha = 1;
     };
 
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       if (pointsRef.current.length === 0) return;
 
-      // Calculate velocity
-      const velocity = Math.hypot(
-        pointsRef.current[0].x - pointsRef.current[1].x,
-        pointsRef.current[0].y - pointsRef.current[1].y
-      );
-      
-      // Determine radius based on velocity
-      const radius = velocity > config.velocityTreshold ? config.radius2 : config.radius1;
+      const colors = isClickingRef.current ? 
+        { glow: '#ff4444', core: '#fff' } : 
+        { glow: '#ffd700', core: '#fff' };
 
-      // Draw the curve with multiple passes for neon effect
-      const drawCurve = (width: number, alpha: number) => {
-        ctx.beginPath();
-        ctx.moveTo(pointsRef.current[0].x, pointsRef.current[0].y);
-        
-        for (let i = 1; i < pointsRef.current.length - 1; i++) {
-          const xc = (pointsRef.current[i].x + pointsRef.current[i + 1].x) / 2;
-          const yc = (pointsRef.current[i].y + pointsRef.current[i + 1].y) / 2;
-          ctx.quadraticCurveTo(pointsRef.current[i].x, pointsRef.current[i].y, xc, yc);
-        }
-
-        ctx.lineCap = 'round';
-        ctx.lineJoin = 'round';
-        ctx.lineWidth = width;
-        ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
-        ctx.shadowBlur = 20;
-        ctx.shadowColor = '#ffd700';
-        ctx.stroke();
-      };
-
-      // Outer glow
-      drawCurve(radius * 2, 0.1);
-      // Middle glow
-      drawCurve(radius * 1.5, 0.2);
-      // Inner glow
-      drawCurve(radius, 0.5);
-      // Core
-      drawCurve(radius * 0.5, 1);
+      drawNeonPath(config.glowWidth * 1.5, colors.glow, 25, 0.1);
+      drawNeonPath(config.glowWidth, colors.glow, 20, 0.2);
+      drawNeonPath(config.glowWidth * 0.7, colors.glow, 15, 0.3);
+      drawNeonPath(config.baseWidth * 1.5, colors.glow, 10, 0.5);
+      drawNeonPath(config.baseWidth, colors.core, 5, 1);
     };
 
     const animate = () => {
@@ -131,39 +210,28 @@ const CustomCursorAnshul = () => {
       animationId = requestAnimationFrame(animate);
     };
 
-    // Initialize
     handleResize();
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousedown', handleMouseDown);
+    window.addEventListener('mouseup', handleMouseUp);
     window.addEventListener('resize', handleResize);
-    initPoints();
+    initPoints(config.minPoints);
     animate();
 
-    // Cleanup
     return () => {
       cancelAnimationFrame(animationId);
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mousedown', handleMouseDown);
+      window.removeEventListener('mouseup', handleMouseUp);
       window.removeEventListener('resize', handleResize);
-      // Restore cursor
-      document.documentElement.style.cursor = 'auto';
-      document.body.style.cursor = 'auto';
-      elements.forEach(el => {
-        (el as HTMLElement).style.removeProperty('cursor');
-      });
     };
   }, []);
 
   return (
-    <>
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-[9999]"
-      />
-      <style jsx global>{`
-        * {
-          cursor: none !important;
-        }
-      `}</style>
-    </>
+    <canvas
+      ref={canvasRef}
+      className="fixed inset-0 w-full h-full pointer-events-none z-[9999]"
+    />
   );
 };
 

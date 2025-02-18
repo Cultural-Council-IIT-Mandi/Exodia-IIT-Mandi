@@ -38,8 +38,7 @@ const Navbar: React.FC = () => {
 
     // setLastScrollY(currentScrollY);
 
-    if(typeof window != undefined)
-    {
+    if (typeof window != undefined) {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY === 0) {
@@ -52,10 +51,10 @@ const Navbar: React.FC = () => {
         // Show navbar when scrolling up
         setIsVisible(false);
       }
-  
+
       setLastScrollY(currentScrollY);
     }
-    };
+  };
 
   useEffect(() => {
     // window.addEventListener("scroll", handleScroll); // DEPLOYMENT FIX
@@ -105,7 +104,7 @@ const Navbar: React.FC = () => {
               </div>
               {/* Dropdown Menu */}
               {item.subItems && dropdownOpen === index && (
-                <div className="border-2 border-white dark:border-white/[0.2] absolute top-full left-0 bg-gray-800 text-white  rounded-2xl shadow-lg  bg-white/10 backdrop-blur-md border-b border-white/20 transition-transform duration-300">
+                <div className="absolute left-0 right-10 top-full mt-2 w-40 border-2 border-white dark:border-white/[0.2] bg-gray-800 text-white rounded-2xl shadow-lg bg-white/10 backdrop-blur-md transition-transform duration-300 z-50">
                   {item.subItems.map((subItem) => (
                     <a
                       key={subItem.name}
@@ -117,6 +116,7 @@ const Navbar: React.FC = () => {
                   ))}
                 </div>
               )}
+
             </div>
           ))}
         </nav>
