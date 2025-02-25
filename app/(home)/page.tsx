@@ -12,6 +12,8 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import Lenis from '@studio-freight/lenis';
 import CountdownTimer from "@/components/HomecountTime";
+import { Bell } from 'lucide-react';
+import AnnouncementPage from '@/app/(home)/announcements/page';
 
 interface ColumnProps {
   images: string[];
@@ -31,6 +33,7 @@ interface CardProps {
 const HomePage = () => {
 
   const futureDate = new Date("2025-03-01T00:00:00").getTime(); // Change to your target date
+  const [showAnnouncement, setShowAnnouncement] = useState(false);
 
 
   // horizontal scroll on scroll list 
@@ -505,9 +508,53 @@ const HomePage = () => {
           </div>
         </div>
 
+        {/* Fixed position button with tooltip */}
+        <div className="fixed bottom-6 right-6 z-50 group">
+          <button
+            className="bg-white hover:bg-gray-100 text-black rounded-full p-4 shadow-lg transition-colors duration-200 border border-gray-200"
+            aria-label="Show announcements"
+            onClick={() => setShowAnnouncement(!showAnnouncement)}
+          >
+            <Bell size={24} />
+          </button>
+
+          {/* Tooltip that appears on hover */}
+          <div className="absolute bottom-full right-0 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 bg-black text-white text-sm rounded px-3 py-1 whitespace-nowrap">
+            Announcements
+          </div>
+        </div>
+
+        {/* Announcement overlay */}
+        {showAnnouncement && (
+          <div className="fixed inset-0 bg-black bg-opacity-70 z-40 flex items-center justify-center p-4">
+            <div className="bg-transparent rounded-lg shadow-xl w-full max-w-6xl h-[90vh] flex flex-col">
+              <div className="flex justify-between items-center p-4 border-b">
+                <button
+                  onClick={() => setShowAnnouncement(false)}
+                  className="text-gray-500 hover:text-gray-700 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100"
+                >
+                  ✕
+                </button>
+              </div>
+              <div className="flex-1 overflow-y-auto" style={{ scrollbarWidth: 'thin' }}>
+                {/* This div wraps your Announcement page content */}
+                <div className="w-full h-full">
+                  {/* We're not directly importing or modifying your announcement page component */}
+                  {/* Your announcement component will be rendered here */}
+                  <iframe
+                    src="/announcements"
+                    className="w-full h-full border-none"
+                    title="Announcements"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         <div ref={homemaincardstackedcontainer} className="relative sm:hidden">
           <div className="h-[100vh]">
-          {/* <div className="relative flex h-screen w-full flex-col items-center justify-center gap-0 scale-x-150 scale-y-150">
+            {/* <div className="relative flex h-screen w-full flex-col items-center justify-center gap-0 scale-x-150 scale-y-150">
             <img src="./Exodia.png" alt="" />
           </div> */}
           </div>

@@ -5,7 +5,7 @@ import P5Background from "@/components/P5Background";
 import P5StarsBackground from "@/components/P5StarsBackground";
 import ClientLoader from "@/components/ClientLoader";
 import localFont from 'next/font/local'
-import CustomCursorAnshul from "@/components/CustomCursorAnshul";
+// import CustomCursorAnshul from "@/components/CustomCursorAnshul";
 import ParticlesBackground from "@/components/ParticlesBackground";
 // import { ClerkProvider } from "@clerk/nextjs";
 
@@ -40,7 +40,6 @@ export default function RootLayout({
         <ClientLoader>
           <div   className={myNewFont.className}>
             {/* <CustomCursor /> */}
-            <CustomCursorAnshul />
             <ParticlesBackground />
             {children}
           </div>

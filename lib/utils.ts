@@ -60,10 +60,10 @@ export const navItems = [
   {
     name: "Gallery",
     link: "/gallery",
-    subItems: [
-      { name: "Gallery", link: "/gallery" },
-      { name: "Brochure", link: "/brochure" },
-    ],
+    // subItems: [
+    //   { name: "Gallery", link: "/gallery" },
+    //   { name: "Brochure", link: "/brochure" },
+    // ],
   },
   {
     name: "Announcements",

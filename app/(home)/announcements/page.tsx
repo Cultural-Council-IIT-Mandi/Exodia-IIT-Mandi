@@ -14,9 +14,9 @@ import React from 'react'
 const page = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
-      <FloatingNav namex="P" className="max-md:hidden" />
+      {/* <FloatingNav namex="P" className="max-md:hidden" /> */}
 
       <div className='m-0 p-0 w-full'>
         {/* <div className='h-[100vh] bg-black flex justify-center items-center'>
@@ -40,7 +40,7 @@ const page = () => {
         </div> */}
 
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
