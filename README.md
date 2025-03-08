@@ -31,6 +31,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [GSAP](https://gsap.com)
 - [shadcn/ui](https://ui.shadcn.com/)
 - [three.js](https://threejs.org/)
+- [framer motion](https://motion.dev/) 😎
 
 ## Basic rules to write code
 
