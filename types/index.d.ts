@@ -5,7 +5,20 @@
 
 
 
+interface ColumnProps {
+  images: string[];
+  y: any;
+}
 
+interface CardProps {
+  card: {
+    imageUrl: string;
+    title: string;
+    description: string;
+    location: string;
+    price: string;
+  };
+}
 
 
 

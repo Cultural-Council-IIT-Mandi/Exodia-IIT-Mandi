@@ -40,7 +40,7 @@ export default function RootLayout({
         <ClientLoader>
           <div   className={myNewFont.className}>
             {/* <CustomCursor /> */}
-            <CustomCursorAnshul />
+            {/* <CustomCursorAnshul /> */}
             <ParticlesBackground />
             {children}
           </div>

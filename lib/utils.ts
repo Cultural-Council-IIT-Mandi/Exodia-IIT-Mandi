@@ -50,6 +50,11 @@ export const sleep = (ms: number) =>
 
 export const navItems = [
   {
+    name: "Home",
+    link: "/",
+  
+  },
+  {
     name: "Events",
     link: "/events",
   },
@@ -60,39 +65,39 @@ export const navItems = [
   {
     name: "Gallery",
     link: "/gallery",
-    subItems: [
-      { name: "Gallery", link: "/gallery" },
-      { name: "Brochure", link: "/brochure" },
-    ],
+    // subItems: [
+    //   { name: "Gallery", link: "/gallery" },
+    //   { name: "Brochure", link: "/brochure" },
+    // ],
   },
-  {
-    name: "Announcements",
-    link: "/announcements",
-  },
-  {
-    name: "Sponsors",
-    link: "/sponsors",
-  },
-  {
-    name: "About",
-    link: "/about",
-  },
-  {
-    name: "Team",
-    link: "/team",
-    subItems: [
-      { name: "Core Team", link: "/team" },
-      { name: "Developers", link: "/developers" },
-    ],
-  },
+  // {
+  //   name: "Announcements",
+  //   link: "/announcements",
+  // },
+  // {
+  //   name: "Sponsors",
+  //   link: "/sponsors",
+  // },
+  // {
+  //   name: "About",
+  //   link: "/about",
+  // },
+  // {
+  //   name: "Team",
+  //   link: "/team",
+  //   subItems: [
+  //     { name: "Core Team", link: "/team" },
+  //     { name: "Developers", link: "/developers" },
+  //   ],
+  // },
   {
     name: "Contact",
     link: "/contact",
-    subItems: [
-      { name: "Contact Us", link: "/contact" },
-      { name: "How to Reach", link: "/howtoreach" },
-      { name: "3D Map", link: "/3dmap" },
-    ],
+    // subItems: [
+    //   { name: "Contact Us", link: "/contact" },
+    //   { name: "How to Reach", link: "/howtoreach" },
+    //   { name: "3D Map", link: "/3dmap" },
+    // ],
   },
 ];
 
@@ -1454,6 +1459,7 @@ export const ScheduleEventList = [
       "Monday",
     Time:"09:00",
     link: "/eventDetail/Anima",
+    imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/college-fest-design-template-5443b82b18d8f816645e035945ef4f59_screen.jpg?ts=1637021026"
   },
   {
     title: "Itachi",
@@ -1462,6 +1468,7 @@ export const ScheduleEventList = [
       "TuesDay",
     Time:"09:00",
     link: "/eventDetail/Anima",
+    imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/college-fest-design-template-5443b82b18d8f816645e035945ef4f59_screen.jpg?ts=1637021026"
   },
   {
     title: "Sasuke Uchiha",
@@ -1470,6 +1477,7 @@ export const ScheduleEventList = [
       "Wednesday",
     Time:"09:00",
     link: "/eventDetail/Anima",
+    imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/college-fest-design-template-5443b82b18d8f816645e035945ef4f59_screen.jpg?ts=1637021026"
   },
   {
     title: "MADARA",
@@ -1478,6 +1486,7 @@ export const ScheduleEventList = [
       "Thursday",
     Time:"09:00",
     link: "/eventDetail/Anima",
+    imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/college-fest-design-template-5443b82b18d8f816645e035945ef4f59_screen.jpg?ts=1637021026"
   },
   {
     title: "Gojo Saturo",
@@ -1486,6 +1495,7 @@ export const ScheduleEventList = [
       "Friday",
     Time:"09:00",
     link: "/eventDetail/Anima",
+    imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/college-fest-design-template-5443b82b18d8f816645e035945ef4f59_screen.jpg?ts=1637021026"
   },
   {
     title: "MicroVenom",
@@ -1494,6 +1504,8 @@ export const ScheduleEventList = [
       "Saturday",
     Time:"09:00",
     link: "/eventDetail/Anima",
+        imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/college-fest-design-template-5443b82b18d8f816645e035945ef4f59_screen.jpg?ts=1637021026"
+
   },
   {
     title: "Teriasekitesi",
@@ -1502,6 +1514,8 @@ export const ScheduleEventList = [
       "Sunday",
     Time:"09:00",
     link: "/eventDetail/Anima",
+        imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/college-fest-design-template-5443b82b18d8f816645e035945ef4f59_screen.jpg?ts=1637021026"
+
   },
   {
     title: "Noa",
@@ -1510,6 +1524,8 @@ export const ScheduleEventList = [
       "Monday",
     Time:"09:00",
     link: "/eventDetail/Anima",
+        imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/college-fest-design-template-5443b82b18d8f816645e035945ef4f59_screen.jpg?ts=1637021026"
+
   },
   {
     title: "NarutoKun",
@@ -1518,6 +1534,8 @@ export const ScheduleEventList = [
       "Tuesday",
     Time:"09:00",
     link: "/eventDetail/Anima",
+        imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/college-fest-design-template-5443b82b18d8f816645e035945ef4f59_screen.jpg?ts=1637021026"
+
   },
   {
     title: "dattevaya",
@@ -1526,6 +1544,8 @@ export const ScheduleEventList = [
       "Wednesday",
     Time:"09:00",
     link: "/eventDetail/Anima",
+        imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/college-fest-design-template-5443b82b18d8f816645e035945ef4f59_screen.jpg?ts=1637021026"
+
 
   },
 ];
@@ -1648,3 +1668,220 @@ export const announcements = [
 //     description: "A mystical mountain adventure through enchanted landscapes, symbolizing the spirit of Exodia 2024.",
 //   },
 // ];
+
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// List of Events for Home page 
+
+export  const projects = [
+  {
+    eventType: "Photography",
+    color: "url('/assets/homefirst/download.jpeg')",
+    events: [
+      {
+        name: "Matthias Leidinger",
+        imageUrl: "/assets/homethird/rock.jpg",
+        description: "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent.",
+      },
+      {
+        name: "Clément Chapillon",
+        imageUrl: "/assets/homethird/tree.jpg",
+        description: "French photographer Clément Chapillon explores the intersection of reality and imagination in his latest project.",
+      },
+      {
+        name: "Zissou",
+        imageUrl: "/assets/homethird/water.jpg",
+        description: "Zissou captures the essence of Bali, blending sacred and mundane moments into captivating photographic narratives.",
+      },
+    ],
+  },
+  {
+    eventType: "Art Exhibitions",
+    color: "url('/assets/homefirst/download.jpeg')",
+    events: [
+      {
+        name: "Van Gogh's Legacy",
+        imageUrl: "/assets/homethird/rock.jpg",
+        description: "An exhibition showcasing the influence of Van Gogh's work on modern artists.",
+      },
+      {
+        name: "Futuristic Visions",
+        imageUrl: "/assets/homethird/tree.jpg",
+        description: "A dive into the future of art through digital media and experimental techniques.",
+      },
+      {
+        name: "Abstract Realms",
+        imageUrl: "/assets/homethird/water.jpg",
+        description: "An exploration of abstract art and its impact on human perception.",
+      },
+      {
+        name: "AI in 2025",
+        imageUrl: "/assets/homethird/rock.jpg",
+        description: "Exploring the latest breakthroughs in artificial intelligence and machine learning.",
+      },
+    ],
+  },
+  {
+    eventType: "Technology Conferences",
+    color: "url('/assets/homefirst/download.jpeg')",
+    events: [
+      {
+        name: "AI in 2025",
+        imageUrl: "/assets/homethird/rock.jpg",
+        description: "Exploring the latest breakthroughs in artificial intelligence and machine learning.",
+      },
+      {
+        name: "Quantum Computing",
+        imageUrl: "/assets/homethird/tree.jpg",
+        description: "A look at the advancements in quantum technology and its applications.",
+      },
+      {
+        name: "Space Innovations",
+        imageUrl: "/assets/homethird/water.jpg",
+        description: "How space exploration is pushing the boundaries of technology and engineering.",
+      },
+    ],
+  },
+  {
+    eventType: "Photography",
+    color: "url('/assets/homefirst/download.jpeg')",
+    events: [
+      {
+        name: "Matthias Leidinger",
+        imageUrl: "/assets/homethird/rock.jpg",
+        description: "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent.",
+      },
+      {
+        name: "Clément Chapillon",
+        imageUrl: "/assets/homethird/tree.jpg",
+        description: "French photographer Clément Chapillon explores the intersection of reality and imagination in his latest project.",
+      },
+      {
+        name: "Zissou",
+        imageUrl: "/assets/homethird/water.jpg",
+        description: "Zissou captures the essence of Bali, blending sacred and mundane moments into captivating photographic narratives.",
+      },
+    ],
+  },
+  {
+    eventType: "Art Exhibitions",
+    color: "url('/assets/homefirst/download.jpeg')",
+    events: [
+      {
+        name: "Van Gogh's Legacy",
+        imageUrl: "/assets/homethird/rock.jpg",
+        description: "An exhibition showcasing the influence of Van Gogh's work on modern artists.",
+      },
+      {
+        name: "Futuristic Visions",
+        imageUrl: "/assets/homethird/tree.jpg",
+        description: "A dive into the future of art through digital media and experimental techniques.",
+      },
+      {
+        name: "Abstract Realms",
+        imageUrl: "/assets/homethird/water.jpg",
+        description: "An exploration of abstract art and its impact on human perception.",
+      },
+      {
+        name: "AI in 2025",
+        imageUrl: "/assets/homethird/rock.jpg",
+        description: "Exploring the latest breakthroughs in artificial intelligence and machine learning.",
+      },
+    ],
+  },
+  {
+    eventType: "Technology Conferences",
+    color: "url('/assets/homefirst/download.jpeg')",
+    events: [
+      {
+        name: "AI in 2025",
+        imageUrl: "/assets/homethird/rock.jpg",
+        description: "Exploring the latest breakthroughs in artificial intelligence and machine learning.",
+      },
+      {
+        name: "Quantum Computing",
+        imageUrl: "/assets/homethird/tree.jpg",
+        description: "A look at the advancements in quantum technology and its applications.",
+      },
+      {
+        name: "Space Innovations",
+        imageUrl: "/assets/homethird/water.jpg",
+        description: "How space exploration is pushing the boundaries of technology and engineering.",
+      },
+    ],
+  },
+  {
+    eventType: "Art Exhibitions",
+    color: "url('/assets/homefirst/download.jpeg')",
+    events: [
+      {
+        name: "Van Gogh's Legacy",
+        imageUrl: "/assets/homethird/rock.jpg",
+        description: "An exhibition showcasing the influence of Van Gogh's work on modern artists.",
+      },
+      {
+        name: "Futuristic Visions",
+        imageUrl: "/assets/homethird/tree.jpg",
+        description: "A dive into the future of art through digital media and experimental techniques.",
+      },
+      {
+        name: "Abstract Realms",
+        imageUrl: "/assets/homethird/water.jpg",
+        description: "An exploration of abstract art and its impact on human perception.",
+      },
+      {
+        name: "AI in 2025",
+        imageUrl: "/assets/homethird/rock.jpg",
+        description: "Exploring the latest breakthroughs in artificial intelligence and machine learning.",
+      },
+    ],
+  },
+  {
+    eventType: "Art Exhibitions",
+    color: "url('/assets/homefirst/download.jpeg')",
+    events: [
+      {
+        name: "Van Gogh's Legacy",
+        imageUrl: "/assets/homethird/rock.jpg",
+        description: "An exhibition showcasing the influence of Van Gogh's work on modern artists.",
+      },
+      {
+        name: "Futuristic Visions",
+        imageUrl: "/assets/homethird/tree.jpg",
+        description: "A dive into the future of art through digital media and experimental techniques.",
+      },
+      {
+        name: "Abstract Realms",
+        imageUrl: "/assets/homethird/water.jpg",
+        description: "An exploration of abstract art and its impact on human perception.",
+      },
+      {
+        name: "AI in 2025",
+        imageUrl: "/assets/homethird/rock.jpg",
+        description: "Exploring the latest breakthroughs in artificial intelligence and machine learning.",
+      },
+    ],
+  },
+  {
+    eventType: "Technology Conferences",
+    color: "url('/assets/homefirst/download.jpeg')",
+    events: [
+      {
+        name: "AI in 2025",
+        imageUrl: "/assets/homethird/rock.jpg",
+        description: "Exploring the latest breakthroughs in artificial intelligence and machine learning.",
+      },
+      {
+        name: "Quantum Computing",
+        imageUrl: "/assets/homethird/tree.jpg",
+        description: "A look at the advancements in quantum technology and its applications.",
+      },
+      {
+        name: "Space Innovations",
+        imageUrl: "/assets/homethird/water.jpg",
+        description: "How space exploration is pushing the boundaries of technology and engineering.",
+      },
+    ],
+  },
+];
