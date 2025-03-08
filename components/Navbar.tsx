@@ -88,8 +88,8 @@ const Navbar: React.FC = () => {
           {navItems.map((item, index) => (
             <div key={item.name}
               className="relative group p-2"
-              onMouseEnter={() => item.subItems && toggleDropdown(index)}
-              onMouseLeave={() => item.subItems && toggleDropdown(null)}
+              // onMouseEnter={() => item.subItems && toggleDropdown(index)}
+              // onMouseLeave={() => item.subItems && toggleDropdown(null)}
             >
               <div className="flex">
                 <a
@@ -99,12 +99,12 @@ const Navbar: React.FC = () => {
                 >
                   {item.name}
                 </a>
-                {item.subItems && (
+                {/* {item.subItems && (
                   <Image src="/icons/custom/dropdown.svg" alt="Arrow Down" width={20} height={20} style={{ filter: 'invert(1)' }} />
-                )}
+                )} */}
               </div>
               {/* Dropdown Menu */}
-              {item.subItems && dropdownOpen === index && (
+              {/* {item.subItems && dropdownOpen === index && (
                 <div className="border-2 border-white dark:border-white/[0.2] absolute top-full left-0 bg-gray-800 text-white  rounded-2xl shadow-lg  bg-white/10 backdrop-blur-md border-b border-white/20 transition-transform duration-300">
                   {item.subItems.map((subItem) => (
                     <a
@@ -116,7 +116,7 @@ const Navbar: React.FC = () => {
                     </a>
                   ))}
                 </div>
-              )}
+              )} */}
             </div>
           ))}
         </nav>

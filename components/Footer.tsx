@@ -37,7 +37,8 @@ const Footer = () => {
           <h3 className="text-gray-400 font-semibold mb-3">Reach Out To Us</h3>
           <ul className="space-y-2">
             <li><a href="/contact" className="hover:text-gold">Contact Us</a></li>
-            <li><a href="/githubLinkSoon" className="hover:text-gold">Contribute With Us</a></li>
+            <li><a href="/team" className="hover:text-gold">Core Team</a></li>
+            {/* <li><a href="/githubLinkSoon" className="hover:text-gold">Contribute With Us</a></li> */}
             <li><a href="/developers" className="hover:text-gold">Developers</a></li>
           </ul>
         </div>

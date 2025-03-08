@@ -50,6 +50,11 @@ export const sleep = (ms: number) =>
 
 export const navItems = [
   {
+    name: "Home",
+    link: "/",
+  
+  },
+  {
     name: "Events",
     link: "/events",
   },
@@ -60,39 +65,39 @@ export const navItems = [
   {
     name: "Gallery",
     link: "/gallery",
-    subItems: [
-      { name: "Gallery", link: "/gallery" },
-      { name: "Brochure", link: "/brochure" },
-    ],
+    // subItems: [
+    //   { name: "Gallery", link: "/gallery" },
+    //   { name: "Brochure", link: "/brochure" },
+    // ],
   },
-  {
-    name: "Announcements",
-    link: "/announcements",
-  },
-  {
-    name: "Sponsors",
-    link: "/sponsors",
-  },
-  {
-    name: "About",
-    link: "/about",
-  },
-  {
-    name: "Team",
-    link: "/team",
-    subItems: [
-      { name: "Core Team", link: "/team" },
-      { name: "Developers", link: "/developers" },
-    ],
-  },
+  // {
+  //   name: "Announcements",
+  //   link: "/announcements",
+  // },
+  // {
+  //   name: "Sponsors",
+  //   link: "/sponsors",
+  // },
+  // {
+  //   name: "About",
+  //   link: "/about",
+  // },
+  // {
+  //   name: "Team",
+  //   link: "/team",
+  //   subItems: [
+  //     { name: "Core Team", link: "/team" },
+  //     { name: "Developers", link: "/developers" },
+  //   ],
+  // },
   {
     name: "Contact",
     link: "/contact",
-    subItems: [
-      { name: "Contact Us", link: "/contact" },
-      { name: "How to Reach", link: "/howtoreach" },
-      { name: "3D Map", link: "/3dmap" },
-    ],
+    // subItems: [
+    //   { name: "Contact Us", link: "/contact" },
+    //   { name: "How to Reach", link: "/howtoreach" },
+    //   { name: "3D Map", link: "/3dmap" },
+    // ],
   },
 ];
 
