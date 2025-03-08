@@ -4,6 +4,7 @@ import { navItems } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 import { aboutNPfont, aboutNPfont11 } from "@/lib/font.utils";
+import JoinExodiaForm from "./JoinExodiaForm";
 
 const Navbar: React.FC = () => {
 
@@ -121,11 +122,11 @@ const Navbar: React.FC = () => {
           ))}
         </nav>
 
-
-        {/* Menu */}
-        <div className="max-sm:hidden">
-          P
+        {/* Join Exodia Button (Desktop) */}
+        <div className="hidden sm:block">
+          <JoinExodiaForm />
         </div>
+
 
 
         {/* Menu Icon (Mobile Only) */}
@@ -150,6 +151,11 @@ const Navbar: React.FC = () => {
                     </Link>
                   </div>
                 ))}
+                
+                {/* Add Join Exodia Button to mobile menu */}
+                <div className="mt-6">
+                  <JoinExodiaForm />
+                </div>
               </div>
             </SheetClose>
           </SheetContent>

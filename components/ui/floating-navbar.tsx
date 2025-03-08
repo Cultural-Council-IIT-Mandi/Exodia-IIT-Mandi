@@ -9,6 +9,7 @@ import {
 import { cn, navItems } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
+import JoinExodiaForm from "../JoinExodiaForm";
 
 export const FloatingNav = ({
   // navItems,
@@ -109,6 +110,9 @@ export const FloatingNav = ({
           <span>{namex}</span>
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
         </button>
+        <div className="ml-2">
+          <JoinExodiaForm />
+        </div>
       </motion.div>
     </AnimatePresence>
   );

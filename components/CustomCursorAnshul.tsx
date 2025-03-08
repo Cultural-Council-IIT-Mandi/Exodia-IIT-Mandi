@@ -1,24 +1,19 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const CustomCursorAnshul = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pointsRef = useRef<{ x: number; y: number }[]>([]);
   const mouseRef = useRef({ x: 0, y: 0 });
   const timeRef = useRef(0);
+  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     // Hide cursor globally
     document.documentElement.style.cursor = 'none';
     document.body.style.cursor = 'none';
     
-    // Add cursor: none to all clickable elements
-    const elements = document.querySelectorAll('a, button, [role="button"], input, select, textarea');
-    elements.forEach(el => {
-      (el as HTMLElement).style.cursor = 'none';
-    });
-
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -26,16 +21,15 @@ const CustomCursorAnshul = () => {
     let animationId: number;
 
     const config = {
-      shaderPoints: 16,
-      curvePoints: 80,
-      curveLerp: 0.5,
-      radius1: 5,
-      radius2: 30,
-      velocityTreshold: 10,
-      sleepRadiusX: 100,
-      sleepRadiusY: 100,
-      sleepTimeCoefX: 0.0025,
-      sleepTimeCoefY: 0.0025
+      curvePoints: 40,     // Reduced from 80 to make tail shorter
+      curveLerp: 0.45,     // Slightly reduced for smoother movement
+      radius1: 4,          // Regular cursor size (reduced from 5)
+      radius2: 10,         // Hover size (reduced from 30)
+      velocityTreshold: 15, // Increased to make it less sensitive
+      sleepRadiusX: 0,     // Removed sleep effect (was 100)
+      sleepRadiusY: 0,     // Removed sleep effect (was 100)
+      sleepTimeCoefX: 0,   // Removed sleep effect
+      sleepTimeCoefY: 0    // Removed sleep effect
     };
 
     // Initialize points at mouse position
@@ -54,6 +48,18 @@ const CustomCursorAnshul = () => {
       }
     };
 
+    // Track hover state on interactive elements
+    const handleMouseOver = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.matches('a, button, [role="button"], input, select, textarea, [data-cursor-hover]')) {
+        setIsHovering(true);
+      }
+    };
+
+    const handleMouseOut = (e: MouseEvent) => {
+      setIsHovering(false);
+    };
+
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -62,13 +68,10 @@ const CustomCursorAnshul = () => {
     const updatePoints = () => {
       timeRef.current += 1;
       
-      // Update first point with mouse position plus sleep effect
-      const sleepX = Math.sin(timeRef.current * config.sleepTimeCoefX) * config.sleepRadiusX;
-      const sleepY = Math.cos(timeRef.current * config.sleepTimeCoefY) * config.sleepRadiusY;
-      
+      // Update first point with mouse position (sleep effect removed)
       pointsRef.current[0] = {
-        x: mouseRef.current.x + sleepX,
-        y: mouseRef.current.y + sleepY
+        x: mouseRef.current.x,
+        y: mouseRef.current.y
       };
 
       // Update rest of points with lerp
@@ -92,15 +95,23 @@ const CustomCursorAnshul = () => {
         pointsRef.current[0].y - pointsRef.current[1].y
       );
       
-      // Determine radius based on velocity
-      const radius = velocity > config.velocityTreshold ? config.radius2 : config.radius1;
+      // Determine radius based on velocity and hover state
+      let radius = config.radius1;
+      if (isHovering) {
+        radius = config.radius2;
+      } else if (velocity > config.velocityTreshold) {
+        radius = Math.min(config.radius1 * 1.5, config.radius2); // Cap the max size
+      }
 
       // Draw the curve with multiple passes for neon effect
       const drawCurve = (width: number, alpha: number) => {
         ctx.beginPath();
         ctx.moveTo(pointsRef.current[0].x, pointsRef.current[0].y);
         
-        for (let i = 1; i < pointsRef.current.length - 1; i++) {
+        // Only use portion of the points for the tail to make it shorter
+        const visiblePoints = Math.min(Math.max(10, Math.floor(config.curvePoints * 0.6)), pointsRef.current.length);
+        
+        for (let i = 1; i < visiblePoints - 1; i++) {
           const xc = (pointsRef.current[i].x + pointsRef.current[i + 1].x) / 2;
           const yc = (pointsRef.current[i].y + pointsRef.current[i + 1].y) / 2;
           ctx.quadraticCurveTo(pointsRef.current[i].x, pointsRef.current[i].y, xc, yc);
@@ -110,17 +121,17 @@ const CustomCursorAnshul = () => {
         ctx.lineJoin = 'round';
         ctx.lineWidth = width;
         ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
-        ctx.shadowBlur = 20;
+        ctx.shadowBlur = 15;  // Reduced blur
         ctx.shadowColor = '#ffd700';
         ctx.stroke();
       };
 
-      // Outer glow
-      drawCurve(radius * 2, 0.1);
+      // Outer glow (reduced)
+      drawCurve(radius * 1.5, 0.1);
       // Middle glow
-      drawCurve(radius * 1.5, 0.2);
+      drawCurve(radius * 1.2, 0.2);
       // Inner glow
-      drawCurve(radius, 0.5);
+      drawCurve(radius * 0.8, 0.5);
       // Core
       drawCurve(radius * 0.5, 1);
     };
@@ -135,6 +146,8 @@ const CustomCursorAnshul = () => {
     handleResize();
     window.addEventListener('mousemove', handleMouseMove);
     window.addEventListener('resize', handleResize);
+    document.addEventListener('mouseover', handleMouseOver, true);
+    document.addEventListener('mouseout', handleMouseOut, true);
     initPoints();
     animate();
 
@@ -143,14 +156,13 @@ const CustomCursorAnshul = () => {
       cancelAnimationFrame(animationId);
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('resize', handleResize);
+      document.removeEventListener('mouseover', handleMouseOver, true);
+      document.removeEventListener('mouseout', handleMouseOut, true);
       // Restore cursor
       document.documentElement.style.cursor = 'auto';
       document.body.style.cursor = 'auto';
-      elements.forEach(el => {
-        (el as HTMLElement).style.removeProperty('cursor');
-      });
     };
-  }, []);
+  }, [isHovering]);
 
   return (
     <>
@@ -160,6 +172,11 @@ const CustomCursorAnshul = () => {
       />
       <style jsx global>{`
         * {
+          cursor: none !important;
+        }
+        
+        /* Ensure the cursor effect works on all interactive elements */
+        a, button, [role="button"], input, select, textarea, [data-cursor-hover] {
           cursor: none !important;
         }
       `}</style>
