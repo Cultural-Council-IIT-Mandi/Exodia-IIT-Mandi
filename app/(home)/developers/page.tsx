@@ -16,7 +16,7 @@ const Page = () => {
 
         <div className="team-members">
             <TeamCards src='/assets/team/avishkar.jpeg' name='Hermoine Granger' linkedin='linkedin.com' instagram='instagram.in' email='gmail.com'/>
-            <TeamCards src='/assets/team/divyanshu.jpg' name='Draco Malfoy' linkedin='linkedin.com' instagram='instagram.in' email='gmail.com'/>
+            <TeamCards src='/assets/team/k1.jpg' name='Kartavya' linkedin='linkedin.com' instagram='instagram.in' email='gmail.com'/>
             <TeamCards src='/assets/team/gaurav.jpg' name='Ginny Weasley' linkedin='linkedin.com' instagram='instagram.in' email='gmail.com'/>
             <TeamCards src='/assets/team/hardeep.jpg' name='Rubius Hagrid' linkedin='linkedin.com' instagram='instagram.in' email='gmail.com'/>
             <TeamCards src='/assets/team/piyush.jpeg' name='Draco Malfoy' linkedin='linkedin.com' instagram='instagram.in' email='gmail.com'/>

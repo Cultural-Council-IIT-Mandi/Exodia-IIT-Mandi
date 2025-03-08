@@ -23,7 +23,8 @@ import { projects } from "@/lib/utils";
 
 const HomePage = () => {
 
-  const futureDate = new Date("2025-03-01T00:00:00").getTime(); // Change to your target date
+  const futureDate = new Date("2025-04-19T00:00:00").getTime();
+
 
 
   // horizontal scroll on scroll list 
@@ -480,7 +481,8 @@ const HomePage = () => {
       >
         <div className='relative h-[calc(160vh+400px)] -top-[100vh]'>
           <div className='h-[calc(60vh+400px)] sticky top-[calc(100vh-400px-60vh)]'>
-            <div className="h-[60vh] bg-gold flex justify-center items-end">
+          <h1>Time Remaining</h1>
+            <div className="h-[75vh] bg-gold flex justify-center items-end">
               <CountdownTimer targetDate={futureDate} />
             </div>
             <Footer />
