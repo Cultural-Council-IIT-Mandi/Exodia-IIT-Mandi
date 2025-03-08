@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import CustomCursor from "@/components/CustomCursor";
+// import CustomCursor from "@/components/CustomCursor";
 import P5Background from "@/components/P5Background";
 import P5StarsBackground from "@/components/P5StarsBackground";
 import ClientLoader from "@/components/ClientLoader";
