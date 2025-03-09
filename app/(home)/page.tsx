@@ -424,7 +424,7 @@ const HomePage = () => {
           <div className="sticky top-0 flex items-center   overflow-hidden">
             <motion.div style={{ x }} className="flex gap-4">
               {horiscrollimage.map((imgsrc, i) => {
-                return <Card imgsrc={imgsrc} i={i} />;
+                return <Card key={i} imgsrc={imgsrc} i={i} />;
               })}
             </motion.div>
           </div>
@@ -436,7 +436,7 @@ const HomePage = () => {
           <div className="sticky top-0 flex items-center overflow-hidden">
             <motion.div style={{ x }} className="flex gap-4">
               {horiscrollimage.map((imgsrc, i) => {
-                return <Card imgsrc={imgsrc} i={i} />;
+                return <Card key={i} imgsrc={imgsrc} i={i} />;
               })}
             </motion.div>
           </div>
