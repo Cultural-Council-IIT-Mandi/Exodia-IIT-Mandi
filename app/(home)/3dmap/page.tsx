@@ -1,7 +1,5 @@
 "use client";
 import AnimatedComponent from '@/components/Home_ParralaxHomeGallery'
-import SkewedPages from '@/components/zzzzzzz'
-import ParallaxHero from '@/components/zzzzzzzzzz'
 import React from 'react'
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";

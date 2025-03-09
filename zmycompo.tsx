@@ -30,7 +30,6 @@ import ParticlesBackground from "@/components/Background_Particles";
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import AnimatedComponent from "@/components/Home_ParralaxHomeGallery";
-import ParallaxScroll from "@/components/zzzzzzz";
 import Lenis from '@studio-freight/lenis';
 
 
