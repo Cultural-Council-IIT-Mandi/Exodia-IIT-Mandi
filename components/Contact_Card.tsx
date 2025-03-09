@@ -45,8 +45,9 @@ interface CardProps {
 
 const ContactCard: React.FC<CardProps> = (props) => {
   return (
-    <div className="flex flex-col items-center justify-center gap-[1rem] max-sm:gap-1 p-4 m-4 max-sm:m-2 max-sm:p-2 h-[30rem] max-sm:h-[10rem] max-sm:w-[8rem] border border-yellow-500 rounded-xl shadow-lg bg-gradient-to-br from-yellow-200 via-yellow-300 to-yellow-400 hover:scale-105 transition-transform duration-300">
-      <h4 className="text-xl max-sm:text-[10px] font-bold text-center mb-2 max-sm:mb-0 text-black">{props.title}</h4>
+    <div className="flex flex-col items-center justify-center gap-[1rem] max-sm:gap-1 p-4 m-4 max-sm:m-2 max-sm:p-2 h-[30rem] max-sm:h-[10rem] 
+                    max-sm:w-[8rem] border-2 border-white/[0.2] rounded-3xl shadow-lg glass hover:scale-105 transition-transform duration-300 mb-[10rem]">
+      <h4 className="text-xl max-sm:text-[10px] font-bold text-center mb-2 max-sm:mb-0 text-white">{props.title}</h4>
       <Image
         className="w-24 h-24 max-sm:h-10 max-sm:w-10 rounded-full shadow-md mb-4 max-sm:mb-0"
         src={props.src}
@@ -55,10 +56,10 @@ const ContactCard: React.FC<CardProps> = (props) => {
         height={96}
         objectFit="cover"
       />
-      <p className="text-sm max-sm:text-[8px] mb-4 max-sm:mb-0 text-black">{props.desc}</p>
+      <p className="text-sm max-sm:text-[8px] mb-4 max-sm:mb-0 text-white">{props.desc}</p>
       <div className="flex items-center justify-center gap-4 max-sm:gap-2 mb-4 max-sm:mb-0">
         <Image src="/icons/socialmedia2/call.png" className='max-sm:w-2 max-sm:h-2' alt="Call" width={20} height={20} />
-        <div className="text-[1rem] max-sm:text-[10px] text-black">+91-9378882318</div>
+        <div className="text-[1rem] max-sm:text-[10px] text-white">+91-9378882318</div>
       </div>
       <div className="flex gap-4 max-sm:gap-1">
         <Link href="" className="p-2 max-sm:p-0 bg-white rounded-full shadow-md hover:scale-110 transition-transform">

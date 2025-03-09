@@ -15,13 +15,13 @@ import { Sociallinks } from "@/lib/utils";
 export const FooterSocialMediaDock = () => {
 
   return (
-    <div className="flex items-center mt-10 justify-center w-full">
+    <div className="flex items-center mt-10 justify-center w-full ">
       <FloatingDock
-        mobileClassName="translate-y-20" // only for demo, remove for production
+        mobileClassName="translate-y-20 " // only for demo, remove for production
         items={Sociallinks}
         desktopClassName="max-sm:hidden"
       />
-      <div className="sm:hidden flex justify-center items-center gap-2 mb-4">
+      <div className="sm:hidden flex justify-center items-center gap-2 mb-4 ">
         {/* social media link on circles mapp  */}
         {Sociallinks.map((link, index) => (
           <div key={index}>

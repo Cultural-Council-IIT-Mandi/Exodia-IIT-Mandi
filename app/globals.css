@@ -25,12 +25,21 @@ html, body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FFD700; /* Thumb color (light gray) */
+  background: #ffffff; /* Thumb color (light gray) */
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #475569; /* Darker on hover */
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* glassmorphic effect class  */
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
 }
 
 
@@ -699,3 +708,11 @@ body{
 
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.home-card-text-outline {
+  text-shadow: 
+    -0.5px -0.5px 0 #000,  
+     0.5px -0.5px 0 #000,
+    -0.5px  0.5px 0 #000,
+     0.5px  0.5px 0 #000;
+}

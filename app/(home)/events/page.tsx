@@ -97,7 +97,7 @@ const Page = () => {
 
         <div className="m-0 p-0 w-full flex flex-col items-center justify-center flex-grow mb-[-800px] sm:mb-0">
           <div className="z-[900]  h-[100vh] w-full flex flex-col items-center justify-center">
-            <div className={`mt-[8rem]  max-sm:mt-[4rem] ${aboutNPfont11.className} text-gold text-[6rem] max-2xl:text-[6rem] max-xl:text-[5rem] max-lg:text-[5rem] max-md:text-[4rem] max-sm:text-[3rem]`}>
+            <div className={`mt-[8rem]  max-sm:mt-[4rem] ${aboutNPfont11.className} text-white text-[6rem] max-2xl:text-[6rem] max-xl:text-[5rem] max-lg:text-[5rem] max-md:text-[4rem] max-sm:text-[3rem]`}>
               Events
             </div>
             {/* <div className="mt-[7rem] max-sm:mt-[1rem] transform scale-100 md:scale-80 max-sm:scale-60"> */}
@@ -110,14 +110,14 @@ const Page = () => {
       
           </div>
 
-          <div className={`w-full h-[20vh] max-sm:h-[10vh] flex justify-center items-end ${aboutNPfont11.className}`}>
+          {/* <div className={`w-full h-[20vh] max-sm:h-[10vh] flex justify-center items-end ${aboutNPfont11.className}`}>
             <TypewriterEffect words={words} />
-          </div>
+          </div> */}
 
           <div className="w-full" id="maineventbody">
             {/* <Image src="/assets/event_assets/evbg.png" alt="bg" width={100} height={100} className='absolute object-fill w-full mx-auto h-full' /> */}
             <div className="text-white text-4xl md:text-6xl text-center mt-[5rem] mb-[5rem] max-sm:mb-[2rem] max-sm:mt-[2rem] z-10"
-              style={{ color: "gold", fontFamily: "B2" }}>
+              style={{ color: "white", fontFamily: "B2" }}>
               Events
             </div>
             <div>

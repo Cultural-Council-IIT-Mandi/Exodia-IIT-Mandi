@@ -13,7 +13,7 @@ const page: React.FC = () => {
       <Navbar />
 
       <div className='p-0 m-0 h-full'>
-        <div className={`mt-[8rem] mb-7 text-gold text-[5rem] max-sm:text-[3rem] ${aboutNPfont11.className}`}>Contact Us</div>
+        <div className={`mt-[8rem] mb-7 text-white text-[5rem] max-sm:text-[3rem] ${aboutNPfont11.className}`}>Contact Us</div>
 
         <div className='flex justify-center items-center flex-wrap'>
           <div className='flex justify-center items-center flex-wrap'>

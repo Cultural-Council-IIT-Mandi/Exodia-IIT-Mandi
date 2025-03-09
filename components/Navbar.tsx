@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`z-[980] fixed top-0 h-[60px] left-0 w-full bg-white/10 backdrop-blur-md border-b border-white/20 transition-transform duration-300 ${isVisible ? "sm:translate-y-0" : "sm:-translate-y-full"
+      className={`home-card-text-outline z-[980] fixed top-0 h-[60px] left-0 w-full bg-white/10 backdrop-blur-md border-b border-white/20 transition-transform duration-300 ${isVisible ? "sm:translate-y-0" : "sm:-translate-y-full"
         }`}
     >
       <div className="flex justify-between items-center px-6 md:px-10">
@@ -95,7 +95,7 @@ const Navbar: React.FC = () => {
               <div className="flex">
                 <a
                   href={item.link}
-                  className="text-base text-white hover:text-yellow-300 transition"
+                  className={`text-xl text-white transition ${aboutNPfont11.className}`}
 
                 >
                   {item.name}

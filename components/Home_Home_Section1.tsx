@@ -4,10 +4,10 @@ import Link from 'next/link'
 
 
 const Section1 = ({ scrollYProgress }: { scrollYProgress: any }) => {
-    const scale = useTransform(scrollYProgress, [0, 2 / 3], [1, 0.8]);
+    const scale = useTransform(scrollYProgress, [0, 1 / 3], [1, 0]);
     const rotate = useTransform(scrollYProgress, [0, 2 / 3], [0, -5])
     return (
-      <motion.div style={{ scale, rotate }} className="sticky top-0 h-screen text-[3.5vw] flex flex-col items-center justify-center text-white pb-[10vh]">
+      <motion.div style={{ scale }} className="sticky top-0 h-screen text-[3.5vw] flex flex-col items-center justify-center text-white pb-[10vh]">
   
         <div className="flex flex-col items-center justify-center relative h-[100vh] w-full z-[900] ">
           <motion.div
@@ -17,11 +17,11 @@ const Section1 = ({ scrollYProgress }: { scrollYProgress: any }) => {
               <img src="./Exodia.png" alt="" />
             </div>
           </motion.div>
-          <div className='mb-7'>
+          {/* <div className='mb-7'>
             <Link href="/3d" className='p-4 rounded-3xl border-2 border-black bg-gold text-black text-[1.2rem] animate-buttonshine'>
               Explore In 3D
             </Link>
-          </div>
+          </div> */}
         </div>
       </motion.div>
     )

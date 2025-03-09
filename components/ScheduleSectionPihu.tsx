@@ -15,10 +15,10 @@ const ScheduleSectionPihu = () => {
                     <button
                         key={dayItem.day}
                         onClick={() => setSelectedDay(dayItem.day)}
-                        className={`px-4 py-2 rounded-md text-sm font-semibold transition hover:bg-blue-600 ${
+                        className={`px-4 py-2 rounded-2xl border-2 border-white/[0.2] text-lg font-semibold transition  ${
                             selectedDay === dayItem.day
-                                ? 'bg-blue-600 text-white'
-                                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                                ? 'bg-gray-200 text-gray-700'
+                                : 'bg-white/[0.2] text-white hover:bg-gray-300 hover:text-gray-700  '
                         }`}
                     >
                         {dayItem.day}
@@ -33,19 +33,25 @@ const ScheduleSectionPihu = () => {
                     ?.cards.map((card, index) => (
                         <VerticalTimelineElement
                             key={index}
-                            className="vertical-timeline-element--work"
-                            contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                            contentArrowStyle={{ borderRight: '7px solid rgb(33, 150, 243)' }}
-                            date={card.price} // Event timing as the date
-                            iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                            className="vertical-timeline-element--work "
+                            contentStyle={{ 
+                                background: 'rgba(255, 255, 255, 0.05)', 
+                                backdropFilter: 'blur(12px)', 
+                                border: '2px solid rgba(255, 255, 255, 0.1)', 
+                                borderRadius: '2rem', 
+                                // color: '#fff' 
+                            }}
+                            contentArrowStyle={{ borderRight: '7px solid rgba(255, 255, 255, 0.05)' }}
+                            date={card.time} // Event timing as the date
+                            iconStyle={{ background: 'rgb(256,256,256)', color: '#fff' }}
                         >
-                            <div className="bg-white shadow-lg rounded-lg p-4 flex gap-4">
-                                <img
+                            <div className=" p-2 flex flex-col gap-6 ">
+                               <img
                                     src={card.imageUrl}
                                     alt={card.title}
-                                    className="w-24 h-24 object-cover rounded-md"
-                                />
-                                <div>
+                                    className="glass border-2 w-[20rem] border-white/[0.2] rounded-3xl object-cover"
+                                />  
+                                <div className='glass border-2 border-white/[0.2] rounded-3xl p-2'>
                                     <h3 className="text-lg font-semibold">{card.title}</h3>
                                     <p className="text-gray-600">{card.description}</p>
                                     <p className="text-sm text-gray-500">{card.location}</p>

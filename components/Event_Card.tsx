@@ -14,9 +14,9 @@ const Card: React.FC<CardProps> = ({ imageUrl, title, description, location, pri
     return (
        <Link href={`/eventDetail/${title}`}>
          <div className='event-card'>
-            <div className="card border-2 border-yellow-300 rounded-3xl">
+            <div className="card border-[2.5px] border-white/[0.2] rounded-3xl">
                 <div className="card-img" style={{ backgroundImage: `url(${imageUrl})` }}></div>
-                <div className="card-body">
+                <div className="card-body border-2 border-white/[0.2] glass">
                     <span className="bg"></span>
                     <span className="bg"></span>
                     <span className="bg"></span>
@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({ imageUrl, title, description, location, pri
                         <p className="short-description">{description}</p>  {/* Short description */}
                         <p className="location">Loc : {location}</p>  {/* Location */}
                         <p className="price">price : {price}</p>  {/* Price */}
-                        <button className="register-button">Register Now</button>  {/* Register button */}
+                        <button className="register-button bg-white">Register Now</button>  {/* Register button */}
                     </div>
                 </div>
             </div>

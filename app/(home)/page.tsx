@@ -18,6 +18,7 @@ import Section3 from "@/components/Home_Home_Section3";
 import Section2 from "@/components/Home_Home_Section2";
 import Section1 from "@/components/Home_Home_Section1";
 import { projects } from "@/lib/utils";
+import Section11 from "@/components/Home_Home_Section11";
 
 
 
@@ -280,15 +281,16 @@ const HomePage = () => {
         {/* <Home_MainSection /> */}
         {/* 1 */}
         {/* page ke upar page transition  */}
-        <div ref={PageKeUparTransitionMain} className="relative h-[300vh] max-sm:hidden">
+        <div ref={PageKeUparTransitionMain} className="relative h-[300vh] ">
           <Section1 scrollYProgress={scrollYProgress7} />
-          <div className="relative ">
+          <Section11 scrollYProgress={scrollYProgress7} />
+          {/* <div className="relative ">
             <Section2 scrollYProgress={scrollYProgress7} element2={element2} characters={characters} scrollYProgress3={scrollYProgress3} />
             <Section3 scrollYProgress={scrollYProgress7} element2={element22} characters={characters} scrollYProgress3={scrollYProgress32} />
-          </div>
+          </div> */}
         </div>
 
-        <div ref={homemaincardstackedcontainer} className="relative sm:hidden">
+        <div ref={homemaincardstackedcontainer} className="relative hidden">
           <div className="h-[100vh]">
           {/* <div className="relative flex h-screen w-full flex-col items-center justify-center gap-0 scale-x-150 scale-y-150">
             <img src="./Exodia.png" alt="" />
@@ -342,7 +344,7 @@ const HomePage = () => {
 
         {/* <div className="h-screen"></div> */}
         {/* 3 ccc*/}
-        <div ref={gallery} className="homeverticalParallax bg-black relative flex gap-[2vw] p-[2vw] box-border overflow-hidden h-[175vh]">
+        <div ref={gallery} className="homeverticalParallax glass relative flex gap-[2vw] p-[2vw] box-border overflow-hidden h-[175vh]">
           <Column images={[images[0], images[1], images[2], images[0], images[1], images[2]]} y={y} />
           <Column images={[images[3], images[4], images[5], images[3], images[4], images[5]]} y={y2} />
           <Column images={[images[6], images[7], images[8], images[6], images[7], images[8]]} y={y3} />
@@ -359,13 +361,13 @@ const HomePage = () => {
               const imagescale = useTransform(scrollYProgress6, [0, 1], [1, 0.5]);
               const scale = useTransform(scrollYProgress5, [i / projects.length, 1], [1, targetscale]);
               return <div ref={cardstackedCard} key={i} className="sticky top-0 flex justify-center items-center w-full h-[100vh] ">
-                <motion.div style={{ backgroundImage: project.color, backgroundSize: 'cover', backgroundPosition: 'center', scale, top: `calc(-0vh + ${i * 15}px)` }}
-                  className="flex flex-col relative top-[-25%] h-[700px] max-sm:h-[500px]  w-[1600px] max-sm:w-[350px] rounded-[25px] origin-top border-[1.7px] border-gold">
+                <motion.div style={{  backgroundSize: 'cover', backgroundPosition: 'center', scale, top: `calc(-0vh + ${i * 15}px)` }}
+                  className="glass flex flex-col relative top-[-25%] h-[700px] max-sm:h-[500px]  w-[1600px] max-sm:w-[350px] rounded-[25px] origin-top border-2 border-white/[0.2]">
 
-                  <div className="flex flex-col mt-4  gap-12 h-full text-[#FFD700]">
+                  <div className="flex flex-col mt-4  gap-12 h-full ">
 
                     <div>
-                      <p className={`${aboutNPfont11.className} text-[5rem] max-sm:text-[2.5rem]`}>{project.eventType}</p>
+                      <p className={`${aboutNPfont11.className} text-[5rem] max-sm:text-[2.5rem] home-card-text-outline`}>{project.eventType}</p>
                     </div>
 
                     <div
@@ -384,7 +386,7 @@ const HomePage = () => {
 
                               }}
                             >
-                              <Image src={event.imageUrl} className="border-2 border-gold rounded-2xl" alt="Event Image" layout="fill" objectFit="cover" />
+                              <Image src={event.imageUrl} className="border-2 border-white/[0.2] rounded-2xl" alt="Event Image" layout="fill" objectFit="cover" />
                             </motion.div>
                           </div>
 
@@ -406,12 +408,12 @@ const HomePage = () => {
         {/* <div className="h-screen bg-yellow-300"></div> */}
         {/* 5 */}
         <div ref={imagescontainer} className="h-[300vh]  relative">
-          <div className="bg-black  sticky overflow-hidden top-0  h-[100vh]">
+          <div className="  sticky overflow-hidden top-0  h-[100vh]">
             {
               pictures.map(({ src, scale }, i) => {
                 return <motion.div key={i} style={{ scale }} className=" absolute max-sm:top-[6rem] flex justify-center items-center w-full h-full">
                   <div className={`relative ${getImageContainerStyles(i)}`}>
-                    <Image src={src} alt="image" fill className="object-cover border rounded-2xl border-gold" />
+                    <Image src={src} alt="image" fill className="object-cover  rounded-2xl border-2 border-white/[0.2]" />
                   </div>
                 </motion.div>
               })
@@ -463,7 +465,7 @@ const HomePage = () => {
           </div>
           {/* <div className="bg-blue-300 h-screen"></div> */}
         </div>
-        <div className="bg-black h-screen text-white flex justify-center items-center text-[5rem]">
+        <div className="bg-purple-900 h-screen text-white flex justify-center items-center text-[5rem]">
           scroll down
         </div>
         {/* 9 */}
@@ -480,7 +482,7 @@ const HomePage = () => {
       >
         <div className='relative h-[calc(160vh+400px)] -top-[100vh]'>
           <div className='h-[calc(60vh+400px)] sticky top-[calc(100vh-400px-60vh)]'>
-            <div className="h-[60vh] bg-gold flex justify-center items-end">
+            <div className="h-[60vh] bg-white flex justify-center items-end">
               <CountdownTimer targetDate={futureDate} />
             </div>
             <Footer />

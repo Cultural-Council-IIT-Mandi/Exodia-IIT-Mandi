@@ -10,6 +10,7 @@ import { cn, navItems } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 import JoinExodiaForm from "../JoinExodiaForm";
+import { aboutNPfont11 } from "@/lib/font.utils";
 
 export const FloatingNav = ({
   // navItems,
@@ -80,18 +81,18 @@ export const FloatingNav = ({
                 key={`link=${idx}`}
                 href={navItem.link}
                 className={cn(
-                  "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+                  " home-card-text-outline relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
                 )}
               >
-                <span className="block sm:hidden">{navItem.icon}</span>
-                <span className="hidden sm:block text-sm">{navItem.name}</span>
+                {/* <span className="block sm:hidden">{navItem.icon}</span> */}
+                <span className={`text-lg text-white transition ${aboutNPfont11.className}`}>{navItem.name}</span>
               </Link>
-              {navItem.subItems && (
+              {/* {navItem.subItems && (
                 <Image src="/icons/custom/dropdown.svg" alt="Arrow Down" width={20} height={20} style={{ filter: 'invert(1)' }} />
-              )}
+              )} */}
             </div>
             {/* Dropdown Menu */}
-            {navItem.subItems && dropdownOpen === idx && (
+            {/* {navItem.subItems && dropdownOpen === idx && (
                 <div className=" border-2 border-white dark:border-white/[0.2] absolute top-full left-0 bg-gray-800 text-white  rounded-2xl shadow-lg  bg-white/10 backdrop-blur-md border-b border-white/20 transition-transform duration-300">
                   {navItem.subItems.map((subItem:any) => (
                     <a
@@ -103,13 +104,13 @@ export const FloatingNav = ({
                     </a>
                   ))}
                 </div>
-              )}
+              )} */}
           </div>
         ))}
-        <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+        {/* <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
           <span>{namex}</span>
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
-        </button>
+        </button> */}
         <div className="ml-2">
           <JoinExodiaForm />
         </div>

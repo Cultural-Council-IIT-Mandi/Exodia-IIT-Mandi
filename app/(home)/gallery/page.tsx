@@ -72,8 +72,8 @@ const page = () => {
       <FloatingNav namex="P" className="max-md:hidden" />
       <div className="absolute top-8 left-8 flex items-center justify-center">
         <Modal>
-          <ModalTrigger className="harry-text border border-yellow-300 flex justify-center group/modal-btn mt-10">
-            <span className="text-[1.3rem] group-hover/modal-btn:translate-x-40 text-yellow-300 text-center transition duration-500 harry-text">
+          <ModalTrigger className="harry-text border border-white flex justify-center group/modal-btn mt-10">
+            <span className="text-[1.3rem] group-hover/modal-btn:translate-x-40 text-white text-center transition duration-500 ">
               Hover here!
             </span>
             <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
@@ -131,13 +131,13 @@ const page = () => {
       </div>
       <div className="flex flex-col items-center px-20 py-12 mt-2">
         <header className="flex flex-col items-center z-[200] sm:static relative">
-          <h1 className={`font-bold text-gold mt-28  z-[900] text-[6rem] max-sm:text-[3rem] ${aboutNPfont11.className}`}>
+          <h1 className={`font-bold text-white mt-28  z-[900] text-[6rem] max-sm:text-[3rem] ${aboutNPfont11.className}`}>
             {/* <TextAnimation text="Gallery" /> */}
             Gallery
           </h1>
-          <div className={`text-white text-center text-[2rem]  mb-20 z-[900] ${aboutNPfont11.className}`}>
+          {/* <div className={`text-white text-center text-[2rem]  mb-20 z-[900] ${aboutNPfont11.className}`}>
             <TextAnimation text="Welcome to the Exodia IIT Mandi Gallery!" />
-          </div>
+          </div> */}
         </header>
         {/* <ImageRenderer onClick={onClick} images={images} /> */}
         <LoadMore onClick={onClick} />

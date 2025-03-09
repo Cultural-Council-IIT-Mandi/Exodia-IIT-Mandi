@@ -38,7 +38,7 @@ export default function JoinPage() {
       className="inline-block"
     >
       <button 
-        className="bg-gold hover:bg-yellow-600 text-black font-bold px-8 py-4 rounded-full text-xl shadow-lg shadow-gold/20 backdrop-blur-sm transition-all duration-300 transform hover:scale-105"
+        className="bg-white hover:bg-purple-300 text-black font-bold px-8 py-4 rounded-full text-xl shadow-lg shadow-white/20 backdrop-blur-sm transition-all duration-300 transform hover:scale-105"
         data-cursor-hover
       >
         Register Now
@@ -47,7 +47,7 @@ export default function JoinPage() {
   );
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen ">
       <Navbar />
       <FloatingNav namex="P" className="max-md:hidden" />
       
@@ -60,7 +60,7 @@ export default function JoinPage() {
         >
           {/* Hero section */}
           <div className="text-center mb-10">
-            <h1 className={`text-gold text-5xl mb-4 ${aboutNPfont11.className}`}>
+            <h1 className={`text-white text-5xl mb-4 ${aboutNPfont11.className}`}>
               Join The Exodia Community
             </h1>
             <p className="text-white/80 text-xl">
@@ -69,16 +69,16 @@ export default function JoinPage() {
           </div>
           
           {/* Fee Structure Card */}
-          <div className="bg-[#111]/90 border-2 border-yellow-300 rounded-2xl p-8 mb-8">
-            <h2 className={`text-gold text-3xl mb-6 ${aboutNPfont11.className}`}>Fee Structure</h2>
+          <div className="glass border-2 border-white/[0.2] rounded-3xl p-8 mb-8">
+            <h2 className={`text-white text-3xl mb-6 ${aboutNPfont11.className}`}>Fee Structure</h2>
             <div className="space-y-6">
               {/* Registration Fee */}
-              <div className="p-6 bg-black/50 rounded-lg border border-yellow-300/30">
-                <h3 className="text-gold text-2xl mb-3">Registration Fee</h3>
+              <div className="p-6 bg-black/50 rounded-2xl border-2 border-white/[0.2]">
+                <h3 className="text-white text-2xl mb-3">Registration Fee</h3>
                 <p className="text-white/80 text-xl mb-2">₹2449 per participant</p>
                 <p className="text-white/60 text-lg">(Non-refundable)</p>
                 <div className="mt-4">
-                  <h4 className="text-gold text-lg mb-2">Includes:</h4>
+                  <h4 className="text-white text-lg mb-2">Includes:</h4>
                   <ul className="text-white/80 grid md:grid-cols-2 gap-2">
                     <li>• ProNite passes</li>
                     <li>• Mess food</li>
@@ -90,18 +90,18 @@ export default function JoinPage() {
               </div>
 
               {/* Security Deposit */}
-              <div className="p-6 bg-black/50 rounded-lg border border-yellow-300/30">
-                <h3 className="text-gold text-2xl mb-3">Security Deposit</h3>
+              <div className="p-6 bg-black/50 rounded-3xl border-2 border-white/[0.2]">
+                <h3 className="text-white text-2xl mb-3">Security Deposit</h3>
                 <p className="text-white/80 text-xl mb-2">₹1000 per participant</p>
                 <p className="text-white/60">• Payable upon arrival at campus</p>
                 <p className="text-white/60">• Fully refundable after fest conclusion</p>
               </div>
 
               {/* Accommodation Details */}
-              <div className="p-6 bg-black/50 rounded-lg border border-yellow-300/30">
-                <h3 className="text-gold text-2xl mb-3">Accommodation Period</h3>
+              <div className="p-6 bg-black/50 rounded-2xl border-2 border-white/[0.2]">
+                <h3 className="text-white text-2xl mb-3">Accommodation Period</h3>
                 <p className="text-white/80">
-                  From <span className="text-gold">3:00 PM, 17th April</span> to <span className="text-gold">7:00 AM, 21st April 2025</span>
+                  From <span className="text-white">3:00 PM, 17th April</span> to <span className="text-white">7:00 AM, 21st April 2025</span>
                 </p>
               </div>
 
@@ -114,19 +114,19 @@ export default function JoinPage() {
           </div>
           
           {/* Perks Section */}
-          <div className="bg-[#111]/90 border-2 border-yellow-300 rounded-2xl p-8 mb-8">
-            <h2 className={`text-gold text-3xl mb-6 ${aboutNPfont11.className}`}>Perks & Benefits</h2>
+          <div className="glass border-2 border-white/[0.2] rounded-2xl p-8 mb-8">
+            <h2 className={`text-white text-3xl mb-6 ${aboutNPfont11.className}`}>Perks & Benefits</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="p-4 bg-black/50 rounded-lg border border-yellow-300/30">
-                <h3 className="text-gold text-xl mb-2">Networking</h3>
+              <div className="p-4 bg-black/50 rounded-2xl border-2 border-white/[0.2]">
+                <h3 className="text-white text-xl mb-2">Networking</h3>
                 <p className="text-white/80">Connect with students from across India</p>
               </div>
-              <div className="p-4 bg-black/50 rounded-lg border border-yellow-300/30">
-                <h3 className="text-gold text-xl mb-2">Learning</h3>
+              <div className="p-4 bg-black/50 rounded-2xl border-2 border-white/[0.2]">
+                <h3 className="text-white text-xl mb-2">Learning</h3>
                 <p className="text-white/80">Participate in workshops and competitions</p>
               </div>
-              <div className="p-4 bg-black/50 rounded-lg border border-yellow-300/30">
-                <h3 className="text-gold text-xl mb-2">Entertainment</h3>
+              <div className="p-4 bg-black/50 rounded-2xl border-2 border-white/[0.2]">
+                <h3 className="text-white text-xl mb-2">Entertainment</h3>
                 <p className="text-white/80">Enjoy star performances and cultural shows</p>
               </div>
             </div>

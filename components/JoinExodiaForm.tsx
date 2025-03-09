@@ -15,7 +15,7 @@ const JoinExodiaForm = () => {
   return (
     <Link href="/join">
       <button 
-        className="border-2  text-gold hover:bg-gold hover:text-black transition-all duration-300 font-medium px-4 py-2 rounded-full "
+        className="border-2 home-card-text-outline text-white hover:bg-white hover:text-black transition-all duration-300 font-medium px-4 py-2 rounded-full "
         data-cursor-hover
       >
         Join Exodia
