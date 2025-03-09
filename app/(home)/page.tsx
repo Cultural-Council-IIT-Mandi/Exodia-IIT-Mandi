@@ -148,61 +148,6 @@ const HomePage = () => {
 
   {/* crads stacked animation  */ }
 
-  const homemaincardstackedcontainer = useRef<HTMLDivElement>(null);
-  const { scrollYProgress: scrollYProgress9 } = useScroll({
-    target: homemaincardstackedcontainer,
-    offset: ['start start', 'end end']
-  });
-  const homeprojects = [
-    {
-      eventType: "Photography",
-      color: "url('/assets/homefirst/download.jpeg')",
-      events: [
-        {
-          name: "Matthias Leidinger",
-          imageUrl: "/assets/homethird/rock.jpg",
-          description: "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent.",
-        },
-        {
-          name: "Clément Chapillon",
-          imageUrl: "/assets/homethird/tree.jpg",
-          description: "French photographer Clément Chapillon explores the intersection of reality and imagination in his latest project.",
-        },
-        {
-          name: "Zissou",
-          imageUrl: "/assets/homethird/water.jpg",
-          description: "Zissou captures the essence of Bali, blending sacred and mundane moments into captivating photographic narratives.",
-        },
-      ],
-    },
-    {
-      eventType: "Art Exhibitions",
-      color: "url('/assets/homefirst/download.jpeg')",
-      events: [
-        {
-          name: "Van Gogh's Legacy",
-          imageUrl: "/assets/homethird/rock.jpg",
-          description: "An exhibition showcasing the influence of Van Gogh's work on modern artists.",
-        },
-        {
-          name: "Futuristic Visions",
-          imageUrl: "/assets/homethird/tree.jpg",
-          description: "A dive into the future of art through digital media and experimental techniques.",
-        },
-        {
-          name: "Abstract Realms",
-          imageUrl: "/assets/homethird/water.jpg",
-          description: "An exploration of abstract art and its impact on human perception.",
-        },
-        {
-          name: "AI in 2025",
-          imageUrl: "/assets/homethird/rock.jpg",
-          description: "Exploring the latest breakthroughs in artificial intelligence and machine learning.",
-        },
-      ],
-    },
-  ];
-
   const maincardstackedcontainer = useRef<HTMLDivElement>(null);
   const { scrollYProgress: scrollYProgress5 } = useScroll({
     target: maincardstackedcontainer,
@@ -290,57 +235,6 @@ const HomePage = () => {
           </div> */}
         </div>
 
-        <div ref={homemaincardstackedcontainer} className="relative hidden">
-          <div className="h-[100vh]">
-          {/* <div className="relative flex h-screen w-full flex-col items-center justify-center gap-0 scale-x-150 scale-y-150">
-            <img src="./Exodia.png" alt="" />
-          </div> */}
-          </div>
-          {
-            homeprojects.map((project, i) => {
-              const targetscale = 1 - ((homeprojects.length - i) * 0.05);
-              // const imagescale = useTransform(scrollYProgress6, [0, 1], [1, 0.5]);
-              const scale = useTransform(scrollYProgress9, [i / homeprojects.length, 1], [1, targetscale]);
-              return <div ref={cardstackedCard} key={i} className="sticky top-0 flex justify-center items-center w-full h-[100vh]">
-                <motion.div style={{ backgroundImage: project.color, backgroundSize: 'cover', backgroundPosition: 'center', scale, top: `calc(-0vh + ${i * 30}px)` }}
-                  className="flex flex-col relative top-[-25%] h-[700px] max-sm:h-[500px]  w-[1600px] max-sm:w-[350px] rounded-[25px] origin-top">
-                  <div className="flex flex-col mt-4  gap-12 h-full text-[#cba135]">
-                    <div>
-                      <p className={`${aboutNPfont11.className} text-[5rem] max-sm:text-[2.5rem]`}>{project.eventType}</p>
-                    </div>
-
-                    <div
-                      className={`grid gap-10 max-sm:gap-0 w-full h-full`}
-                      style={{
-                        gridTemplateColumns: `repeat(${project.events.length}, minmax(0, 1fr))`,
-                      }}
-                    >
-                      {project.events.map((event, index) => (
-                        <div key={index} className="  h-full rounded-2xl flex flex-col items-center">
-                          <div className=" relative rounded-2xl w-[80%] h-[80%] overflow-hidden ">
-                            <motion.div
-                              className=" rounded-2xl w-full h-full"
-                              style={{
-                                // scale: imagescale,
-
-                              }}
-                            >
-                              <Image src={event.imageUrl} className="border-2 border-gold rounded-2xl" alt="Event Image" layout="fill" objectFit="cover" />
-                            </motion.div>
-                          </div>
-
-                          <div className="relative mt-2 text-center ">
-                            <p className={`text-[2rem] max-sm:text-[0.8rem] ${aboutNPfont11.className}`}>{event.name}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-            })
-          }
-        </div>
 
         {/* <div className="h-screen"></div> */}
         {/* 3 ccc*/}
