@@ -104,11 +104,11 @@ const HomePage = () => {
   const scale9 = useTransform(scrollYProgress4, [0, 1], [1, 9]);
   const pictures = [
     {
-      src: "/assets/exodia-gallery-images/DSC_0373.JPG",
+      src: "/assets/exodia-gallery-images/DSC_0373.jpg",
       scale: scale4
     },
     {
-      src: "/assets/exodia-gallery-images/DSC07253.JPG",
+      src: "/assets/exodia-gallery-images/DSC07253.jpg",
       scale: scale5
     },
     {
@@ -116,7 +116,7 @@ const HomePage = () => {
       scale: scale6
     },
     {
-      src: "/assets/exodia-gallery-images/DSC07223.JPG",
+      src: "/assets/exodia-gallery-images/DSC07223.jpg",
       scale: scale5
     },
     {
@@ -128,7 +128,7 @@ const HomePage = () => {
       scale: scale8
     },
     {
-      src: "/assets/exodia-gallery-images/DSC06940.JPG",
+      src: "/assets/exodia-gallery-images/DSC06940.jpg",
       scale: scale9
     }
   ]
