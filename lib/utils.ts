@@ -1689,7 +1689,6 @@ export const announcements = [
 export  const projects = [
   {
     eventType: "Photography",
-    color: "url('/assets/homefirst/download.jpeg')",
     events: [
       {
         name: "Matthias Leidinger",
@@ -1710,7 +1709,6 @@ export  const projects = [
   },
   {
     eventType: "Art Exhibitions",
-    color: "url('/assets/homefirst/download.jpeg')",
     events: [
       {
         name: "Van Gogh's Legacy",
@@ -1736,7 +1734,6 @@ export  const projects = [
   },
   {
     eventType: "Technology Conferences",
-    color: "url('/assets/homefirst/download.jpeg')",
     events: [
       {
         name: "AI in 2025",
@@ -1757,7 +1754,6 @@ export  const projects = [
   },
   {
     eventType: "Photography",
-    color: "url('/assets/homefirst/download.jpeg')",
     events: [
       {
         name: "Matthias Leidinger",
@@ -1778,7 +1774,6 @@ export  const projects = [
   },
   {
     eventType: "Art Exhibitions",
-    color: "url('/assets/homefirst/download.jpeg')",
     events: [
       {
         name: "Van Gogh's Legacy",
@@ -1804,7 +1799,6 @@ export  const projects = [
   },
   {
     eventType: "Technology Conferences",
-    color: "url('/assets/homefirst/download.jpeg')",
     events: [
       {
         name: "AI in 2025",
@@ -1825,7 +1819,6 @@ export  const projects = [
   },
   {
     eventType: "Art Exhibitions",
-    color: "url('/assets/homefirst/download.jpeg')",
     events: [
       {
         name: "Van Gogh's Legacy",
@@ -1851,7 +1844,6 @@ export  const projects = [
   },
   {
     eventType: "Art Exhibitions",
-    color: "url('/assets/homefirst/download.jpeg')",
     events: [
       {
         name: "Van Gogh's Legacy",
@@ -1877,7 +1869,6 @@ export  const projects = [
   },
   {
     eventType: "Technology Conferences",
-    color: "url('/assets/homefirst/download.jpeg')",
     events: [
       {
         name: "AI in 2025",
