@@ -3,7 +3,7 @@
 import { useInView } from "react-intersection-observer";
 import Image, { StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
-import { ImageRenderer } from "./ImageRenderer";
+import { ImageRenderer } from "./Gallery_ImageRenderer";
 
 import img1 from "../public/assets/exodia-gallery-images/DSC06940.jpg";
 import img2 from "../public/assets/exodia-gallery-images/DSC_0372.jpg";

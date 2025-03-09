@@ -3,7 +3,7 @@ import React, { Suspense, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plane, Train, Bus, MapPin, Navigation } from 'lucide-react';
-import { TabsDemo } from '@/components/DisplayTabs';
+import { TabsDemo } from '@/components/HowtoReach_DisplayTabs';
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalTrigger } from '@/components/ui/animated-modal';
 import Image from 'next/image';
 import { CoolMode } from '@/components/ui/cool-mode';

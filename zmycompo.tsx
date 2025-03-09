@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { Home_JoinSection } from "@/components/Home_JoinSection";
 import Navbar from "@/components/Navbar";
-import ArrowButton from "@/components/Button";
+import ArrowButton from "@/components/Event_Button";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { HomeEvents } from "@/components/HomeEvents";
 import Home_MainSection from "@/components/Home_MainSection";
@@ -25,11 +25,11 @@ import HomeEventCrousalPihu2 from "@/components/HomeEventCrousalPihu2";
 import { CarouselComponentPihu } from "@/components/Event_CarouselPihu";
 import HomeEventCrousalPihu3 from "@/components/HomeEventCrousalPihu3";
 import HomeEventCrousalPihu4 from "@/components/HomeEventCrousalPihu4";
-import ParticlesBackground from "@/components/ParticlesBackground";
+import ParticlesBackground from "@/components/Background_Particles";
 
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-import AnimatedComponent from "@/components/ParralaxHomeGallery";
+import AnimatedComponent from "@/components/Home_ParralaxHomeGallery";
 import ParallaxScroll from "@/components/zzzzzzz";
 import Lenis from '@studio-freight/lenis';
 

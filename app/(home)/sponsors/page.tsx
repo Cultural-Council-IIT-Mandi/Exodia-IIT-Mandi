@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import Sponsors from '../../../components/Sponsors';
-import Spomsors_section from '@/components/Spomsors_section';
+import Spomsors_section from '@/components/Sponsors_section';
 import Navbar from '@/components/Navbar';
 import { FloatingNav } from '@/components/ui/floating-navbar';
 import { navItems } from '@/lib/utils';

@@ -7,7 +7,7 @@ import "yet-another-react-lightbox/styles.css";
 import { Fullscreen, Zoom, Thumbnails, Captions } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/captions.css";
-import LoadMore from "@/components/LoadMore";
+import LoadMore from "@/components/Gallery_LoadMore";
 // import { ImageRenderer } from "@/components/ImageRenderer";
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalTrigger } from "@/components/ui/animated-modal";
 import Image from "next/image";

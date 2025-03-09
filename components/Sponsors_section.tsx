@@ -1,5 +1,5 @@
 import React from 'react'
-import Spomsors_Card from './Spomsors_Card'
+import Spomsors_Card from './Sponsors_Card'
 import { SponList } from '@/lib/utils'
 import { aboutNPfont, aboutNPfont11 } from '@/lib/font.utils'
 

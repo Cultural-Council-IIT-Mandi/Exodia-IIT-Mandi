@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BackgroundGradientAnimation } from "./ui/background-gradient-animation";
-import ArrowButton from "./Button";
+import ArrowButton from "./Event_Button";
 import Home_EventsSection from "./Home_EventsSection";
 import { CarouselComponentPihu } from "./Event_CarouselPihu";
 
