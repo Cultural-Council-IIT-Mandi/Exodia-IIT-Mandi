@@ -42,7 +42,7 @@ export default function RootLayout({
             {/* <CustomCursorAnshul /> */}
             {/* <ParticlesBackground /> */}
             {/* // deploy check  */}
-            {/* <BackgroundBlobs /> */}
+            <BackgroundBlobs />
             {children}
           </div>
         </ClientLoader>
