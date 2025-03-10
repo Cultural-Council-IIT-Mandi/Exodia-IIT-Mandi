@@ -32,8 +32,8 @@ const HomePage = () => {
 
   // vertical moving images on scroll 
   const images = [
-    "DSC07047.JPG", "DSC07218.JPG", "DSC07252.JPG", "DSC08347.JPG", "DSC08403.JPG", "DSC08481.JPG",
-    "LEH07282.JPG", "DSC08503.JPG", "DSC07243.JPG", "DSC06940.JPG", "DSC08482.JPG", "LEH07282.JPG"
+    "DSC07046.jpg", "DSC07220.jpg", "DSC07252.jpg", "DSC08347.jpg", "DSC08403.jpg", "DSC08481.jpg",
+    "LEH07282.jpg", "DSC08487.jpg", "DSC07249.jpg", "DSC06940.jpg", "DSC08482.jpg", "LEH07282.jpg"
   ];
 
   const gallery = useRef<HTMLDivElement>(null);
