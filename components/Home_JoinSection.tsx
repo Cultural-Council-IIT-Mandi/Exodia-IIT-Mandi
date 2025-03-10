@@ -9,7 +9,9 @@ import { aboutNPfont } from "@/lib/font.utils";
 
 export function Home_JoinSection() {
   const images = [
-    "/assets/exodia-gallery-images/DSC07046.jpg",
+    // "/assets/exodia-gallery-images/DSC07046.jpg",
+    // deploy check
+    "/assets/exodia-gallery-images/DSC06940.jpg",
   ];
   return (
     <ImagesSlider className="h-[40rem] max-sm:h-[20rem] max-sm:rounded-xl mx-[100px] max-2xl:mx-[80px] max-xl:mx-[70px] max-lg:mx-[60px] max-md:mx-[40px] max-sm:mx-[20px] border-2 border-yellow-300" images={images}>

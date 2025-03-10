@@ -102,29 +102,60 @@ const HomePage = () => {
   const scale6 = useTransform(scrollYProgress4, [0, 1], [1, 6]);
   const scale8 = useTransform(scrollYProgress4, [0, 1], [1, 8]);
   const scale9 = useTransform(scrollYProgress4, [0, 1], [1, 9]);
+  // deploy heck
+  // const pictures = [
+  //   {
+  //     src: "/assets/exodia-gallery-images/DSC_0373.jpg",
+  //     scale: scale4
+  //   },
+  //   {
+  //     src: "/assets/exodia-gallery-images/DSC07253.jpg",
+  //     scale: scale5
+  //   },
+  //   {
+  //     src: "/assets/exodia-gallery-images/LEH07282.jpg",
+  //     scale: scale6
+  //   },
+  //   {
+  //     src: "/assets/exodia-gallery-images/DSC07223.jpg",
+  //     scale: scale5
+  //   },
+  //   {
+  //     src: "/assets/exodia-gallery-images/DSC08403.jpg",
+  //     scale: scale6
+  //   },
+  //   {
+  //     src: "/assets/exodia-gallery-images/DSC08482.jpg",
+  //     scale: scale8
+  //   },
+  //   {
+  //     src: "/assets/exodia-gallery-images/DSC06940.jpg",
+  //     scale: scale9
+  //   }
+  // ]
   const pictures = [
     {
-      src: "/assets/exodia-gallery-images/DSC_0373.jpg",
+      src: "/assets/exodia-gallery-images/DSC06940.jpg",
       scale: scale4
     },
     {
-      src: "/assets/exodia-gallery-images/DSC07253.jpg",
+      src: "/assets/exodia-gallery-images/DSC06940.jpg",
       scale: scale5
     },
     {
-      src: "/assets/exodia-gallery-images/LEH07282.jpg",
+      src: "/assets/exodia-gallery-images/DSC06940.jpg",
       scale: scale6
     },
     {
-      src: "/assets/exodia-gallery-images/DSC07223.jpg",
+      src: "/assets/exodia-gallery-images/DSC06940.jpg",
       scale: scale5
     },
     {
-      src: "/assets/exodia-gallery-images/DSC08403.jpg",
+      src: "/assets/exodia-gallery-images/DSC06940.jpg",
       scale: scale6
     },
     {
-      src: "/assets/exodia-gallery-images/DSC08482.jpg",
+      src: "/assets/exodia-gallery-images/DSC06940.jpg",
       scale: scale8
     },
     {

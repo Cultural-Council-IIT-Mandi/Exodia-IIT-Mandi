@@ -1564,6 +1564,40 @@ export const ScheduleEventList = [
 
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// deploy check
+// export const AboutPrevGuestData = [
+//   {
+//     title: "Itachi Uchia",
+//     src: "/assets/about/prevguest/g1.JPG",
+//   },
+//   {
+//     title: "Madara Uchiha",
+//     src: "/assets/about/prevguest/g2.JPG",
+//   },
+//   {
+//     title: "Levi Ackerman",
+//     src: "/assets/about/prevguest/g3.JPG",
+//   },
+ 
+//   {
+//     title: "Radhe Karn",
+//     src: "/assets/about/prevguest/g4.JPG",
+//   },
+//   {
+//     title: "Kai Sakamuru",
+//     src: "/assets/about/prevguest/g5.JPG",
+//   },
+//   {
+//     title: "Gojo Saturo",
+//     src: "/assets/about/prevguest/g6.JPG",
+//   },
+//   {
+//       title: "Kakashi Hatake",
+//       src: "/assets/about/prevguest/g7.JPG",
+//     },
+// ];
+
+
 
 export const AboutPrevGuestData = [
   {
@@ -1572,31 +1606,30 @@ export const AboutPrevGuestData = [
   },
   {
     title: "Madara Uchiha",
-    src: "/assets/about/prevguest/g2.JPG",
+    src: "/assets/about/prevguest/g1.JPG",
   },
   {
     title: "Levi Ackerman",
-    src: "/assets/about/prevguest/g3.JPG",
+    src: "/assets/about/prevguest/g1.JPG",
   },
  
   {
     title: "Radhe Karn",
-    src: "/assets/about/prevguest/g4.JPG",
+    src: "/assets/about/prevguest/g1.JPG",
   },
   {
     title: "Kai Sakamuru",
-    src: "/assets/about/prevguest/g5.JPG",
+    src: "/assets/about/prevguest/g1.JPG",
   },
   {
     title: "Gojo Saturo",
-    src: "/assets/about/prevguest/g6.JPG",
+    src: "/assets/about/prevguest/g1.JPG",
   },
   {
       title: "Kakashi Hatake",
-      src: "/assets/about/prevguest/g7.JPG",
+      src: "/assets/about/prevguest/g1.JPG",
     },
 ];
-
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
