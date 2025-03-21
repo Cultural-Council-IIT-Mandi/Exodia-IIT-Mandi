@@ -2,7 +2,6 @@
 import React from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-// import './component/page.css'
 import Contact_Card from '@/components/Contact_Card'
 import { aboutNPfont, aboutNPfont11 } from '@/lib/font.utils'
 

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-// import CustomCursor from "@/components/CustomCursor";
 import ClientLoader from "@/components/ClientLoader";
 import localFont from 'next/font/local'
 import CustomCursorAnshul from "@/components/CustomCursorAnshul";
@@ -34,11 +33,8 @@ export default function RootLayout({
     // <ClerkProvider>
     <html lang="en">
       <body className="dark">
-             {/* <P5Background /> */}
-             {/* <P5StarsBackground /> */}
         <ClientLoader>
           <div   className={myNewFont.className}>
-            {/* <CustomCursor /> */}
             {/* <CustomCursorAnshul /> */}
             {/* <ParticlesBackground /> */}
             {/* // deploy check  */}

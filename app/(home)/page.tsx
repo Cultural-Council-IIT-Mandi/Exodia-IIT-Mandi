@@ -254,7 +254,6 @@ const HomePage = () => {
         <Navbar />
 
         <FloatingNav namex="P" className="max-md:hidden" />
-        {/* <Home_MainSection /> */}
         {/* 1 */}
         {/* page ke upar page transition  */}
         <div ref={PageKeUparTransitionMain} className="relative h-[300vh] ">

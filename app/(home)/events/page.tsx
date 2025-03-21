@@ -1,24 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-// import SwiperComponent from "@/components/Event_EventsSwiper";  // DEPLOYMENT FIX
-// import { Vortex } from "@/components/ui/vortex";
-// import Card from "@/components/Event_Card";
 import AllCards from "@/components/Event_AllCards";
-// import ArrowButton from "@/components/Button";
 
 import Link from "next/link";
-// import { HomeEvents } from "@/components/HomeEvents";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { FloatingNav } from "@/components/ui/floating-navbar";
-// import { navItems } from "@/lib/utils";
-// import Image from "next/image";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { aboutNPfont, aboutNPfont11 } from "@/lib/font.utils";
-// import EventCrousel2 from "@/components/EventCrousel2";
-// import { CarouselComponentPihu } from "@/components/Event_CarouselPihu";
-// import Expandable from "@/components/animata/carousel/expandable";
 import HomeEventCrousalPihu3 from "@/components/HomeEventCrousalPihu3";
 
 import Lenis from '@studio-freight/lenis';
@@ -61,13 +50,6 @@ const pageVariants = {
 
 const Page = () => {
 
-  // // Reset scroll position to left when the page loads
-  // useEffect(() => {
-  //   // window.scrollTo(0, 0); // DEPLOYMENT FIX
-  //   if (typeof window !== 'undefined') {
-  //     window.scrollTo(0, 0);
-  //   }
-  // }, []);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
   useEffect(() => {
       const lenis = new Lenis();
@@ -100,22 +82,11 @@ const Page = () => {
             <div className={`mt-[8rem]  max-sm:mt-[4rem] ${aboutNPfont11.className} text-white text-[6rem] max-2xl:text-[6rem] max-xl:text-[5rem] max-lg:text-[5rem] max-md:text-[4rem] max-sm:text-[3rem]`}>
               Events
             </div>
-            {/* <div className="mt-[7rem] max-sm:mt-[1rem] transform scale-100 md:scale-80 max-sm:scale-60"> */}
-              {/* <SwiperComponent /> */}  {/* DEPLOYMENT FIX */}
-              {/* <EventCrousel2 /> */} 
-            {/* </div> */}
-            
-              {/* <Expandable/> */}
               <HomeEventCrousalPihu3 />
-      
           </div>
 
-          {/* <div className={`w-full h-[20vh] max-sm:h-[10vh] flex justify-center items-end ${aboutNPfont11.className}`}>
-            <TypewriterEffect words={words} />
-          </div> */}
 
           <div className="w-full" id="maineventbody">
-            {/* <Image src="/assets/event_assets/evbg.png" alt="bg" width={100} height={100} className='absolute object-fill w-full mx-auto h-full' /> */}
             <div className="text-white text-4xl md:text-6xl text-center mt-[5rem] mb-[5rem] max-sm:mb-[2rem] max-sm:mt-[2rem] z-10"
               style={{ color: "white", fontFamily: "B2" }}>
               Events

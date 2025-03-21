@@ -4,7 +4,6 @@ import Navbar from '@/components/Navbar';
 import { FloatingNav } from '@/components/ui/floating-navbar';
 import { navItems } from '@/lib/utils';
 import Footer from '@/components/Footer';
-import ScheduleSection from '@/components/Schedule-section';
 import ScheduleSectionPihu from '@/components/ScheduleSectionPihu';
 
 
@@ -18,7 +17,6 @@ const Page: React.FC = () => {
 
       <FloatingNav  namex="P" className="max-md:hidden" />
       <main>
-      {/* <ScheduleSection /> */}
       <ScheduleSectionPihu />
       </main>
       <Footer />
