@@ -102,60 +102,30 @@ const HomePage = () => {
   const scale6 = useTransform(scrollYProgress4, [0, 1], [1, 6]);
   const scale8 = useTransform(scrollYProgress4, [0, 1], [1, 8]);
   const scale9 = useTransform(scrollYProgress4, [0, 1], [1, 9]);
-  // deploy heck
-  // const pictures = [
-  //   {
-  //     src: "/assets/exodia-gallery-images/DSC_0373.jpg",
-  //     scale: scale4
-  //   },
-  //   {
-  //     src: "/assets/exodia-gallery-images/DSC07253.jpg",
-  //     scale: scale5
-  //   },
-  //   {
-  //     src: "/assets/exodia-gallery-images/LEH07282.jpg",
-  //     scale: scale6
-  //   },
-  //   {
-  //     src: "/assets/exodia-gallery-images/DSC07223.jpg",
-  //     scale: scale5
-  //   },
-  //   {
-  //     src: "/assets/exodia-gallery-images/DSC08403.jpg",
-  //     scale: scale6
-  //   },
-  //   {
-  //     src: "/assets/exodia-gallery-images/DSC08482.jpg",
-  //     scale: scale8
-  //   },
-  //   {
-  //     src: "/assets/exodia-gallery-images/DSC06940.jpg",
-  //     scale: scale9
-  //   }
-  // ]
+  // deploy check
   const pictures = [
     {
-      src: "/assets/exodia-gallery-images/DSC06940.jpg",
+      src: "/assets/exodia-gallery-images/DSC_0373.jpg",
       scale: scale4
     },
     {
-      src: "/assets/exodia-gallery-images/DSC06940.jpg",
+      src: "/assets/exodia-gallery-images/DSC07253.jpg",
       scale: scale5
     },
     {
-      src: "/assets/exodia-gallery-images/DSC06940.jpg",
+      src: "/assets/exodia-gallery-images/LEH07282.jpg",
       scale: scale6
     },
     {
-      src: "/assets/exodia-gallery-images/DSC06940.jpg",
+      src: "/assets/exodia-gallery-images/DSC07223.jpg",
       scale: scale5
     },
     {
-      src: "/assets/exodia-gallery-images/DSC06940.jpg",
+      src: "/assets/exodia-gallery-images/DSC08403.jpg",
       scale: scale6
     },
     {
-      src: "/assets/exodia-gallery-images/DSC06940.jpg",
+      src: "/assets/exodia-gallery-images/DSC08482.jpg",
       scale: scale8
     },
     {
@@ -163,6 +133,36 @@ const HomePage = () => {
       scale: scale9
     }
   ]
+  // const pictures = [
+  //   {
+  //     src: "/assets/exodia-gallery-images/DSC06940.jpg",
+  //     scale: scale4
+  //   },
+  //   {
+  //     src: "/assets/exodia-gallery-images/DSC06940.jpg",
+  //     scale: scale5
+  //   },
+  //   {
+  //     src: "/assets/exodia-gallery-images/DSC06940.jpg",
+  //     scale: scale6
+  //   },
+  //   {
+  //     src: "/assets/exodia-gallery-images/DSC06940.jpg",
+  //     scale: scale5
+  //   },
+  //   {
+  //     src: "/assets/exodia-gallery-images/DSC06940.jpg",
+  //     scale: scale6
+  //   },
+  //   {
+  //     src: "/assets/exodia-gallery-images/DSC06940.jpg",
+  //     scale: scale8
+  //   },
+  //   {
+  //     src: "/assets/exodia-gallery-images/DSC06940.jpg",
+  //     scale: scale9
+  //   }
+  // ]
   const getImageContainerStyles = (index: number) => {
     const styles = [
       "w-[25vw] h-[25vh] max-sm:top-[2vh]", // Default
@@ -256,27 +256,21 @@ const HomePage = () => {
         <FloatingNav namex="P" className="max-md:hidden" />
         {/* 1 */}
         {/* page ke upar page transition  */}
-        <div ref={PageKeUparTransitionMain} className="relative h-[300vh] ">
+        <div ref={PageKeUparTransitionMain} className="relative h-[100vh] ">
           <Section1 scrollYProgress={scrollYProgress7} />
-          <Section11 scrollYProgress={scrollYProgress7} />
-          {/* <div className="relative ">
-            <Section2 scrollYProgress={scrollYProgress7} element2={element2} characters={characters} scrollYProgress3={scrollYProgress3} />
-            <Section3 scrollYProgress={scrollYProgress7} element2={element22} characters={characters} scrollYProgress3={scrollYProgress32} />
-          </div> */}
+          {/* <Section11 scrollYProgress={scrollYProgress7} /> */}
         </div>
 
 
-        {/* <div className="h-screen"></div> */}
         {/* 3 ccc*/}
         <div ref={gallery} className="homeverticalParallax glass relative flex gap-[2vw] p-[2vw] box-border overflow-hidden h-[175vh]">
-          <Column images={[images[0], images[1], images[2], images[0], images[1], images[2]]} y={y} />
-          <Column images={[images[3], images[4], images[5], images[3], images[4], images[5]]} y={y2} />
-          <Column images={[images[6], images[7], images[8], images[6], images[7], images[8]]} y={y3} />
-          <Column images={[images[9], images[10], images[11], images[9], images[10], images[11]]} y={y4} />
+          <Column images={[images[0], images[1], images[2], images[11], images[1]]} y={y} />
+          <Column images={[images[3], images[4], images[5], images[3], images[4]]} y={y2} />
+          <Column images={[images[6], images[7], images[8], images[9], images[10]]} y={y3} />
+          {/* <Column images={[images[9], images[10], images[11], images[9], images[10], images[11]]} y={y4} /> */}
         </div>
 
         {/* crads stacked animation  */}
-        {/* <div className="h-screen"></div> */}
         {/* 4 */}
         <div ref={maincardstackedcontainer} className="mt-[0vh] pb-[10vh]  relative">
           {
@@ -329,7 +323,6 @@ const HomePage = () => {
           }
         </div>
 
-        {/* <div className="h-screen bg-yellow-300"></div> */}
         {/* 5 */}
         <div ref={imagescontainer} className="h-[300vh]  relative">
           <div className="  sticky overflow-hidden top-0  h-[100vh]">
@@ -368,13 +361,10 @@ const HomePage = () => {
           </div>
         </div>
         {/* 6 */}
-        {/* <div className="bg-blue-300 h-screen"></div> */}
         {/* 9 */}
         <div ref={textZoomToVideocontainer} className="relative h-[300vh] bg-white">
           <div
             ref={textZoomToVideostickyMask}
-
-
             className="flex overflow-hidden sticky top-0 h-screen items-center justify-center"
             style={{
               WebkitMaskImage: "url('/assets/homefifth/EXODIA.svg')",
@@ -387,7 +377,6 @@ const HomePage = () => {
               <source src="/assets/homefifth/nature.mp4" type="video/mp4" />
             </video>
           </div>
-          {/* <div className="bg-blue-300 h-screen"></div> */}
         </div>
         <div className="bg-purple-900 h-screen text-white flex justify-center items-center text-[5rem]">
           scroll down

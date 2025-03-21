@@ -4,10 +4,12 @@ import Link from 'next/link'
 
 
 const Section1 = ({ scrollYProgress }: { scrollYProgress: any }) => {
-    const scale = useTransform(scrollYProgress, [0, 1 / 3], [1, 0]);
-    const rotate = useTransform(scrollYProgress, [0, 2 / 3], [0, -5])
+    // const scale = useTransform(scrollYProgress, [0, 1 / 3], [1, 0]);
+    // const rotate = useTransform(scrollYProgress, [0, 2 / 3], [0, -5])
     return (
-      <motion.div style={{ scale }} className="sticky top-0 h-screen text-[3.5vw] flex flex-col items-center justify-center text-white pb-[10vh]">
+      <motion.div 
+      // style={{ scale }} 
+      className="sticky top-0 h-screen text-[3.5vw] flex flex-col items-center justify-center text-white pb-[10vh]">
   
         <div className="flex flex-col items-center justify-center relative h-[100vh] w-full z-[900] ">
           <motion.div

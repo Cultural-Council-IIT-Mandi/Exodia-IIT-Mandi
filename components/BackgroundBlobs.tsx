@@ -207,7 +207,7 @@ const BackgroundBlobs = () => {
       ) : (
         // Full Background for Larger Screens
         <>
-//       {/* Top left blob */}
+      {/* Top left blob */}
       <motion.div
         className="absolute w-[500px] h-[500px] left-0 top-0 rounded-full bg-purple-700/30 blur-3xl"
         animate={{

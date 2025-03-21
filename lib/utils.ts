@@ -58,10 +58,10 @@ export const navItems = [
     name: "Events",
     link: "/events",
   },
-  {
-    name: "Schedule",
-    link: "/schedule",
-  },
+  // {
+  //   name: "Schedule",
+  //   link: "/schedule",
+  // },
   {
     name: "Gallery",
     link: "/gallery",
@@ -82,14 +82,14 @@ export const navItems = [
   //   name: "About",
   //   link: "/about",
   // },
-  // {
-  //   name: "Team",
-  //   link: "/team",
-  //   subItems: [
-  //     { name: "Core Team", link: "/team" },
-  //     { name: "Developers", link: "/developers" },
-  //   ],
-  // },
+  {
+    name: "Team",
+    link: "/team",
+    // subItems: [
+    //   { name: "Core Team", link: "/team" },
+    //   { name: "Developers", link: "/developers" },
+    // ],
+  },
   {
     name: "Contact",
     link: "/contact",
@@ -936,7 +936,6 @@ export const teamsList = [
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/vishal-kumar-gupta-b5a664252/' },
           { name: 'instagram', link: 'https://www.instagram.com/bitchaal/' },
-          { name: 'whatsapp', link: '7739301036' },
           { name: 'email', link: 'B22339@students.iitmandi.ac.in' },
         ],
       },
@@ -1565,40 +1564,6 @@ export const ScheduleEventList = [
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // deploy check
-// export const AboutPrevGuestData = [
-//   {
-//     title: "Itachi Uchia",
-//     src: "/assets/about/prevguest/g1.JPG",
-//   },
-//   {
-//     title: "Madara Uchiha",
-//     src: "/assets/about/prevguest/g2.JPG",
-//   },
-//   {
-//     title: "Levi Ackerman",
-//     src: "/assets/about/prevguest/g3.JPG",
-//   },
- 
-//   {
-//     title: "Radhe Karn",
-//     src: "/assets/about/prevguest/g4.JPG",
-//   },
-//   {
-//     title: "Kai Sakamuru",
-//     src: "/assets/about/prevguest/g5.JPG",
-//   },
-//   {
-//     title: "Gojo Saturo",
-//     src: "/assets/about/prevguest/g6.JPG",
-//   },
-//   {
-//       title: "Kakashi Hatake",
-//       src: "/assets/about/prevguest/g7.JPG",
-//     },
-// ];
-
-
-
 export const AboutPrevGuestData = [
   {
     title: "Itachi Uchia",
@@ -1606,30 +1571,64 @@ export const AboutPrevGuestData = [
   },
   {
     title: "Madara Uchiha",
-    src: "/assets/about/prevguest/g1.JPG",
+    src: "/assets/about/prevguest/g2.JPG",
   },
   {
     title: "Levi Ackerman",
-    src: "/assets/about/prevguest/g1.JPG",
+    src: "/assets/about/prevguest/g3.JPG",
   },
  
   {
     title: "Radhe Karn",
-    src: "/assets/about/prevguest/g1.JPG",
+    src: "/assets/about/prevguest/g4.JPG",
   },
   {
     title: "Kai Sakamuru",
-    src: "/assets/about/prevguest/g1.JPG",
+    src: "/assets/about/prevguest/g5.JPG",
   },
   {
     title: "Gojo Saturo",
-    src: "/assets/about/prevguest/g1.JPG",
+    src: "/assets/about/prevguest/g6.JPG",
   },
   {
       title: "Kakashi Hatake",
-      src: "/assets/about/prevguest/g1.JPG",
+      src: "/assets/about/prevguest/g7.JPG",
     },
 ];
+
+
+
+// export const AboutPrevGuestData = [
+//   {
+//     title: "Itachi Uchia",
+//     src: "/assets/about/prevguest/g1.JPG",
+//   },
+//   {
+//     title: "Madara Uchiha",
+//     src: "/assets/about/prevguest/g1.JPG",
+//   },
+//   {
+//     title: "Levi Ackerman",
+//     src: "/assets/about/prevguest/g1.JPG",
+//   },
+ 
+//   {
+//     title: "Radhe Karn",
+//     src: "/assets/about/prevguest/g1.JPG",
+//   },
+//   {
+//     title: "Kai Sakamuru",
+//     src: "/assets/about/prevguest/g1.JPG",
+//   },
+//   {
+//     title: "Gojo Saturo",
+//     src: "/assets/about/prevguest/g1.JPG",
+//   },
+//   {
+//       title: "Kakashi Hatake",
+//       src: "/assets/about/prevguest/g1.JPG",
+//     },
+// ];
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1721,7 +1720,7 @@ export const announcements = [
 
 export  const projects = [
   {
-    eventType: "Photography",
+    eventType: "Events",
     events: [
       {
         name: "Matthias Leidinger",
@@ -1741,7 +1740,7 @@ export  const projects = [
     ],
   },
   {
-    eventType: "Art Exhibitions",
+    eventType: "Stars Attraction",
     events: [
       {
         name: "Van Gogh's Legacy",
@@ -1758,15 +1757,10 @@ export  const projects = [
         imageUrl: "/assets/homethird/water.jpg",
         description: "An exploration of abstract art and its impact on human perception.",
       },
-      {
-        name: "AI in 2025",
-        imageUrl: "/assets/homethird/rock.jpg",
-        description: "Exploring the latest breakthroughs in artificial intelligence and machine learning.",
-      },
     ],
   },
   {
-    eventType: "Technology Conferences",
+    eventType: "Activities",
     events: [
       {
         name: "AI in 2025",

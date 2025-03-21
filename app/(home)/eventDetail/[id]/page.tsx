@@ -29,10 +29,10 @@ interface EventDetail {
 
 // Reusable Components
 const EventInfoItem = ({ icon: Icon, label, value }: { icon: any, label: string, value: string }) => (
-  <div className="flex items-center gap-3 text-amber-700">
+  <div className="flex items-center gap-3 text-gold">
     <Icon size={20} />
     <span className="font-semibold">{label}:</span>
-    <span className="text-amber-900">{value}</span>
+    <span className="text-white">{value}</span>
   </div>
 );
 
@@ -44,14 +44,14 @@ const ParticipantCounter = ({ current, max }: { current: number, max: number }) 
         style={{ width: `${(current / max) * 100}%` }}
       />
     </div>
-    <span className="text-amber-900 font-bold">
+    <span className="text-white font-bold">
       {current}/{max}
     </span>
   </div>
 );
 
 const RegisterButton = () => (
-  <button className="mt-6 w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+  <button className=" bg-white hover:bg-amber-700 text-black font-bold py-3 px-6 rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
     Join this Magical Event
   </button>
 );
@@ -96,85 +96,75 @@ const EventDetailsPage = ({ params }: { params: Promise<{ id: string }> }) => {
         }} // Animation timing 
       >
         {/* <div className="w-full min-h-screen bg-neutral-900 relative flex flex-col items-center justify-center antialiased py-12"> */}
-        <div className="min-h-screen bg-neutral-900 py-12 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className=" bg-gradient-to-b from-amber-50 to-amber-100 shadow-xl border-amber-200 p-6 z-10 rounded-lg">
-              <header>
-                <h1 className="text-5xl font-serif text-amber-900 py-4 font-face">
-                  {event.title}
-                </h1>
-              </header>
-              <div>
-                <div className="space-y-8">
-                  {/* Event Image */}
-                  <div className="relative h-64 rounded-lg overflow-hidden">
-                    <img
-                      src={event.imageUrl}
-                      alt={event.title}
-                      className="object-cover w-full h-full"
-                    />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                      <h2 className="text-white text-xl font-bold">{event.title}</h2>
-                    </div>
-                  </div>
+        <div className="min-h-screen flex justify-center items-center">
+          <div className=" w-[60%] flex flex-col justify-center items-center gap-10 glass border-white/[0.2] z-10 rounded-lg">
+            <div className="text-5xl font-serif text-white p-2">
+              {event.title}
+            </div>
+            <div className="flex justify-center items-center gap-10 w-full">
+              {/* Event Image */}
+              <div className="relative h-64 rounded-lg overflow-hidden w-1/2 flex justify-center items-center p-2">
+                <img
+                  src={event.imageUrl}
+                  alt={event.title}
+                  className="object-cover w-full h-full"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                  <h2 className="text-white text-xl font-bold">{event.title}</h2>
+                </div>
+              </div>
 
-                  {/* Event Information */}
-                  <div className="grid gap-4">
-                    <EventInfoItem
-                      icon={Calendar}
-                      label="Date"
-                      value={event.date}
-                    />
-                    <EventInfoItem
-                      icon={MapPin}
-                      label="Location"
-                      value={event.location}
-                    />
-                    <EventInfoItem
-                      icon={User}
-                      label="Organizer"
-                      value={event.organizer}
-                    />
-                    <EventInfoItem
-                      icon={Wand}
-                      label="Spell Category"
-                      value={event.spellCategory}
-                    />
-                    <EventInfoItem
-                      icon={BadgeIndianRupee}
-                      label="Fee"
-                      value={event.Fee}
-                    />
-                  </div>
+              {/* Event Information */}
+              <div className="w-1/2 flex flex-col justify-center items-center gap-10">
+                <div className="grid gap-4 glass p-10">
+                  <EventInfoItem
+                    icon={Calendar}
+                    label="Date"
+                    value={event.date}
+                  />
+                  <EventInfoItem
+                    icon={MapPin}
+                    label="Location"
+                    value={event.location}
+                  />
+                  <EventInfoItem
+                    icon={User}
+                    label="Organizer"
+                    value={event.organizer}
+                  />
+                  <EventInfoItem
+                    icon={BadgeIndianRupee}
+                    label="Fee"
+                    value={event.Fee}
+                  />
+                </div>
 
-                  {/* Description */}
-                  <div className="bg-amber-50 p-4 rounded-lg">
-                    <div className="flex items-center gap-2 mb-2">
-                      <ScrollText size={20} className="text-amber-700" />
-                      <h3 className="font-bold text-amber-900">Event Description</h3>
-                    </div>
-                    <p className="text-amber-800 leading-relaxed">
-                      {event.description}
-                    </p>
+                {/* Description */}
+                <div className="glass p-10 rounded-lg">
+                  <div className="flex items-center gap-2 mb-2">
+                    <ScrollText size={20} className="text-gold" />
+                    <h3 className="font-bold text-white">Event Description</h3>
                   </div>
+                  <p className="text-gold leading-relaxed">
+                    {event.description}
+                  </p>
+                </div>
 
-                  {/* Participants Counter */}
-                  <div>
-                    <h3 className="font-bold text-amber-900 mb-2">Available Spots</h3>
+                {/* Participants Counter */}
+                {/* <div>
+                    <h3 className="font-bold text-white mb-2">Available Spots</h3>
                     <ParticipantCounter
                       current={event.currentParticipants}
                       max={event.maxParticipants}
                     />
-                  </div>
+                  </div> */}
 
-                  {/* Register Button */}
-                  <RegisterButton />
-                </div>
+                {/* Register Button */}
+                <RegisterButton />
               </div>
             </div>
           </div>
         </div>
-        <BackgroundBeams />
       </motion.div>
 
       <Footer />
