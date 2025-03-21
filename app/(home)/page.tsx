@@ -45,9 +45,9 @@ const HomePage = () => {
   const { height } = dimension;
   const isMobile = window.innerWidth < 768;
   const y = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 0.5 : 2)]);
-  const y2 = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 1.2 : 3.3)]);
+  const y2 = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 1.2 : 3)]);
   const y3 = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 0.5 : 1.25)]);
-  const y4 = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 1.2 : 3)]);
+  // const y4 = useTransform(scrollYProgress1, [0, 1], [0, height * (isMobile ? 1.2 : 3)]);
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -272,7 +272,7 @@ const HomePage = () => {
 
         {/* crads stacked animation  */}
         {/* 4 */}
-        <div ref={maincardstackedcontainer} className="mt-[0vh] pb-[10vh]  relative">
+        <div ref={maincardstackedcontainer} className="mt-[0vh] pb-[10vh] max-sm:pb-0  relative">
           {
             projects.map((project, i) => {
               const targetscale = 1 - ((projects.length - i) * 0.05);
@@ -280,7 +280,7 @@ const HomePage = () => {
               const scale = useTransform(scrollYProgress5, [i / projects.length, 1], [1, targetscale]);
               return <div ref={cardstackedCard} key={i} className="sticky top-0 flex justify-center items-center w-full h-[100vh] ">
                 <motion.div style={{  backgroundSize: 'cover', backgroundPosition: 'center', scale, top: `calc(-0vh + ${i * 15}px)` }}
-                  className="glass flex flex-col relative top-[-25%] h-[700px] max-sm:h-[500px]  w-[1600px] max-sm:w-[350px] rounded-[25px] origin-top border-2 border-white/[0.2]">
+                  className="glass flex flex-col relative top-[-25%] h-[700px] max-sm:h-[550px]  w-[1600px] max-sm:w-[400px] rounded-[25px] origin-top border-2 border-white/[0.2]">
 
                   <div className="flex flex-col mt-4  gap-12 h-full ">
 
@@ -328,7 +328,7 @@ const HomePage = () => {
           <div className="  sticky overflow-hidden top-0  h-[100vh]">
             {
               pictures.map(({ src, scale }, i) => {
-                return <motion.div key={i} style={{ scale }} className=" absolute max-sm:top-[6rem] flex justify-center items-center w-full h-full">
+                return <motion.div key={i} style={{ scale }} className=" absolute max-sm:top-[1rem] flex justify-center items-center w-full h-full">
                   <div className={`relative ${getImageContainerStyles(i)}`}>
                     <Image src={src} alt="image" fill className="object-cover  rounded-2xl border-2 border-white/[0.2]" />
                   </div>
