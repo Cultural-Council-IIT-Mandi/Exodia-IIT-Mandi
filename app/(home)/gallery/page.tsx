@@ -54,31 +54,6 @@ const page = () => {
     "/assets/exodia-gallery-images/DSC08499.jpg",
     "/assets/exodia-gallery-images/LEH07282.jpg",
   ];
-  // const images = [
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  //   "/assets/exodia-gallery-images/DSC06940.jpg",
-  // ];
 
   const slides = Array.from({ length: images.length }, (_, index) => ({
     
@@ -155,9 +130,9 @@ const page = () => {
           </ModalBody>
         </Modal>
       </div>
-      <div className="flex flex-col items-center px-20 py-12 mt-2">
+      <div className="flex flex-col items-center mt-2">
         <header className="flex flex-col items-center z-[200] sm:static relative">
-          <h1 className={`font-bold text-white mt-28  z-[900] text-[6rem] max-sm:text-[3rem] ${aboutNPfont11.className}`}>
+          <h1 className={`font-bold text-white mt-40 z-[900] sm:text-[6rem] text-[4rem] ${aboutNPfont11.className}`}>
             {/* <TextAnimation text="Gallery" /> */}
             Gallery
           </h1>

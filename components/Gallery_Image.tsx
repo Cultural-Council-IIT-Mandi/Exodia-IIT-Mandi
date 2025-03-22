@@ -21,7 +21,7 @@ const GalleryImage: React.FC<ImageProps> = ({src, alt, onClick, className, index
 
     return (
         <motion.div variants={variants} initial="hidden" animate="visible" transition={{delay: index * 0.25, ease: "easeInOut", duration: 0.5}} viewport={{ amount: 0 }} className="my-8 max-sm:my-3 ">
-            <div className="group overflow-hidden rounded-3xl border-2 border-white/[0.2] sm:h-72 sm:w-96 h-52 w-72" onClick={handleClick}>
+            <div className="group overflow-hidden rounded-3xl border-[1.5px] border-white sm:h-[324px] sm:w-[432px] h-[234px] w-[324px]" onClick={handleClick}>
             <Image loading="lazy" fill={true} alt={alt} src={src} style={{objectFit: "cover"}} className={`transition ease duration-1000 group-hover:scale-110 ${className}`}/>
             </div>
         </motion.div>
