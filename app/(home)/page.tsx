@@ -8,7 +8,7 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import About_VideoSection from "@/components/About_VideoSection";
 import { aboutNPfont, aboutNPfont11, aboutNPfont2, aboutNPfont4 } from "@/lib/font.utils";
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform, useScroll, AnimatePresence } from "framer-motion";
 import { useRef } from "react";
 import Lenis from '@studio-freight/lenis';
 import CountdownTimer from "@/components/HomecountTime";
@@ -19,6 +19,7 @@ import Section2 from "@/components/Home_Home_Section2";
 import Section1 from "@/components/Home_Home_Section1";
 import { projects } from "@/lib/utils";
 import Section11 from "@/components/Home_Home_Section11";
+import TextReveal from "@/components/Home_TextReveal";
 
 
 
@@ -80,16 +81,18 @@ const HomePage = () => {
     target: element2,
     offset: ['start 0.7', 'start 0.35']
   })
-  const characters1 = "The valley echoes with magical chants when the moon and stars paint the black canvas white. Where mystique captivates the mind of all those who seek, such is the magic of Exodia's twilight. ".split(" ");
-  const characters2 = "Let The Magic Begin! ".split(" ");
-  const characters3 = "The biggest college fest in the Himalayas is back to enchant the world with its vibrant mystique. The three-day-long fest guarantees a magical experience brimming with events that ignite zeal, craft, and empyreal artistry and will emblaze the starry night in its arcane brilliance.".split(" ");
-  const characters4 = "So, pick your wands, mount your brooms, and meet us at Hogwarts in the hills — IIT Mandi !!!. ".split(" ");
-  const characters = [characters1, characters2, characters3, characters4];
-  const element22 = useRef<HTMLParagraphElement>(null);
-  const { scrollYProgress: scrollYProgress32 } = useScroll({
-    target: element22,
-    offset: ['start 0.7', 'start 0.35']
-  })
+  const characters1 = `The biggest college fest in the Himalayas is back to enchant the`;
+  const characters2 = `world with its vibrant mystique. The three-day-long fest`;
+  const characters3 = `guarantees a magical experience brimming with events that ignite`;
+  const characters4 = `zeal, craft, and empyreal artistry and will emblaze the starry night`;
+  const characters5 = `in its arcane brilliance.`;
+  const characters6 = `IIT Mandi, cradled in the Himalayas, blends wisdom with nature's serenity.`;  
+  const characters7 = `A place where innovation meets tranquility, shaping visions of tomorrow.`;  
+  const characters8 = `With rivers whispering knowledge, it fosters brilliance in every mind.`;  
+  const characters9 = `An abode of research, creativity, and dreams soaring beyond the peaks.`;  
+  const characters10 = `Where intellect and nature converge, crafting a legacy of excellence.`;  
+  
+
 
   // for scaled image on scroll
   const imagescontainer = useRef<HTMLDivElement>(null);
@@ -184,7 +187,7 @@ const HomePage = () => {
     target: maincardstackedcontainer,
     offset: ['start start', 'end end']
   });
- 
+
   const cardstackedCard = useRef<HTMLDivElement>(null);
   const { scrollYProgress: scrollYProgress6 } = useScroll({
     target: cardstackedCard,
@@ -244,8 +247,21 @@ const HomePage = () => {
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-75%"]);
+
+
+  // for video intro 
+  const [showHome, setShowHome] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+    const timer = setTimeout(() => {
+      setShowHome(true);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
 
 
   return (
@@ -272,14 +288,14 @@ const HomePage = () => {
 
         {/* crads stacked animation  */}
         {/* 4 */}
-        <div ref={maincardstackedcontainer} className="mt-[0vh] pb-[10vh] max-sm:pb-0  relative">
+        <div ref={maincardstackedcontainer} className="mt-[0vh] pb-[1vh] max-sm:pb-0  relative">
           {
             projects.map((project, i) => {
               const targetscale = 1 - ((projects.length - i) * 0.05);
               const imagescale = useTransform(scrollYProgress6, [0, 1], [1, 0.5]);
               const scale = useTransform(scrollYProgress5, [i / projects.length, 1], [1, targetscale]);
               return <div ref={cardstackedCard} key={i} className="sticky top-0 flex justify-center items-center w-full h-[100vh] ">
-                <motion.div style={{  backgroundSize: 'cover', backgroundPosition: 'center', scale, top: `calc(-0vh + ${i * 15}px)` }}
+                <motion.div style={{ backgroundSize: 'cover', backgroundPosition: 'center', scale, top: `calc(-0vh + ${i * 15}px)` }}
                   className="glass flex flex-col relative top-[-25%] h-[700px] max-sm:h-[550px]  w-[1600px] max-sm:w-[400px] rounded-[25px] origin-top border-2 border-white/[0.2]">
 
                   <div className="flex flex-col mt-4  gap-12 h-full ">
@@ -321,6 +337,14 @@ const HomePage = () => {
               </div>
             })
           }
+        </div>
+        {/* 11 */}
+        <div className="flex flex-col justify-center items-center gap-5 h-[50vh] max-sm:w-[80%] mx-auto ">
+          <TextReveal text={characters1} />
+          <TextReveal text={characters2} />
+          <TextReveal text={characters3} />
+          <TextReveal text={characters4} />
+          <TextReveal text={characters5} />
         </div>
 
         {/* 5 */}
@@ -378,8 +402,14 @@ const HomePage = () => {
             </video>
           </div>
         </div>
-        <div className="bg-purple-900 h-screen text-white flex justify-center items-center text-[5rem]">
-          scroll down
+        <div className="bg-purple-900 h-screen text-white flex justify-center items-center">
+          <div className="flex flex-col justify-center items-center gap-5 h-[50vh] max-sm:w-[80%] mx-auto ">
+            <TextReveal text={characters6} />
+            <TextReveal text={characters7} />
+            <TextReveal text={characters8} />
+            <TextReveal text={characters9} />
+            <TextReveal text={characters10} />
+          </div>
         </div>
         {/* 9 */}
 
