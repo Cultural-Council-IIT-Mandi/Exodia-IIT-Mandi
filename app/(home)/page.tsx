@@ -395,7 +395,7 @@ const HomePage = () => {
       >
         <div className='relative h-[calc(160vh+400px)] -top-[100vh]'>
           <div className='h-[calc(60vh+400px)] sticky top-[calc(100vh-400px-60vh)]'>
-            <div className="h-[75vh] bg-white flex justify-center items-end">
+            <div className="h-[60vh] max-sm:h-[75vh] bg-white flex justify-center items-end">
               <CountdownTimer targetDate={futureDate} />
             </div>
             <Footer />

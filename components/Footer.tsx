@@ -1,5 +1,6 @@
 import React from 'react'
 import { FooterSocialMediaDock } from './Home_FooterSocialMediaDock'
+import { aboutNPfont11 } from '@/lib/font.utils'
 
 const Footer = () => {
   return (
@@ -9,12 +10,12 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-4 max-md:grid-cols-1">
 
         <div className='z-[900]'>
-          <p className="harry-text text-[3rem] flex justify-center items-center">EXODIA '25</p>
+          <p className={`text-[3rem] flex justify-center items-center ${aboutNPfont11.className}`}>EXODIA '25</p>
         </div>
 
         {/* Participate Section */}
         <div className='max-md:hidden'>
-          <h3 className="text-gray-400 font-semibold mb-3">Participate</h3>
+          <h3 className="text-white font-semibold mb-3">Participate</h3>
           <ul className="space-y-2">
             <li><a href="/events" className="hover:text-purple-400">Events Portal</a></li>
             <li><a href="/ExodiaInstagramLink" className="hover:text-purple-400">Join The Community</a></li>
@@ -24,7 +25,7 @@ const Footer = () => {
 
         {/* Explore More Section */}
         <div className='max-md:hidden'>
-          <h3 className="text-gray-400 font-semibold mb-3">Explore More</h3>
+          <h3 className="text-white font-semibold mb-3">Explore More</h3>
           <ul className="space-y-2">
             <li><a href="/about" className="hover:text-purple-400">About Exodia</a></li>
             <li><a href="/gallery" className="hover:text-purple-400">Previous Star Attractions</a></li>
@@ -34,7 +35,7 @@ const Footer = () => {
 
         {/* Reach Out Section */}
         <div className='max-md:hidden'>
-          <h3 className="text-gray-400 font-semibold mb-3">Reach Out To Us</h3>
+          <h3 className="text-white font-semibold mb-3">Reach Out To Us</h3>
           <ul className="space-y-2">
             <li><a href="/contact" className="hover:text-purple-400">Contact Us</a></li>
             <li><a href="/team" className="hover:text-purple-400">Core Team</a></li>
@@ -53,7 +54,7 @@ const Footer = () => {
         {/* Social Media Links */}
 
         {/* Copyright */}
-        <p className="text-gray-400 mt-4 max-sm:mt-1 md:mt-0 text-sm">
+        <p className="text-white mt-4 max-sm:mt-1 md:mt-0 text-sm">
           © Exodia '25, IIT Mandi &nbsp; | &nbsp; Made with <span className="text-pink-500">♥</span> by Web Dev Team
         </p>
       </div>

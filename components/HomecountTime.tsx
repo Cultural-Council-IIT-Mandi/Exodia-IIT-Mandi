@@ -1,5 +1,6 @@
 import { aboutNPfont11 } from "@/lib/font.utils";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const CountdownTimer = ({ targetDate }:any) => {
   const calculateTimeLeft = () => {
