@@ -276,13 +276,14 @@ export const SponList = [
 
 
 
-export const videoLinks: Record<number,string> = {
-  2017:"xQDj8OrE0bo?si=KW575XIEyKTzBuMS",
-  2018:"WU_8wcNML3M?si=JwusbaJ7TvDwrYFS",
-  2019:"GlRHHi22mQg?si=XHcqcWHIqIM2z7wo",
-  2023:"GtArDHgOt5A?si=WfkmoRAPhQ5t5qYY",
-  2024:"WvwU3scKoAI?si=gB2kQWbVTzNk4kc7"
-}; 
+export const videoLinks: Record<number, [string, string]> = {
+  2017: ["xQDj8OrE0bo?si=KW575XIEyKTzBuMS", "/assets/pyqs/2017.jpg"],
+  2018: ["WU_8wcNML3M?si=JwusbaJ7TvDwrYFS", "/assets/pyqs/2018.jpg"],
+  2019: ["GlRHHi22mQg?si=XHcqcWHIqIM2z7wo", "/assets/pyqs/2019.jpg"],
+  2023: ["GtArDHgOt5A?si=WfkmoRAPhQ5t5qYY", "/assets/pyqs/2023.jpg"],
+  2024: ["WvwU3scKoAI?si=gB2kQWbVTzNk4kc7", "/assets/pyqs/2024.jpg"]
+};
+
 
 
 
