@@ -3,7 +3,7 @@ import { FooterSocialMediaDock } from './Home_FooterSocialMediaDock'
 
 const Footer = () => {
   return (
-    <footer className="bg-purple-900 text-white py-20 flex flex-col items-center">
+    <footer className="bg-purple-900 text-white py-20 max-sm:py-10 flex flex-col items-center">
 
 
       <div className="container mx-auto grid grid-cols-4 max-md:grid-cols-1">
@@ -49,11 +49,11 @@ const Footer = () => {
 
 
       {/* Social Icons and Copyright */}
-      <div className=" border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center lg:px-12">
+      <div className=" border-t border-gray-700 pt-6 max-sm:pt-3 flex flex-col md:flex-row justify-between items-center lg:px-12">
         {/* Social Media Links */}
 
         {/* Copyright */}
-        <p className="text-gray-400 mt-4 md:mt-0 text-sm">
+        <p className="text-gray-400 mt-4 max-sm:mt-1 md:mt-0 text-sm">
           © Exodia '25, IIT Mandi &nbsp; | &nbsp; Made with <span className="text-pink-500">♥</span> by Web Dev Team
         </p>
       </div>

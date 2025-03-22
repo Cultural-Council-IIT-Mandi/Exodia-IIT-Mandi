@@ -1,32 +1,5 @@
 "use client";
 import Footer from '@/components/Footer';
-// import Scrollbar from '@/components/Team_scrollbar';
-// import Sidebar from '@/components/Team_sidebar';
-// import React from 'react';
-
-
-// const page: React.FC = () => {
-//   const handleTeamClick = (teamId: string) => {
-//     const teamBox = document.getElementById(teamId);
-//     if (teamBox) {
-//       window.scrollTo({
-//         top: teamBox.offsetTop,
-//         behavior: 'smooth',
-//       });
-//     }
-//   };
-
-//   return (
-//     <div className="container flex">
-//       {/* <Sidebar onTeamClick={handleTeamClick} /> */}
-//       <Sidebar />
-//       <Scrollbar />
-//     </div>
-//   );
-// };
-
-// export default page;
-
 
 
 import Navbar from '@/components/Navbar';

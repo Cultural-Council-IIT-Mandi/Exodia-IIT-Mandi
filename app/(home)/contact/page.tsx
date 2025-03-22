@@ -11,19 +11,17 @@ const page: React.FC = () => {
     <>
       <Navbar />
 
-      <div className='p-0 m-0 h-full'>
+      <div className='p-0 m-0 h-full min-h-screen'>
         <div className={`mt-[8rem] mb-7 text-white text-[5rem] max-sm:text-[3rem] ${aboutNPfont11.className}`}>Contact Us</div>
 
-        <div className='flex justify-center items-center flex-wrap'>
-          <div className='flex justify-center items-center flex-wrap'>
-            <Contact_Card src="/assets/contact/c1.jpeg" title='Albus Dumbledore' desc="Headmaster" contact="+91-987384738" />
+        <div className='flex justify-center items-center max-sm:flex-col max-sm:p-4 '>
+          <Contact_Card src="/assets/team/vishal.jpeg" title='Vishal Kumar' desc="Convener" contact="" />
 
-            <Contact_Card src="/assets/contact/c2.jpeg" title="Minerva Mcgonagall" desc="Professor" contact="+91-987384738" />
+          <Contact_Card src="/assets/team/aryan.jpeg" title="Aryan Kumar" desc="Convener" contact="" />
 
-            <Contact_Card src="/assets/contact/c1.jpeg" title="Severus Snape" desc="Professor" contact="+91-987384738" />
+          <Contact_Card src="/assets/team/divyanshu.jpg" title="Divyanshu Raj" desc="Head" contact="+91-9811197429" />
 
-            <Contact_Card src="/assets/contact/c2.jpeg" title="Harry Potter" desc="Head boy" contact="+91-987384738" />
-          </div>
+          <Contact_Card src="/assets/team/gaurav.jpg" title="Gourav Chaudhary" desc="Head" contact="+91-8278741047" />
         </div>
       </div>
 

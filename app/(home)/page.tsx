@@ -167,7 +167,7 @@ const HomePage = () => {
     const styles = [
       "w-[25vw] h-[25vh] max-sm:top-[2vh]", // Default
       "w-[35vw] h-[30vh] top-[-30vh] max-sm:top-[-27vh] left-[5vw]", // 2nd image
-      "w-[20vw] h-[45vh] top-[-10vh] left-[-25vw]", // 3rd image
+      "w-[30vw] h-[45vh] top-[-10vh] left-[-30vw]", // 3rd image
       "w-[25vw] h-[25vh] max-sm:top-[2vh] left-[27.5vw]", // 4th image
       "w-[20vw] h-[25vh] top-[27.5vh] max-sm:top-[28.5vh] left-[5vw]", // 5th image
       "w-[30vw] h-[25vh] top-[27.5vh] max-sm:top-[28vh] left-[-22.5vw]", // 6th image
@@ -395,7 +395,7 @@ const HomePage = () => {
       >
         <div className='relative h-[calc(160vh+400px)] -top-[100vh]'>
           <div className='h-[calc(60vh+400px)] sticky top-[calc(100vh-400px-60vh)]'>
-            <div className="h-[60vh] bg-white flex justify-center items-end">
+            <div className="h-[75vh] bg-white flex justify-center items-end">
               <CountdownTimer targetDate={futureDate} />
             </div>
             <Footer />

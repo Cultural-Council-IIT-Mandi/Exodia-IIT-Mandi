@@ -939,6 +939,15 @@ export const teamsList = [
           { name: 'email', link: 'B22339@students.iitmandi.ac.in' },
         ],
       },
+      { 
+        name: 'Aryan Kumar',
+        photo: '/assets/team/aryan.jpeg',
+        heading: 'Aryan Kumar',
+        socialMediaLinks: [
+          { name: 'linkedin', link: 'https://www.linkedin.com/in/aryan0singh/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+          { name: 'email', link: 'B22236@students.iitmandi.ac.in' },
+        ],
+      },
     ], 
   },
   {
@@ -1059,12 +1068,12 @@ export const teamsList = [
         socialMediaLinks: [
         ],
       },
-      { 
-        name: 'Pragyansh',
-        photo: '/assets/team/pragyansh.png',
-        socialMediaLinks: [
-        ],
-      },
+      // { 
+      //   name: 'Pragyansh',
+      //   photo: '/assets/team/pragyansh.png',
+      //   socialMediaLinks: [
+      //   ],
+      // },
     ],
   },
   {

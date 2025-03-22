@@ -29,7 +29,7 @@ const CountdownTimer = ({ targetDate }:any) => {
   }, [targetDate]);
 
   return (
-    <div className={`text-[7rem] pb-[10rem] text-center bg text-purple-900 p-4  ${aboutNPfont11.className}`}>
+    <div className={`text-[7rem] max-sm:text-[3rem] pb-[10rem] max-sm:pb-[2rem] text-center  text-purple-900 p-4  ${aboutNPfont11.className}`}>
       {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s left
     </div>
   );

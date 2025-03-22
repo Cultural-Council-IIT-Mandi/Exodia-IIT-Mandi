@@ -100,7 +100,7 @@ export function FocusCards({ cards }: { cards: Card[] }) {
                 hovered={hovered}
                 setHovered={setHovered}
               />
-              { card.name == "Vishal Kumar" && (
+              {( card.name == "Vishal Kumar" || card.name == "Aryan Kumar") && (
                   <div className="flex justify-center items-center gap-2 mb-4">
                     {card.socialMediaLinks.map((l: { name: string; link: string }, index: number) => (
                       <div className="bg-white rounded-3xl hover:scale-150 transition-transform duration-300" key={index}>
