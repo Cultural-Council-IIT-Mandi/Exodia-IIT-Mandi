@@ -10,7 +10,7 @@ const Card = ({ imgsrc, i }: { imgsrc: string; i: number }) => {
       >
         <div
           style={{
-            backgroundImage: `url("/assets/horiscrollimage/${imgsrc}")`,
+            backgroundImage: `url("${imgsrc}")`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

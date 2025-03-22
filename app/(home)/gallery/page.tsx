@@ -1,6 +1,5 @@
 "use client";
 
-import TextAnimation from "@/components/Gallery_TextAnimation";
 import { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -18,6 +17,7 @@ import { FloatingNav } from "@/components/ui/floating-navbar";
 // import { navItems } from "@/lib/utils";
 import { aboutNPfont11 } from "@/lib/font.utils";
 import { CoolMode } from "@/components/ui/cool-mode";
+import { images } from "@/lib/utils";
 
 const page = () => {
   const [open, setOpen] = useState(false);
@@ -29,31 +29,32 @@ const page = () => {
   }
 
   // deploy check
-  const images = [
-    "/assets/exodia-gallery-images/DSC06940.jpg",
-    "/assets/exodia-gallery-images/DSC_0372.jpg",
-    "/assets/exodia-gallery-images/DSC_0373.jpg",
-    "/assets/exodia-gallery-images/DSC07046.jpg",
-    "/assets/exodia-gallery-images/DSC07220.jpg",
-    "/assets/exodia-gallery-images/DSC07242.jpg",
-    "/assets/exodia-gallery-images/DSC07249.jpg",
-    "/assets/exodia-gallery-images/DSC07252.jpg",
-    "/assets/exodia-gallery-images/DSC07253.jpg",
-    "/assets/exodia-gallery-images/DSC07260.jpg",
-    "/assets/exodia-gallery-images/DSC07268.jpg",
-    "/assets/exodia-gallery-images/DSC07270.jpg",
-    "/assets/exodia-gallery-images/DSC07275.jpg",
-    "/assets/exodia-gallery-images/DSC07390.jpg",
-    "/assets/exodia-gallery-images/DSC08347.jpg",
-    "/assets/exodia-gallery-images/DSC08403.jpg",
-    "/assets/exodia-gallery-images/DSC08467.jpg",
-    "/assets/exodia-gallery-images/DSC08472.jpg",
-    "/assets/exodia-gallery-images/DSC08481.jpg",
-    "/assets/exodia-gallery-images/DSC08482.jpg",
-    "/assets/exodia-gallery-images/DSC08487.jpg",
-    "/assets/exodia-gallery-images/DSC08499.jpg",
-    "/assets/exodia-gallery-images/LEH07282.jpg",
-  ];
+//   const images = [
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8I707mXJOVUiXjEZo8nPCruRv1xJM02KalYe3",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8OzvaoCZAVZirtFvpze2T4jfB9k1RaSXCLubx",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8Nu2ALWATBnmKsCY0o1ENRbLkZXIgjp3rfh6V",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8n2DsJgKFvlWGTIAJSubDhEoNp9XPaV5xw4jy",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8myK0B8jXbzNjKiwsf8AWZGL3t6QTYohU9BDg",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8XyZ0N1hWnfg8CkBHLr7YPo4jxz6Elt0a5ucZ",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8VqbjfD4TaWOgMFRoCkJPN2dSYzuqDA9f47ci",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg80jj3l2O6nPm1We5dZyOsKhfk4grHcBuEtjiq",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg81E4rQi0dFuSj7PyAlmGUCN6WXqKIfTRJibEM",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8fgX5LuNnaGuQcUEXzIrigDtYvbPpyeAwZH8K",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8nzPw094KFvlWGTIAJSubDhEoNp9XPaV5xw4j",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg87RXf5OeVgzrG1oD8Ky4Iwvx0LatSiTFCZ2Bh",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8CWhqH5rR4iUhtEkXzqNrGjSnf1ul85MDWvBs",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8GAjgtGvLvuzkRJai146Y2oZCN0Q3DmjflbHw",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg83tXH9Az72kmsCXMLPhjzWtoifAyncURqe9d8",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8Xf41RshWnfg8CkBHLr7YPo4jxz6Elt0a5ucZ",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8hUTBB8hgiPInSsWU8AM03Hk6OVjE5NlYFoqr",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8tI4Vqp3eeKLVcTXI7MJNPQraCYZ5iGjoEO9H",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8wZ0pJUkN93fDJcmlrWoxYu8LRnVCHUMXgaki",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8h2xHhMgiPInSsWU8AM03Hk6OVjE5NlYFoqrg",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8hfWTnsgiPInSsWU8AM03Hk6OVjE5NlYFoqrg",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8brpqZ0JFTD4RYVkqMGW97ir0uIxeHfXCJ5oO",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8XXqyIghWnfg8CkBHLr7YPo4jxz6Elt0a5ucZ",
+// "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg877RNt8VgzrG1oD8Ky4Iwvx0LatSiTFCZ2BhA",
+//   ];
 
   const slides = Array.from({ length: images.length }, (_, index) => ({
     

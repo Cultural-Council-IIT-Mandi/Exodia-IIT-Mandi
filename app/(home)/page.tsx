@@ -17,7 +17,7 @@ import Column from "@/components/Home_Home_Column";
 import Section3 from "@/components/Home_Home_Section3";
 import Section2 from "@/components/Home_Home_Section2";
 import Section1 from "@/components/Home_Home_Section1";
-import { projects } from "@/lib/utils";
+import { horiscrollimage, projects } from "@/lib/utils";
 import Section11 from "@/components/Home_Home_Section11";
 import TextReveal from "@/components/Home_TextReveal";
 
@@ -28,8 +28,6 @@ const HomePage = () => {
   const futureDate = new Date("2025-03-01T00:00:00").getTime(); // Change to your target date
 
 
-  // horizontal scroll on scroll list 
-  const horiscrollimage = ["1.jpg", "2.jpg", "3.jpg", "4.jpeg", "5.jpeg", "1.jpg", "2.jpg", "3.jpg", "4.jpeg", "5.jpeg", "1.jpg", "2.jpg", "3.jpg", "4.jpeg", "5.jpeg", "1.jpg", "2.jpg", "3.jpg", "4.jpeg", "5.jpeg", "1.jpg", "2.jpg", "3.jpg", "4.jpeg", "5.jpeg"];
 
   // vertical moving images on scroll 
   const images = [

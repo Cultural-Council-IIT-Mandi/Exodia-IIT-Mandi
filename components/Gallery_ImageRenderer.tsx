@@ -2,7 +2,7 @@ import { StaticImageData } from "next/image";
 import GalleryImage from "./Gallery_Image";
 
 interface ImageRendererProps {
-    images: StaticImageData[],
+    images: string[],
     onClick: (index: number) => void;
 }
 

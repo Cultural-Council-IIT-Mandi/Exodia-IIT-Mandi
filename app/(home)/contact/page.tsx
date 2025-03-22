@@ -4,7 +4,6 @@ import Footer from '@/components/Footer'
 import Contact_Card from '@/components/Contact_Card'
 import { aboutNPfont, aboutNPfont11 } from '@/lib/font.utils'
 import React, { Suspense, useEffect } from 'react';
-import { Canvas } from '@react-three/fiber';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plane, Train, Bus, MapPin, Navigation } from 'lucide-react';
 import { TabsDemo } from '@/components/HowtoReach_DisplayTabs';
@@ -12,19 +11,14 @@ import { Modal, ModalBody, ModalContent, ModalFooter, ModalTrigger } from '@/com
 import Image from 'next/image';
 import { CoolMode } from '@/components/ui/cool-mode';
 import { FloatingNav } from '@/components/ui/floating-navbar';
+import { HTRimages } from '@/lib/utils'
 
 
 const page: React.FC = () => {
 
   const [selectedRoute, setSelectedRoute] = React.useState<string | null>(null);
 
-  const images = [
-    "/assets/how-to-reach/htr-1.jpg",
-    "/assets/how-to-reach/htr-2.jpg",
-    "/assets/how-to-reach/htr-3.jpg",
-    "/assets/how-to-reach/htr-4.jpg",
-    "/assets/how-to-reach/htr-5.jpg",
-  ];
+ 
 
   useEffect(() => {
     const handleOutsideClick = (e: MouseEvent) => {
@@ -61,13 +55,13 @@ const page: React.FC = () => {
         <div className={`mt-[8rem] mb-7 text-white text-[5rem] max-sm:text-[3rem] ${aboutNPfont11.className}`}>Contact Us</div>
 
         <div className='flex justify-center items-center max-sm:flex-col max-sm:p-4 '>
-          <Contact_Card src="/assets/team/vishal.jpeg" title='Vishal Kumar' desc="Convener" contact="" />
+          <Contact_Card src="https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8nbegVpKFvlWGTIAJSubDhEoNp9XPaV5xw4jy" title='Vishal Kumar' desc="Convener" contact="" />
 
-          <Contact_Card src="/assets/team/aryan.jpeg" title="Aryan Kumar" desc="Convener" contact="" />
+          <Contact_Card src="https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8EgnL0zqXyL9MO1q2nHQca6xPvFe7YNiRswgV" title="Aryan Kumar" desc="Convener" contact="" />
 
-          <Contact_Card src="/assets/team/divyanshu.jpg" title="Divyanshu Raj" desc="Head" contact="+91-9811197429" />
+          <Contact_Card src="https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8duJobtD2zCVD9W0xXfbPgcFB8GtZ3ejKnmsO" title="Divyanshu Raj" desc="Head" contact="+91-9811197429" />
 
-          <Contact_Card src="/assets/team/gaurav.jpg" title="Gourav Chaudhary" desc="Head" contact="+91-8278741047" />
+          <Contact_Card src="https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8C1nGsyYrR4iUhtEkXzqNrGjSnf1ul85MDWvB" title="Gourav Chaudhary" desc="Head" contact="+91-8278741047" />
         </div>
       </div>
 
@@ -248,7 +242,7 @@ const page: React.FC = () => {
                     on Google Map! 🌄
                   </h4>
                   <div className="flex justify-center items-center">
-                    {images.map((image, idx) => (
+                    {HTRimages.map((image, idx) => (
                       <motion.div
                         key={"images" + idx}
                         style={{

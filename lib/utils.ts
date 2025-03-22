@@ -932,7 +932,7 @@ export const teamsList = [
     members: [
       { 
         name: 'Vishal Kumar',
-        photo: '/assets/team/vishal.jpeg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8nbegVpKFvlWGTIAJSubDhEoNp9XPaV5xw4jy',
         heading: 'Vishal Kumar',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/vishal-kumar-gupta-b5a664252/' },
@@ -942,7 +942,7 @@ export const teamsList = [
       },
       { 
         name: 'Aryan Kumar',
-        photo: '/assets/team/aryan.jpeg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8EgnL0zqXyL9MO1q2nHQca6xPvFe7YNiRswgV',
         heading: 'Aryan Kumar',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/aryan0singh/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
@@ -957,7 +957,7 @@ export const teamsList = [
     members: [
       { 
         name: 'Ayush Sinha',
-        photo: '/assets/team/ayush.JPG',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8HG0sJDWxhybz3vfeqLAQnpcSBWg6d54OMKiH',
         heading: 'Literary Secretary',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/ayush-sinha-iit-mandi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
@@ -968,7 +968,7 @@ export const teamsList = [
       },
       { 
         name: 'Vivek Aggarwal',
-        photo: '/assets/team/vivek.jpeg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8XSTLmChWnfg8CkBHLr7YPo4jxz6Elt0a5ucZ',
         heading: 'Cultural Secretary',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/vivek-aggarwal-b005b125a/' },
@@ -985,7 +985,7 @@ export const teamsList = [
     members: [
       { 
         name: 'Ayan Garg',
-        photo: '/assets/team/ayan.jpeg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8wPU7iBkN93fDJcmlrWoxYu8LRnVCHUMXgaki',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://linkedin.com/in/AyanGargAyanGarg' },
           { name: 'instagram', link: 'https://instagram.com/ayangarg2' },
@@ -995,7 +995,7 @@ export const teamsList = [
       },
       { 
         name: 'Ayush Bhardwaj',
-        photo: '/assets/team/ayushb.jpeg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8GAYxcapvLvuzkRJai146Y2oZCN0Q3DmjflbH',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/ayush-bhardwaj01' },
           { name: 'whatsapp', link: '9877809383' },
@@ -1004,7 +1004,7 @@ export const teamsList = [
       },
       { 
         name: 'Hardeep Gupta',
-        photo: '/assets/team/hardeep.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8iO1pzvndrAuLZbPVFehBwa7QtcmkpnJoi6T1',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/hardeep-gupta-14ab7b337' },
           { name: 'instagram', link: 'https://instagram.com/hardeepgupta123' },
@@ -1020,7 +1020,7 @@ export const teamsList = [
     members: [
       { 
         name: 'Avishkar Chavan',
-        photo: '/assets/team/avishkar.jpeg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg85Wj3InUAUQ6YOXCtv3Fsqkif4u7ENMrxJenS',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/avishkarchavan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
           { name: 'instagram', link: 'https://instagram.com/avishkar_95' },
@@ -1030,7 +1030,7 @@ export const teamsList = [
       },
       { 
         name: 'Tushar Bhati',
-        photo: '/assets/team/tushar.jpeg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8XCV1kEhWnfg8CkBHLr7YPo4jxz6Elt0a5ucZ',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/tushar-bhati-632862318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
           { name: 'instagram', link: 'https://instagram.com/tusharbhatiiii' },
@@ -1040,7 +1040,7 @@ export const teamsList = [
       },
       { 
         name: 'Sujay Ghonshetwad',
-        photo: '/assets/team/sujay.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8rY40s9FKczH6lU2AfYM4j8OCnVtxLuhdeWiG',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/sujay-ghonshetwad-233b89225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
           { name: 'instagram', link: 'https://instagram.com/itz_sujay_20' },
@@ -1050,7 +1050,7 @@ export const teamsList = [
       },
       { 
         name: 'Jaspinder kaur ',
-        photo: '/assets/team/jasbinder.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg86rGX0YmwX9hA86oIV0kMUetRYfrxvLGNiHJa',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/jaspinder-kaur-ba33242a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
           { name: 'whatsapp', link: '9780771121' },
@@ -1083,7 +1083,7 @@ export const teamsList = [
     members: [
       { 
         name: 'Deepansha Deora',
-        photo: '/assets/team/depansha.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8DIPW1MtCGHb0TXgla6n8qNr1RxSKzEoJWwZy',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/deepansha-deora-27b8b4280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
           { name: 'instagram', link: 'https://instagram.com/deepansha_05' },
@@ -1093,7 +1093,7 @@ export const teamsList = [
       },
       { 
         name: 'Gourav Chaudhary ',
-        photo: '/assets/team/gaurav.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8C1nGsyYrR4iUhtEkXzqNrGjSnf1ul85MDWvB',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/gourav-chaudhary-845a78344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
           { name: 'instagram', link: 'https://instagram.com/Chodry_gourav_22' },
@@ -1103,7 +1103,7 @@ export const teamsList = [
       },
       { 
         name: 'Namita Singh ',
-        photo: '/assets/team/namita.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8j3WZKKEvUlrMC78dNGSEnVcpPI96zhWaqeDy',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/namita-singh-b00346329' },
           { name: 'instagram', link: 'https://instagram.com/namitasingh14114' },
@@ -1113,7 +1113,7 @@ export const teamsList = [
       },
       { 
         name: 'Divyanshu Raj',
-        photo: '/assets/team/divyanshu.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8duJobtD2zCVD9W0xXfbPgcFB8GtZ3ejKnmsO',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/divyanshu-raj-784306329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
           { name: 'whatsapp', link: '8797003838' },
@@ -1129,7 +1129,7 @@ export const teamsList = [
     members: [
       { 
         name: 'Mankirat Singh Saini',
-        photo: '/assets/team/mankirat.jpeg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8UjpwyQc5DGBn1dJwk74IcaTePASLs3ofF6E8',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/mankirat-singh-saini-1695b81a4/' },
           { name: 'instagram', link: 'https://www.instagram.com/_mankirat_saini/' },
@@ -1139,7 +1139,7 @@ export const teamsList = [
       },
       { 
         name: 'Rohak Gupta',
-        photo: '/assets/team/rohak.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg85O0JDPUAUQ6YOXCtv3Fsqkif4u7ENMrxJenS',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/rohak-gupta-04ab172b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
           { name: 'instagram', link: 'rohak_gupta' },
@@ -1149,7 +1149,7 @@ export const teamsList = [
       },
       { 
         name: 'Adit',
-        photo: '/assets/team/adit.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8hjYjHfgiPInSsWU8AM03Hk6OVjE5NlYFoqrg',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/adit-raj-69925224a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
           { name: 'instagram', link: 'https://www.instagram.com/adit.raj_?igsh=MWg4b3lnMjdlbWJ1dA==' },
@@ -1159,7 +1159,7 @@ export const teamsList = [
       },
       { 
         name: 'Achintya Dixit',
-        photo: '/assets/team/achintya.JPG',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8WKT2QbCiUtTqDvQ12xPwnlk7pVJeZcfi6r3B',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/achintya-dixit-302039328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
           { name: 'instagram', link: 'achintya_dixit_' },
@@ -1175,7 +1175,7 @@ export const teamsList = [
     members: [
       { 
         name: 'Aditya Sharma',
-        photo: '/assets/team/adityaSharma.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8jlfTs9EvUlrMC78dNGSEnVcpPI96zhWaqeDy',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/aditya-sharma-b71335289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
           { name: 'instagram', link: 'https://www.instagram.com/aditya_sh2606/profilecard/?igsh=MXF4Z2lpM3d1cDhzNA==' },
@@ -1185,7 +1185,7 @@ export const teamsList = [
       },
       { 
         name: 'Monu Patil',
-        photo: '/assets/team/monu.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8jWhf8xEvUlrMC78dNGSEnVcpPI96zhWaqeDy',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/monu-patil-551a0b255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
           { name: 'instagram', link: 'https://www.instagram.com/satyam.patil.7921/profilecard/?igsh=dTRwY3JoNGNnZTJn' },
@@ -1195,7 +1195,7 @@ export const teamsList = [
       },
       { 
         name: 'Aryan Kashyap',
-        photo: '/assets/team/aryan.jpeg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8EgnL0zqXyL9MO1q2nHQca6xPvFe7YNiRswgV',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/aryan-kashyap-1953a3275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
           { name: 'instagram', link: 'https://www.instagram.com/_.aryankashyap/profilecard/?igsh=MXB5dzB6YWo5NThtaQ==' },
@@ -1211,7 +1211,7 @@ export const teamsList = [
     members: [
       { 
         name: 'Basil Khan',
-        photo: '/assets/team/basil.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8fZYU8mNnaGuQcUEXzIrigDtYvbPpyeAwZH8K',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/basil-khan-b7714b321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
           { name: 'instagram', link: 'Basilkhan78' },
@@ -1221,7 +1221,7 @@ export const teamsList = [
       },
       { 
         name: 'Harshit Kumar Singh',
-        photo: '/assets/team/harshit.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8K8SLqMQ3y0NMqAiv1scShIQEJfUmRlp8G745',
         socialMediaLinks: [
           { name: 'linkedin', link: 'harshithi5' },
           { name: 'instagram', link: 'harshit_hi5' },
@@ -1231,7 +1231,7 @@ export const teamsList = [
       },
       { 
         name: 'Mohit',
-        photo: '/assets/team/mohit.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8tY2XKQeeKLVcTXI7MJNPQraCYZ5iGjoEO9H8',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/mohit-b356172a5/' },
           { name: 'instagram', link: 'mohit_gothwal07' },
@@ -1241,7 +1241,7 @@ export const teamsList = [
       },
       { 
         name: 'Rishang Yadav',
-        photo: '/assets/team/rishang.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg87R1Az05VgzrG1oD8Ky4Iwvx0LatSiTFCZ2Bh',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/yadavrishang?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
           { name: 'instagram', link: 'meson_197' },
@@ -1257,7 +1257,7 @@ export const teamsList = [
     members: [
       { 
         name: 'Sumit  Tiwari',
-        photo: '/assets/team/sumit.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8GAqjVaqvLvuzkRJai146Y2oZCN0Q3DmjflbH',
         socialMediaLinks: [
           { name: 'linkedin', link: 'sumit tiwari' },
           { name: 'instagram', link: 'tiwariisumit' },
@@ -1267,7 +1267,7 @@ export const teamsList = [
       },
       { 
         name: 'Yash Kataria',
-        photo: '/assets/team/yash.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8Nua9Uo0TBnmKsCY0o1ENRbLkZXIgjp3rfh6V',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/yash-kataria-6a3610284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
           { name: 'instagram', link: 'yash_k_.9' },
@@ -1277,7 +1277,7 @@ export const teamsList = [
       },
       { 
         name: 'Pranjal',
-        photo: '/assets/team/pranjal.jpeg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8G9x2tFvLvuzkRJai146Y2oZCN0Q3DmjflbHw',
         socialMediaLinks: [
           { name: 'linkedin', link: 'Pranjal Rai' },
           { name: 'instagram', link: 'Pranjalol' },
@@ -1287,7 +1287,7 @@ export const teamsList = [
       },
       { 
         name: 'Prashashti',
-        photo: '/assets/team/prashashti.jpeg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8qr6kyjoQarxcF3UnTdD8M24buszJNjfgyh1p',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/prashasti-singh-5516a8288' },
           { name: 'instagram', link: ' https://www.instagram.com/prashasti._.x?igsh=MTY3bmo5em00anc3dQ%3D%3D&utm_source=qr' },
@@ -1302,7 +1302,7 @@ export const teamsList = [
     members: [
       { 
         name: 'Ruchi',
-        photo: '/assets/team/ruchi.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8i3zUjT5ndrAuLZbPVFehBwa7QtcmkpnJoi6T',
         socialMediaLinks: [
           { name: 'linkedin', link: '' },
           { name: 'instagram', link: 'Ruchi_pundir_16' },
@@ -1312,7 +1312,7 @@ export const teamsList = [
       },
       { 
         name: 'Aditya Bagyan',
-        photo: '/assets/team/aditya.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8jlfTs9EvUlrMC78dNGSEnVcpPI96zhWaqeDy',
         socialMediaLinks: [
           { name: 'linkedin', link: 'Aditya bagyan' },
           { name: 'instagram', link: 'Aditya.bagyan' },
@@ -1322,7 +1322,7 @@ export const teamsList = [
       },
       { 
         name: 'Priyanshu Maurya',
-        photo: '/assets/team/priyanshu.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8lqyK2wlAw3fuBnaqkdIUrR1PbAD8sHzjOSCh',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/priyanshu-maurya-092b95344/' },
           { name: 'instagram', link: 'priyanshu_maurya06' },
@@ -1332,7 +1332,7 @@ export const teamsList = [
       },
       { 
         name: 'Ankur Rathore',
-        photo: '/assets/team/ankur.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8ZkBam7F1OxwUjyTlv03g8bLCGVSYHBiKo4mp',
         socialMediaLinks: [
           { name: 'linkedin', link: '' },
           { name: 'instagram', link: '' },
@@ -1348,7 +1348,7 @@ export const teamsList = [
     members: [
       { 
         name: 'Alok Kumar Yadav ',
-        photo: '/assets/team/alok.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg86E5XyqEmwX9hA86oIV0kMUetRYfrxvLGNiHJ',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/alok-yadav-371a75305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
           { name: 'instagram', link: 'https://www.instagram.com/__.al0k.__/profilecard/?igsh=b2lwemRvOTVlYjlh' },
@@ -1358,7 +1358,7 @@ export const teamsList = [
       },
       { 
         name: 'Devansh Garg ',
-        photo: '/assets/team/devansh.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg83CU1Q6z72kmsCXMLPhjzWtoifAyncURqe9d8',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/devansh-garg-92888a241' },
           { name: 'instagram', link: 'devansh_garg_mma' },
@@ -1374,7 +1374,7 @@ export const teamsList = [
     members: [
       { 
         name: 'Ananya Rai',
-        photo: '/assets/team/ananya.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8OD9rsuZAVZirtFvpze2T4jfB9k1RaSXCLubx',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/ananya-rai-a54516267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
           { name: 'instagram', link: '' },
@@ -1384,7 +1384,7 @@ export const teamsList = [
       },
       { 
         name: 'Shivam Anand ',
-        photo: '/assets/team/shivam.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg81KzxZq0dFuSj7PyAlmGUCN6WXqKIfTRJibEM',
         socialMediaLinks: [
           { name: 'linkedin', link: '' },
           { name: 'instagram', link: '__friend.exe__' },
@@ -1394,7 +1394,7 @@ export const teamsList = [
       },
       { 
         name: 'Saurav Kumar ',
-        photo: '/assets/team/saurav.jpg',
+        photo: 'https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg88mcZCZf4vby2KhTFrt1qAxpg70QM59SaBCRI',
         socialMediaLinks: [
           { name: 'linkedin', link: 'https://www.linkedin.com/in/saurav-kumar-0bb364284/' },
           { name: 'instagram', link: 'Sauravk_singhh' },
@@ -1577,32 +1577,32 @@ export const ScheduleEventList = [
 export const AboutPrevGuestData = [
   {
     title: "Itachi Uchia",
-    src: "/assets/about/prevguest/g1.JPG",
+    src: "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8tICdyHKeeKLVcTXI7MJNPQraCYZ5iGjoEO9H",
   },
   {
     title: "Madara Uchiha",
-    src: "/assets/about/prevguest/g2.JPG",
+    src: "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8ZrrVFH7F1OxwUjyTlv03g8bLCGVSYHBiKo4m",
   },
   {
     title: "Levi Ackerman",
-    src: "/assets/about/prevguest/g3.JPG",
+    src: "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8gcTOmQZ55uXiZQTqNIntk9HSYGwbaAfxvLeB",
   },
  
   {
     title: "Radhe Karn",
-    src: "/assets/about/prevguest/g4.JPG",
+    src: "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8X5uH6K7hWnfg8CkBHLr7YPo4jxz6Elt0a5uc",
   },
   {
     title: "Kai Sakamuru",
-    src: "/assets/about/prevguest/g5.JPG",
+    src: "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8FrO3UQ1sOhtfncomTS60MER1JXj9ueN28kI4",
   },
   {
     title: "Gojo Saturo",
-    src: "/assets/about/prevguest/g6.JPG",
+    src: "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8kQgUNYdmeRU37CuzDvwZLP5FgiTOWcaX0JNy",
   },
   {
       title: "Kakashi Hatake",
-      src: "/assets/about/prevguest/g7.JPG",
+      src: "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg86EHQoRymwX9hA86oIV0kMUetRYfrxvLGNiHJ",
     },
 ];
 
@@ -1790,3 +1790,79 @@ export  const projects = [
     ],
   },
 ];
+
+
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  // horizontal scroll on scroll list 
+export const horiscrollimage = [
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg81u15n10dFuSj7PyAlmGUCN6WXqKIfTRJibEM",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8H0XkaBWxhybz3vfeqLAQnpcSBWg6d54OMKiH",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8zHdUSN8A1KGoF6Q0ZitnYBmJPl8chHbjdVLR",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8NnBEE7TBnmKsCY0o1ENRbLkZXIgjp3rfh6Vz",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8gBRg155uXiZQTqNIntk9HSYGwbaAfxvLeB27",
+
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg81u15n10dFuSj7PyAlmGUCN6WXqKIfTRJibEM",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8H0XkaBWxhybz3vfeqLAQnpcSBWg6d54OMKiH",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8zHdUSN8A1KGoF6Q0ZitnYBmJPl8chHbjdVLR",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8NnBEE7TBnmKsCY0o1ENRbLkZXIgjp3rfh6Vz",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8gBRg155uXiZQTqNIntk9HSYGwbaAfxvLeB27",
+
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg81u15n10dFuSj7PyAlmGUCN6WXqKIfTRJibEM",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8H0XkaBWxhybz3vfeqLAQnpcSBWg6d54OMKiH",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8zHdUSN8A1KGoF6Q0ZitnYBmJPl8chHbjdVLR",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8NnBEE7TBnmKsCY0o1ENRbLkZXIgjp3rfh6Vz",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8gBRg155uXiZQTqNIntk9HSYGwbaAfxvLeB27",
+
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg81u15n10dFuSj7PyAlmGUCN6WXqKIfTRJibEM",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8H0XkaBWxhybz3vfeqLAQnpcSBWg6d54OMKiH",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8zHdUSN8A1KGoF6Q0ZitnYBmJPl8chHbjdVLR",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8NnBEE7TBnmKsCY0o1ENRbLkZXIgjp3rfh6Vz",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8gBRg155uXiZQTqNIntk9HSYGwbaAfxvLeB27",
+
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg81u15n10dFuSj7PyAlmGUCN6WXqKIfTRJibEM",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8H0XkaBWxhybz3vfeqLAQnpcSBWg6d54OMKiH",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8zHdUSN8A1KGoF6Q0ZitnYBmJPl8chHbjdVLR",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8NnBEE7TBnmKsCY0o1ENRbLkZXIgjp3rfh6Vz",
+"https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8gBRg155uXiZQTqNIntk9HSYGwbaAfxvLeB27",
+  ];
+
+
+  
+export const HTRimages = [
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8AKpGbcacbtfYk82or9UsZ1RQNXmW0Deh7wqS",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8k8vPjhdmeRU37CuzDvwZLP5FgiTOWcaX0JNy",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg88SZ2Lsf4vby2KhTFrt1qAxpg70QM59SaBCRI",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8yw4zY9vbcnD1Z80MwGei4QNvUP6JjxgdSYHB",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8wuDUuOkN93fDJcmlrWoxYu8LRnVCHUMXgaki",
+  ];
+
+
+export  const images = [
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8I707mXJOVUiXjEZo8nPCruRv1xJM02KalYe3",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8OzvaoCZAVZirtFvpze2T4jfB9k1RaSXCLubx",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8Nu2ALWATBnmKsCY0o1ENRbLkZXIgjp3rfh6V",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8n2DsJgKFvlWGTIAJSubDhEoNp9XPaV5xw4jy",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8myK0B8jXbzNjKiwsf8AWZGL3t6QTYohU9BDg",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8XyZ0N1hWnfg8CkBHLr7YPo4jxz6Elt0a5ucZ",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8VqbjfD4TaWOgMFRoCkJPN2dSYzuqDA9f47ci",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg80jj3l2O6nPm1We5dZyOsKhfk4grHcBuEtjiq",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg81E4rQi0dFuSj7PyAlmGUCN6WXqKIfTRJibEM",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8fgX5LuNnaGuQcUEXzIrigDtYvbPpyeAwZH8K",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8nzPw094KFvlWGTIAJSubDhEoNp9XPaV5xw4j",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg87RXf5OeVgzrG1oD8Ky4Iwvx0LatSiTFCZ2Bh",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8CWhqH5rR4iUhtEkXzqNrGjSnf1ul85MDWvBs",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8GAjgtGvLvuzkRJai146Y2oZCN0Q3DmjflbHw",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg83tXH9Az72kmsCXMLPhjzWtoifAyncURqe9d8",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8Xf41RshWnfg8CkBHLr7YPo4jxz6Elt0a5ucZ",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8hUTBB8hgiPInSsWU8AM03Hk6OVjE5NlYFoqr",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8tI4Vqp3eeKLVcTXI7MJNPQraCYZ5iGjoEO9H",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8wZ0pJUkN93fDJcmlrWoxYu8LRnVCHUMXgaki",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8h2xHhMgiPInSsWU8AM03Hk6OVjE5NlYFoqrg",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8hfWTnsgiPInSsWU8AM03Hk6OVjE5NlYFoqrg",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8brpqZ0JFTD4RYVkqMGW97ir0uIxeHfXCJ5oO",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8XXqyIghWnfg8CkBHLr7YPo4jxz6Elt0a5ucZ",
+  "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg877RNt8VgzrG1oD8Ky4Iwvx0LatSiTFCZ2BhA",
+    ];
+  
