@@ -72,12 +72,14 @@ const LoadMore: React.FC<LoadMoreProps> = ({ onClick }) => {
     }, [inView, data]);
     return (
         <>
-            <section className="flex flex-col items-center justify-center">
-                <ImageRenderer images={data} onClick={onClick} />
-                <div ref={ref}>
-                    <Image className="mt-16 max-sm:mt-0" src='/assets/gallery-svgs/spinner.svg' alt="spinner" width={60} height={60} />
-                </div>
-            </section>
+            <div className="flex justify-center w-full">
+                <section className="flex flex-col items-center justify-center w-full">
+                    <ImageRenderer images={data} onClick={onClick} />
+                    <div ref={ref}>
+                        <Image className="mt-16 max-sm:mt-0" src='/assets/gallery-svgs/spinner.svg' alt="spinner" width={60} height={60} />
+                    </div>
+                </section>
+            </div>
         </>
     )
 }
