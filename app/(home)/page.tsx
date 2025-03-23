@@ -17,7 +17,7 @@ import Column from "@/components/Home_Home_Column";
 import Section3 from "@/components/Home_Home_Section3";
 import Section2 from "@/components/Home_Home_Section2";
 import Section1 from "@/components/Home_Home_Section1";
-import { horiscrollimage, projects } from "@/lib/utils";
+import { horiscrollimage, projects, VERimages } from "@/lib/utils";
 import Section11 from "@/components/Home_Home_Section11";
 import TextReveal from "@/components/Home_TextReveal";
 
@@ -27,13 +27,6 @@ const HomePage = () => {
 
   const futureDate = new Date("2025-03-01T00:00:00").getTime(); // Change to your target date
 
-
-
-  // vertical moving images on scroll 
-  const images = [
-    "DSC07046.jpg", "DSC07220.jpg", "DSC07252.jpg", "DSC08347.jpg", "DSC08403.jpg", "DSC08481.jpg",
-    "LEH07282.jpg", "DSC08487.jpg", "DSC07249.jpg", "DSC06940.jpg", "DSC08482.jpg", "LEH07282.jpg"
-  ];
 
   const gallery = useRef<HTMLDivElement>(null);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
@@ -66,19 +59,7 @@ const HomePage = () => {
     };
   }, []);
 
-  // for text apearing on scroll 
-  const element = useRef<HTMLParagraphElement>(null);
-  const { scrollYProgress: scrollYProgress2 } = useScroll({
-    target: element,
-    offset: ['start 0.8', 'start 0.25']
-  });
-
-  // for text apearing on scroll 2
-  const element2 = useRef<HTMLParagraphElement>(null);
-  const { scrollYProgress: scrollYProgress3 } = useScroll({
-    target: element2,
-    offset: ['start 0.7', 'start 0.35']
-  })
+ 
   const characters1 = `The biggest college fest in the Himalayas is back to enchant the`;
   const characters2 = `world with its vibrant mystique. The three-day-long fest`;
   const characters3 = `guarantees a magical experience brimming with events that ignite`;
@@ -103,67 +84,36 @@ const HomePage = () => {
   const scale6 = useTransform(scrollYProgress4, [0, 1], [1, 6]);
   const scale8 = useTransform(scrollYProgress4, [0, 1], [1, 8]);
   const scale9 = useTransform(scrollYProgress4, [0, 1], [1, 9]);
-  // deploy check
   const pictures = [
     {
-      src: "/assets/exodia-gallery-images/DSC_0373.jpg",
+      src: "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8OzvaoCZAVZirtFvpze2T4jfB9k1RaSXCLubx",
       scale: scale4
     },
     {
-      src: "/assets/exodia-gallery-images/DSC07253.jpg",
+      src: "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg81E4rQi0dFuSj7PyAlmGUCN6WXqKIfTRJibEM",
       scale: scale5
     },
     {
-      src: "/assets/exodia-gallery-images/LEH07282.jpg",
+      src: "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg877RNt8VgzrG1oD8Ky4Iwvx0LatSiTFCZ2BhA",
       scale: scale6
     },
     {
-      src: "/assets/exodia-gallery-images/DSC07223.jpg",
+      src: "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8GAjgtGvLvuzkRJai146Y2oZCN0Q3DmjflbHw",
       scale: scale5
     },
     {
-      src: "/assets/exodia-gallery-images/DSC08403.jpg",
+      src: "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8nzPw094KFvlWGTIAJSubDhEoNp9XPaV5xw4j",
       scale: scale6
     },
     {
-      src: "/assets/exodia-gallery-images/DSC08482.jpg",
+      src: "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg80jj3l2O6nPm1We5dZyOsKhfk4grHcBuEtjiq",
       scale: scale8
     },
     {
-      src: "/assets/exodia-gallery-images/DSC06940.jpg",
+      src: "https://a64j3m5x58.ufs.sh/f/XmKfJ6hWnfg8XXqyIghWnfg8CkBHLr7YPo4jxz6Elt0a5ucZ",
       scale: scale9
     }
   ]
-  // const pictures = [
-  //   {
-  //     src: "/assets/exodia-gallery-images/DSC06940.jpg",
-  //     scale: scale4
-  //   },
-  //   {
-  //     src: "/assets/exodia-gallery-images/DSC06940.jpg",
-  //     scale: scale5
-  //   },
-  //   {
-  //     src: "/assets/exodia-gallery-images/DSC06940.jpg",
-  //     scale: scale6
-  //   },
-  //   {
-  //     src: "/assets/exodia-gallery-images/DSC06940.jpg",
-  //     scale: scale5
-  //   },
-  //   {
-  //     src: "/assets/exodia-gallery-images/DSC06940.jpg",
-  //     scale: scale6
-  //   },
-  //   {
-  //     src: "/assets/exodia-gallery-images/DSC06940.jpg",
-  //     scale: scale8
-  //   },
-  //   {
-  //     src: "/assets/exodia-gallery-images/DSC06940.jpg",
-  //     scale: scale9
-  //   }
-  // ]
   const getImageContainerStyles = (index: number) => {
     const styles = [
       "w-[25vw] h-[25vh] max-sm:top-[2vh]", // Default
@@ -179,7 +129,6 @@ const HomePage = () => {
 
 
   {/* crads stacked animation  */ }
-
   const maincardstackedcontainer = useRef<HTMLDivElement>(null);
   const { scrollYProgress: scrollYProgress5 } = useScroll({
     target: maincardstackedcontainer,
@@ -231,14 +180,6 @@ const HomePage = () => {
   };
 
 
-  // text moving on scroll
-  const textMovingOnScrollMain = useRef<HTMLDivElement>(null);
-  const { scrollYProgress: scrollYProgress8 } = useScroll({
-    target: textMovingOnScrollMain,
-    offset: ['start end', 'end start']
-  });
-
-
 
   // for horizontal moving cards on scroll
   const targetRef = useRef(null);
@@ -278,10 +219,10 @@ const HomePage = () => {
 
         {/* 3 ccc*/}
         <div ref={gallery} className="homeverticalParallax glass relative flex gap-[2vw] p-[2vw] box-border overflow-hidden h-[175vh]">
-          <Column images={[images[0], images[1], images[2], images[11], images[1]]} y={y} />
-          <Column images={[images[3], images[4], images[5], images[3], images[4]]} y={y2} />
-          <Column images={[images[6], images[7], images[8], images[9], images[10]]} y={y3} />
-          {/* <Column images={[images[9], images[10], images[11], images[9], images[10], images[11]]} y={y4} /> */}
+          <Column images={[VERimages[0], VERimages[1], VERimages[2], VERimages[11], VERimages[1]]} y={y} />
+          <Column images={[VERimages[3], VERimages[4], VERimages[5], VERimages[3], VERimages[4]]} y={y2} />
+          <Column images={[VERimages[6], VERimages[7], VERimages[8], VERimages[9], VERimages[10]]} y={y3} />
+          {/* <Column images={[VERimages[9], VERimages[10], VERimages[11], VERimages[9], VERimages[10], VERimages[11]]} y={y4} /> */}
         </div>
 
         {/* crads stacked animation  */}
