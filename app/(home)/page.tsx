@@ -20,6 +20,7 @@ import Section1 from "@/components/Home_Home_Section1";
 import { horiscrollimage, projects, VERimages } from "@/lib/utils";
 import Section11 from "@/components/Home_Home_Section11";
 import TextReveal from "@/components/Home_TextReveal";
+import CardStacked from "@/components/Home_CardStack";
 
 
 
@@ -227,56 +228,8 @@ const HomePage = () => {
 
         {/* crads stacked animation  */}
         {/* 4 */}
-        <div ref={maincardstackedcontainer} className="mt-[0vh] pb-[1vh] max-sm:pb-0  relative">
-          {
-            projects.map((project, i) => {
-              const targetscale = 1 - ((projects.length - i) * 0.05);
-              const imagescale = useTransform(scrollYProgress6, [0, 1], [1, 0.5]);
-              const scale = useTransform(scrollYProgress5, [i / projects.length, 1], [1, targetscale]);
-              return <div ref={cardstackedCard} key={i} className="sticky top-0 flex justify-center items-center w-full h-[100vh] ">
-                <motion.div style={{ backgroundSize: 'cover', backgroundPosition: 'center', scale, top: `calc(-0vh + ${i * 15}px)` }}
-                  className="glass flex flex-col relative top-[-25%] h-[700px] max-sm:h-[550px]  w-[1600px] max-sm:w-[400px] rounded-[25px] origin-top border-2 border-white/[0.2]">
+        <CardStacked scrollYProgress={scrollYProgress} />
 
-                  <div className="flex flex-col mt-4  gap-12 h-full ">
-
-                    <div>
-                      <p className={`${aboutNPfont11.className} text-[5rem] max-sm:text-[2.5rem] home-card-text-outline`}>{project.eventType}</p>
-                    </div>
-
-                    <div
-                      className={`grid gap-10 max-sm:gap-0 w-full h-full`}
-                      style={{
-                        gridTemplateColumns: `repeat(${project.events.length}, minmax(0, 1fr))`,
-                      }}
-                    >
-                      {project.events.map((event, index) => (
-                        <div key={index} className="  h-full rounded-2xl flex flex-col items-center">
-                          <div className=" relative rounded-2xl w-[80%] h-[80%] overflow-hidden ">
-                            <motion.div
-                              className=" rounded-2xl w-full h-full"
-                              style={{
-                                // scale: imagescale,
-
-                              }}
-                            >
-                              <Image src={event.imageUrl} className="border-2 border-white/[0.2] rounded-2xl" alt="Event Image" layout="fill" objectFit="cover" />
-                            </motion.div>
-                          </div>
-
-                          <div className="relative mt-2 text-center ">
-                            <p className={`text-[2rem] max-sm:text-[0.8rem] ${aboutNPfont11.className}`}>{event.name}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-
-                </motion.div>
-              </div>
-            })
-          }
-        </div>
         {/* 11 */}
         <div className="flex flex-col justify-center items-center gap-5 h-[50vh] max-sm:w-[80%] mx-auto ">
           <TextReveal text={characters1} />
@@ -337,7 +290,7 @@ const HomePage = () => {
             }}
           >
             <video autoPlay muted loop className="h-full w-full object-cover">
-              <source src="/assets/homefifth/nature.mp4" type="video/mp4" />
+              <source src="/assets/homefifth/mdi.mp4" type="video/mp4" />
             </video>
           </div>
         </div>

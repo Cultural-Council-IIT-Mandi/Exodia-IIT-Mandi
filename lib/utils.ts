@@ -1,3 +1,4 @@
+import { EventDetail } from '@/types';
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -1730,32 +1731,22 @@ export const announcements = [
 
 export  const projects = [
   {
-    eventType: "Events",
+    eventType: "Mr. and Mrs. Exodia:",
     events: [
       {
-        name: "Matthias Leidinger",
+        name: "Mr. and Mrs. Exodia:",
         imageUrl: "/assets/homethird/rock.jpg",
-        description: "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent.",
-      },
-      {
-        name: "Clément Chapillon",
-        imageUrl: "/assets/homethird/tree.jpg",
-        description: "French photographer Clément Chapillon explores the intersection of reality and imagination in his latest project.",
-      },
-      {
-        name: "Zissou",
-        imageUrl: "/assets/homethird/water.jpg",
-        description: "Zissou captures the essence of Bali, blending sacred and mundane moments into captivating photographic narratives.",
+        description: "Get ready to entice the audience with your mystical wits and mesmerizing charisma. So bask in the moonlight and prepare yourselves for the opportunity to immortalize yourself as a Merlinic beauty. ",
       },
     ],
   },
   {
-    eventType: "Stars Attraction",
+    eventType: "Cosplay",
     events: [
       {
-        name: "Van Gogh's Legacy",
+        name: "Cosplay",
         imageUrl: "/assets/homethird/rock.jpg",
-        description: "An exhibition showcasing the influence of Van Gogh's work on modern artists.",
+        description: "Wave your wand and breathe life into your favorite characters– be it the sorcerer supreme, a green gold-loving goblin, or an occultic creature of the dark, own the stage and allow others to bask under your glory at this polyjuice infused event.",
       },
       {
         name: "Futuristic Visions",
@@ -1770,12 +1761,32 @@ export  const projects = [
     ],
   },
   {
-    eventType: "Activities",
+    eventType: "Mushaira",
     events: [
       {
-        name: "AI in 2025",
+        name: "Mushaira",
         imageUrl: "/assets/homethird/rock.jpg",
-        description: "Exploring the latest breakthroughs in artificial intelligence and machine learning.",
+        description: "Immerse yourself into a magical night where the Himalayas echo with mystical ghazals and enchant all those who hear it. With talent of the likes of Ustad Nusarat Fateh Ali Khan, let the valley be mesmerized by the ever magical sufi music.",
+      },
+      {
+        name: "Quantum Computing",
+        imageUrl: "/assets/homethird/tree.jpg",
+        description: "A look at the advancements in quantum technology and its applications.",
+      },
+      {
+        name: "Space Innovations",
+        imageUrl: "/assets/homethird/water.jpg",
+        description: "How space exploration is pushing the boundaries of technology and engineering.",
+      },
+    ],
+  },
+  {
+    eventType: "MUNSC",
+    events: [
+      {
+        name: "MUNSC",
+        imageUrl: "/assets/homethird/rock.jpg",
+        description: "Believe yourself to be a leader? Then sharpen your silver tongues and get ready for the battle of brains and navigate the occultic labyrinth of politics and emerge victorious– oh! And remember: keep your allies close and your foes closer.",
       },
       {
         name: "Quantum Computing",

@@ -16,7 +16,7 @@ const Section1 = ({ scrollYProgress }: { scrollYProgress: any }) => {
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 3, repeat: Infinity }}>
             <div className="relative flex h-screen w-full flex-col items-center justify-center gap-0 ">
-              <img src="./Exodia.png" alt="" />
+              <img src="./Exodiaa.PNG" alt="" />
             </div>
           </motion.div>
           {/* <div className='mb-7'>

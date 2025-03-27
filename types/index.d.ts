@@ -20,7 +20,16 @@ interface CardProps {
   };
 }
 
+export interface Event  {
+  name: string;
+  imageUrl: string;
+};
 
+
+
+export interface CardStackedProps  {
+  scrollYProgress: any;
+};
 
 
 
