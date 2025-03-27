@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import Image from 'next/image'
+import { ColumnProps } from '@/types';
 
 const Column: React.FC<ColumnProps> = ({ images, y }) => {
     return (
