@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import ClientLoader from "@/components/ClientLoader";
 import localFont from 'next/font/local'
-import CustomCursorAnshul from "@/components/CustomCursorAnshul";
-import ParticlesBackground from "@/components/Background_Particles";
-import BackgroundBlobs from "@/components/BackgroundBlobs";
-// import { ClerkProvider } from "@clerk/nextjs";
 
+import "./globals.css";
+
+import ClientLoader from "@/components/ClientLoader";
+import BackgroundBlobs from "@/components/BackgroundBlobs";
+
+import { ToasterProvider } from "@/providers/toast-provider";
 
 export const metadata: Metadata = {
   title: "Exodia '25 || IIT Mandi",
@@ -39,6 +39,7 @@ export default function RootLayout({
             {/* <ParticlesBackground /> */}
             {/* // deploy check  */}
             <BackgroundBlobs />
+            <ToasterProvider />
             {children}
           </div>
         </ClientLoader>

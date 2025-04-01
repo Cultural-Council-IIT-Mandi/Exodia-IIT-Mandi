@@ -17,9 +17,6 @@ import { HTRimages } from '@/lib/utils'
 const page: React.FC = () => {
 
   const [selectedRoute, setSelectedRoute] = React.useState<string | null>(null);
-
- 
-
   useEffect(() => {
     const handleOutsideClick = (e: MouseEvent) => {
       if (!(e.target as HTMLElement).closest(".route-container")) {
