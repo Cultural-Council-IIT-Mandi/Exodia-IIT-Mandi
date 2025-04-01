@@ -1,0 +1,186 @@
+.scroll-container {
+  position: relative;
+  width: 100%;
+  overflow: visible; /* Allow overflow content to be visible */
+  margin-top: -170px;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-content {
+  display: flex;
+  gap: 0; /* No gap between images */
+}
+
+.scroll-content .image-container {
+  position: relative; /* Needed for absolute positioning of the info div */
+}
+
+.scroll-content img {
+  flex-shrink: 0;
+  width: 300px; /* Match image width */ /* Match image height */
+  display: block;
+}
+
+.image-info {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  background-color: black; /* Black background */
+  color: white;
+  padding: 10px;
+  border-radius: 10px; /* Smooth borders */
+  border: 3px solid gold; /* Gold border with 3px width */
+  width: calc(100% - 20px); /* To avoid overflow */
+  opacity: 0;
+  z-index: -10; /* Ensure the info div is above the image */
+  transition: opacity 0.3s; /* Smooth opacity transition */
+}
+
+/* Hover effect on the image to show the info div */
+.image-container:hover .image-info {
+  opacity: 1; /* Show the info div */
+  animation: slideAndFlipIn 1s ease forwards;
+}
+
+/* Hover out effect to hide the info div */
+.image-container:not(:hover) .image-info {
+  animation: slideAndFlipOut 1s ease forwards;
+}
+
+/* Keyframes for sliding and flipping in */
+@keyframes slideAndFlipIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0) rotateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-230px) rotateY(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-230px) rotateY(360deg);
+  }
+}
+
+/* Keyframes for sliding and flipping out */
+@keyframes slideAndFlipOut {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-230px) rotateY(360deg);
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0) rotateY(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0) rotateY(0);
+  }
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  height: auto;
+  display: block; /* Prevent images from stretching */
+}
+
+
+.image-container:hover .image-info {
+  transform: translateY(0); /* Slide the info box up */
+}
+
+.image-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  overflow: hidden;
+  white-space:wrap; /* Prevent title text overflow */
+}
+
+.image-description {
+  font-size: 14px;
+  width: 250px;
+  margin: 5px 0;
+  overflow: visible; /* Allow content to overflow */
+  white-space: normal; /* Allow the text to wrap to the next line */
+  word-wrap: break-word; /* Ensure long words break and wrap */
+}
+
+button {
+  background-color: gold;
+  color: black;
+  border: 2px solid gold;
+  border-radius: 10px;
+  padding: 5px 10px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+}
+
+button:hover {
+  background-color: black;
+  color: gold;
+}
+
+/* Media Queries for Tablet and Mobile */
+@media (max-width: 1024px) {
+  .scroll-container {
+    margin-top: -120px; /* Adjust margin-top for tablet */
+  }
+
+  .scroll-content img {
+    width: 250px; /* Adjust image width for tablet */
+    height: 250px; /* Adjust image height for tablet */
+  }
+  .image-description{
+    width: 150px;
+  }
+  .image-info {
+    width: 180px; /* Adjust width for tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-container {
+    margin-top: -100px; /* Adjust margin-top for mobile */
+  }
+
+  .scroll-content img {
+    width: 200px; /* Adjust image width for mobile */
+    height: 200px; /* Adjust image height for mobile */
+  }
+  .image-description{
+    width: 110px;
+  }
+  .image-info {
+    width: 160px; /* Adjust width for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-container {
+    margin-top: -80px; /* Further adjust margin-top for smaller screens */
+  }
+
+  .scroll-content img {
+    width: 150px; /* Further reduced image width for small screens */
+    height: 150px; /* Further reduced image height for small screens */
+  }
+  .image-description{
+    width: 90px;
+  }
+  .image-info {
+    width: 120px; /* Adjust width for small screens */
+  }
+}

@@ -1,0 +1,107 @@
+body {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.slide-container {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgb(110, 110, 250);
+}
+
+.image-slider {
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+
+.slides-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 30px;
+}
+
+.img {
+  position: relative;
+  width: 350px !important;
+  height: 310px;
+  transition: 0.5s;
+  object-fit: cover; /* Ensures the image fills the frame while maintaining aspect ratio */
+  overflow: hidden; 
+  filter: saturate(0.3) brightness(70%); /* Prevents image overflow */
+}
+
+.button {
+  position: absolute;
+  width: 350px;
+  height: 310px;
+  transition: 0.5s;
+  background-color: rgba(67, 67, 151, 0);
+}
+
+/* Highlight the active image */
+#slider-span1:target ~ .image-slider #img1,
+#slider-span2:target ~ .image-slider #img2,
+#slider-span3:target ~ .image-slider #img3,
+#slider-span4:target ~ .image-slider #img4,
+#slider-span5:target ~ .image-slider #img5,
+#slider-span6:target ~ .image-slider #img6,
+#slider-span7:target ~ .image-slider #img7,
+#slider-span8:target ~ .image-slider #img8,
+#slider-span9:target ~ .image-slider #img9,
+#slider-span10:target ~ .image-slider #img10 {
+  width: 460px;
+  height: 385px;
+  filter: saturate(1) brightness(100%);
+}
+
+/* Positioning logic for each slider */
+#slider-span1:target ~ .image-slider {
+  left: 0%;
+}
+#slider-span2:target ~ .image-slider {
+  left: -10%;
+}
+#slider-span3:target ~ .image-slider {
+  left: -20%;
+}
+#slider-span4:target ~ .image-slider {
+  left: -30%;
+}
+#slider-span5:target ~ .image-slider {
+  left: -40%;
+}
+#slider-span6:target ~ .image-slider {
+  left: -50%;
+}
+#slider-span7:target ~ .image-slider {
+  left: -60%;
+}
+#slider-span8:target ~ .image-slider {
+  left: -70%;
+}
+#slider-span9:target ~ .image-slider {
+  left: -80%;
+}
+#slider-span10:target ~ .image-slider {
+  left: -90%;
+}
+
+/* Overflow handling */
+.image-slider {
+  display: flex;
+  justify-content: flex-start; /* Align to start so overflow is visible */
+  width: calc(10 * 350px + 9 * 30px); /* Width accounts for 10 sliders with margins */
+}
+
+

@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.jjk{
+  scale: 1;
+}
+h1 {
+  color: #fff;
+  font-size: 55px;
+  margin: 80px 0;
+}
+
+.swiper {
+  width: 80%;
+  height: 600hv;
+  overflow: visible;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 250px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 120hv;  /* Set the width to 70px */
+  height: 90hv;  /* Set the height to 50px */
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent , #0002 , #0004);
+}
+
+.mySwiper {
+  height: 300px; /* Increase the height of the swiper container */
+}
+
+.swiper-image {
+  width: 80%; /* Adjust the width of the images */
+  height: 80%; /* Adjust the height to maintain aspect ratio */
+}
+
+.slide-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.slide-content img {
+  border-radius: 5px;
+}
+
+.text-overlay {
+  position: fixed;
+  bottom: 80px;
+  left: -90px;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  background: linear-gradient(to top, black, transparent);
+  width: 440px;
+  text-align: left;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out; /* Fade effect */
+}
+
+.text-overlay.fade-in {
+  opacity: 1; /* Fade in */
+}
+
+.text-overlay.fade-out {
+  opacity: 0; /* Fade out */
+}
+
+.text-overlay h2 {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin: 0;
+}
+
+.text-overlay p {
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+}
+/* Mobile View */
+@media (max-width: 768px) {
+  .jjk{
+    scale : 0.6;
+  }
+  
+}
+/* Mobile (small devices) View */
+@media (max-width: 480px) {
+  .jjk{
+    scale : 0.4;
+  }
+}

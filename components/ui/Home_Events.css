@@ -1,0 +1,167 @@
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+  transform: rotate(0deg);
+  position: relative;
+}
+
+.Mkd {
+  margin-top: 0px;
+}
+
+.box34 {
+  position: relative;
+  transform-style: preserve-3d;
+  /* animation: animate 20s linear infinite; */
+}
+
+.animate {
+  width: 60px;
+  height: 40px;
+  transform-style: preserve-3d;
+  animation: animate 20s linear infinite;
+  position: relative;
+  margin: 70px 10px;
+}
+
+.animate:hover {
+  animation-play-state: paused;
+}
+
+@keyframes animate {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+.center-text {
+  position: absolute;
+  top: 0%;
+  left: -200%;
+  color: gold;
+  z-index: 10;
+  transform: rotate(0deg) ;
+}
+
+.animate span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 36deg)) translateZ(270px);
+  -webkit-box-reflect: below 2px linear-gradient(transparent, transparent);
+}
+
+.animate span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  /* border-radius: 15px; */
+  /* border: 4px double rgb(0, 0, 0); */
+}
+
+img:hover {
+  transform: translateY(-2px);
+}
+
+/* Media Queries for Tablet and Mobile */
+@media (max-width: 1024px) {
+  .gallery-container {
+    transform: rotate(-8deg); /* Slightly reduced rotation */
+  }
+
+  .box34 {
+    width: 120px; /* Adjust width for tablet */
+    height: 80px; /* Adjust height for tablet */
+  }
+
+  .animate {
+    width: 100px; /* Adjust width for tablet */
+    height: 70px; /* Adjust height for tablet */
+  }
+
+  .center-text {
+    font-size: 10rem; /* Smaller font size for tablets */
+    top: -160%;
+    left: -150%;
+  }
+
+  .animate span {
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px); /* Adjusted for smaller screens */
+  }
+
+  .animate span img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    flex-direction: column; /* Stack the content vertically */
+    /* transform: rotate(-4deg); Further reduce rotation on mobile */
+    padding-top: 310px;
+  }
+
+  .box34 {
+    width: 100px; /* Adjust width for mobile */
+    height: 70px; /* Adjust height for mobile */
+  }
+
+  .animate {
+    width: 90px; /* Adjust width for mobile */
+    height: 60px; /* Adjust height for mobile */
+  }
+
+  .center-text {
+    font-size: 8rem; /* Even smaller font size for mobile */
+    top: -90%;
+    left: -100%;
+  }
+
+  .animate span {
+    transform: rotateY(calc(var(--i) * 60deg)) translateZ(250px); /* Adjusted for mobile */
+  }
+
+  .animate span img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .gallery-container {
+    padding-top: 440px;
+  }
+
+
+  .animate {
+    width: 70px; /* Further reduced width for small screens */
+    height: 50px; /* Further reduced height for small screens */
+  }
+
+  .center-text {
+    font-size: 6rem; /* Smallest font size for small screens */
+  }
+
+  .animate span {
+    transform: rotateY(calc(var(--i) * 72deg)) translateZ(150px); /* Adjusted for mobile */
+  }
+
+  .animate span img {
+    width: 100%;
+    height: 100%;
+  }
+}

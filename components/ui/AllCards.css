@@ -1,0 +1,41 @@
+/* Magical animation for title and cards */
+@keyframes magicAnimation {
+    0% {
+      transform: translateY(10px);
+      opacity: 0;
+      filter: blur(5px);
+    }
+    50% {
+      transform: translateY(0);
+      opacity: 1;
+      filter: blur(0);
+    }
+    100% {
+      transform: translateY(-10px);
+      opacity: 0;
+      filter: blur(5px);
+    }
+  }
+  
+  .animate-magic {
+    animation: magicAnimation 1s ease-in-out 1;
+  }
+  
+  /* Styling for horizontal line */
+  hr {
+    border-top: 1px solid #d1d5db; /* Gray color */
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 640px) {
+    .flex-shrink-0 {
+      width: 80%; /* Make cards wider on small screens */
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .flex-shrink-0 {
+      width: 45%; /* Cards will take more space on tablets */
+    }
+  }
+  

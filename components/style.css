@@ -1,0 +1,95 @@
+
+body{
+    background-image: url('/assets/background/background2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-blend-mode: soft-light;
+}
+
+.heading{
+    font-size: 80px;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px  rgb(227, 181, 31);
+}
+
+.name{
+    font-size: 30px;
+    text-shadow: 3px 3px 4px rgb(238, 189, 30);
+}
+
+.team-heads , .team-members {
+    display: flex;
+    background-color: transparent;
+    padding: 20px;
+    align-content: center;
+    justify-content: center;
+}
+
+.team-heads .image{
+    padding:auto;
+    margin: 4px;
+}
+
+.image img{
+    border: 2px solid goldenrod;
+}
+
+.team-members{
+    display: flex;
+        align-self: center;
+        justify-content: center;
+}
+
+
+.team-members .image{
+    display: flex;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    size: cover;
+}
+
+.team-members .image img{
+    height: 200px;
+    width: 200px;
+}
+
+.team-heads .image img, .team-members .image img{
+    margin: 2px;
+    padding: auto;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: transform 0.3s ease-out;
+    filter: sepia(50%);
+}
+
+
+.team-heads .image img:hover, .team-members .image img:hover{
+    transform: scale(1.1);
+    filter: none;
+    box-shadow: 4px 4px 2px 2px black;
+}
+
+.buttons{
+    margin: 3px;
+}
+
+.buttons button{
+    background-color: white;
+    width: 40px;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.buttons button:hover{
+    transform:scale(1.1);
+    box-shadow: 0 0 4px rgb(235, 172, 38);
+}
+
+*{
+    margin: 0;padding: 0;
+}
