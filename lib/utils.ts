@@ -1731,74 +1731,28 @@ export const announcements = [
 
 export  const projects = [
   {
-    eventType: "Mr. and Mrs. Exodia:",
-    events: [
-      {
-        name: "Mr. and Mrs. Exodia:",
-        imageUrl: "/assets/homethird/rock.jpg",
+
+        name: "Mr. and Miss. Exodia",
+        imageUrl: "/assets/cards/mex.jpg",
         description: "Get ready to entice the audience with your mystical wits and mesmerizing charisma. So bask in the moonlight and prepare yourselves for the opportunity to immortalize yourself as a Merlinic beauty. ",
-      },
-    ],
   },
   {
-    eventType: "Cosplay",
-    events: [
-      {
+ 
         name: "Cosplay",
-        imageUrl: "/assets/homethird/rock.jpg",
-        description: "Wave your wand and breathe life into your favorite characters– be it the sorcerer supreme, a green gold-loving goblin, or an occultic creature of the dark, own the stage and allow others to bask under your glory at this polyjuice infused event.",
-      },
-      {
-        name: "Futuristic Visions",
-        imageUrl: "/assets/homethird/tree.jpg",
-        description: "A dive into the future of art through digital media and experimental techniques.",
-      },
-      {
-        name: "Abstract Realms",
-        imageUrl: "/assets/homethird/water.jpg",
-        description: "An exploration of abstract art and its impact on human perception.",
-      },
-    ],
+        imageUrl: "/assets/cards/cs.webp",
+        description: "Wave your wand and breathe life into your favorite characters be it the sorcerer supreme, a green gold-loving goblin, or an occultic creature of the dark, own the stage and allow others to bask under your glory at this polyjuice infused event.",
   },
   {
-    eventType: "Mushaira",
-    events: [
-      {
+
         name: "Mushaira",
-        imageUrl: "/assets/homethird/rock.jpg",
+        imageUrl: "/assets/cards/mush.jpg",
         description: "Immerse yourself into a magical night where the Himalayas echo with mystical ghazals and enchant all those who hear it. With talent of the likes of Ustad Nusarat Fateh Ali Khan, let the valley be mesmerized by the ever magical sufi music.",
-      },
-      {
-        name: "Quantum Computing",
-        imageUrl: "/assets/homethird/tree.jpg",
-        description: "A look at the advancements in quantum technology and its applications.",
-      },
-      {
-        name: "Space Innovations",
-        imageUrl: "/assets/homethird/water.jpg",
-        description: "How space exploration is pushing the boundaries of technology and engineering.",
-      },
-    ],
   },
   {
-    eventType: "MUNSC",
-    events: [
-      {
+ 
         name: "MUNSC",
-        imageUrl: "/assets/homethird/rock.jpg",
+        imageUrl: "/assets/cards/mnsc.jpg",
         description: "Believe yourself to be a leader? Then sharpen your silver tongues and get ready for the battle of brains and navigate the occultic labyrinth of politics and emerge victorious– oh! And remember: keep your allies close and your foes closer.",
-      },
-      {
-        name: "Quantum Computing",
-        imageUrl: "/assets/homethird/tree.jpg",
-        description: "A look at the advancements in quantum technology and its applications.",
-      },
-      {
-        name: "Space Innovations",
-        imageUrl: "/assets/homethird/water.jpg",
-        description: "How space exploration is pushing the boundaries of technology and engineering.",
-      },
-    ],
   },
 ];
 

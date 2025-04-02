@@ -213,9 +213,23 @@ const HomePage = () => {
           {/* <Column images={[VERimages[9], VERimages[10], VERimages[11], VERimages[9], VERimages[10], VERimages[11]]} y={y4} /> */}
         </div>
 
+        <div className="h-[20vh] flex justify-center items-end">
+          {/* <TextReveal className="text-8xl max-sm:text-sm" text="Explore Flagship Events" /> */}
+          <div className={`text-8xl max-sm:text-3xl ${aboutNPfont11.className}`}> Explore Flagship Events </div>
+        </div>
+
         {/* crads stacked animation  */}
         {/* 4 */}
         <CardStacked scrollYProgress={scrollYProgress} />
+
+        <div className=" flex justify-end items-start w-[90%]">
+          {/* <TextReveal className="text-8xl max-sm:text-sm" text="Explore Flagship Events" /> */}
+          <div className={`text-2xl max-sm:text-xs cursor-pointer sm:hover:scale-125 transform transition-all duration-300 ${aboutNPfont11.className}`}>
+            <Link href="/events">
+              Explore More ....
+            </Link>
+          </div>
+        </div>
 
         {/* 11 */}
         <div className="flex flex-col justify-center items-center gap-5 max-sm:gap-3 h-[50vh] max-sm:h-[40vh] max-sm:w-[90%] mx-auto ">
